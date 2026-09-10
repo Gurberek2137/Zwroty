@@ -562,9 +562,9 @@ img {
 }
 
 .product-card:hover .card-cta {
-  background: var(--ig-gradient);
+  background: linear-gradient(135deg, #0064D2 0%, #004fb3 100%);
   border-color: transparent;
-  box-shadow: 0 4px 14px var(--ig-glow);
+  box-shadow: 0 4px 16px rgba(0, 100, 210, 0.4);
 }
 
 .product-card:hover .card-cta svg {
