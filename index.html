@@ -3,895 +3,244 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMZ Outlet – Okazje i Zwroty z Amazon | Sprawdzony Towar do -70%</title>
-  <meta name="description" content="Katalog okazyjnych zwrotów konsumenckich i nadwyżek magazynowych z Amazon. Przetestowany sprzęt z rabatami do -70%. Zamówienia i rezerwacje przez Instagram.">
-  <meta name="keywords" content="zwroty amazon, outlet amazon, amazon returns, elektronika outlet, palety amazon, okazje amazon">
-  
-  <!-- Open Graph / Social Media Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AMZ Outlet – Okazje i Zwroty z Amazon">
-  <meta property="og:description" content="Sprawdzony sprzęt ze zwrotów konsumenckich Amazon w ułamku ceny rynkowej. Bezpieczny zakup przez Instagram.">
+  <title>AMZ Outlet – Okazje i Zwroty z Amazon</title>
+  <meta name="description" content="Sprawdzony sprzęt ze zwrotów konsumenckich Amazon w ułamku ceny rynkowej. Zamówienia i kontakt przez Instagram.">
   
   <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Pasek powiadomień / Live Delivery Status -->
-  <div class="top-announcement">
-    <div class="container announcement-inner">
-      <div class="live-dot-wrapper">
-        <span class="live-dot"></span>
-        <span class="live-text">Nowa dostawa palet rozpakowana: <strong id="liveDate">Dzisiaj rano</strong></span>
-      </div>
-      <div class="announcement-right">
-        <span>⚡ Pojedyncze sztuki – rezerwacja przez <strong>Instagram DM</strong></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Główny Pasek Nawigacji -->
-  <header class="site-header" id="header">
-    <div class="container header-container">
-      <a href="#" class="brand-logo" aria-label="Strona główna AMZ Outlet">
-        <div class="logo-badge">AMZ</div>
-        <div class="logo-text">
-          <span class="logo-name">RETURNS<strong>OUTLET</strong></span>
-          <span class="logo-sub">Okazje ze zwrotów konsumenckich</span>
-        </div>
+  <!-- Minimalistyczny Nagłówek -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-badge">AMZ</span>
+        <span class="logo-name">RETURNS<strong>OUTLET</strong></span>
       </a>
 
-      <nav class="nav-menu" id="navMenu">
-        <a href="#katalog" class="nav-link">Okazje dzisiaj</a>
-        <a href="#jak-to-dziala" class="nav-link">Jak zamawiać?</a>
-        <a href="#klasy-stanu" class="nav-link">Klasy towaru</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="btn-ig-nav" id="headerIgBtn">
-          <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-          <span>Napisz na IG</span>
-        </a>
-
-        <!-- Hamburger do urządzeń mobilnych -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Otwórz menu nawigacji">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="nav-ig-link">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span>Instagram</span>
+      </a>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <div class="hero-glow-bg"></div>
-      <div class="container hero-container">
-        
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="badge-fire">🔥</span>
-            <span>Sprawdzone zwroty konsumenckie & nadwyżki do <strong>-70%</strong></span>
-          </div>
-
-          <h1 class="hero-title">
-            Okazje i Zwroty z Amazon <br>
-            <span class="gradient-text">Najlepsze Ceny w Sieci</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            Oryginalny, w 100% przetestowany sprzęt ze zwrotów konsumenckich Amazon w ułamku ceny rynkowej. 
-            Przejrzysty stan każdego egzemplarza, wysyłka Paczkomatem w 24h i bezpieczna rezerwacja w wiadomości prywatnej na naszym profilu Instagram.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="btn btn-instagram-hero" id="heroIgBtn">
-              <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              <span>Zobacz na Instagramie</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-
-            <a href="#katalog" class="btn btn-secondary-hero">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
-              <span>Przeglądaj Katalog Ofert</span>
-            </a>
-          </div>
-
-          <!-- Trust Badges Bar -->
-          <div class="hero-trust-bar">
-            <div class="trust-item">
-              <div class="trust-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>
-                <strong>Każda sztuka sprawdzona</strong>
-                <p>100% sprawności technicznej</p>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="1" y="3" width="15" height="13"></rect>
-                  <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
-                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                </svg>
-              </div>
-              <div>
-                <strong>Wysyłka w 24h</strong>
-                <p>Paczkomat InPost lub Kurier</p>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              <div>
-                <strong>Oszczędzasz 40-70%</strong>
-                <p>Względem regularnych cen</p>
-              </div>
-            </div>
-          </div>
+    <!-- STRONA TYTUŁOWA (HERO) -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Zwroty konsumenckie & nadwyżki magazynowe</span>
         </div>
 
+        <h1 class="hero-title">
+          Okazje i Zwroty z Amazon <br>
+          <span class="gradient-text">Najlepsze Ceny</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Sprawdzony towar ze zwrotów konsumenckich w ułamku ceny rynkowej. 
+          Zakupy, rezerwacje i bezpośredni kontakt prowadzimy przez nasz profil na Instagramie.
+        </p>
+
+        <div class="hero-cta">
+          <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Zobacz na Instagramie</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- SEKCJĘ PRODUKTÓW / KATALOG OFERT -->
-    <section class="catalog-section" id="katalog">
+    <!-- WYBRANE OKAZJE (3-4 PRODUKTY) -->
+    <section class="products-section">
       <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">KATALOG Z OSTATNIEJ PALETY</div>
-          <h2 class="section-title">Aktualnie Dostępne Okazje</h2>
-          <p class="section-desc">
-            Poniżej znajduje się partia rozpakowana i przetestowana z ostatniego transportu. 
-            Ilości są ściśle limitowane (zazwyczaj 1 sztuka). Kliknij w wybraną ofertę, by zarezerwować przez wiadomość na Instagramie.
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge">OSTATNIA DOSTAWA</span>
+          <h2 class="section-heading">Aktualne Okazje</h2>
         </div>
 
-        <!-- Pasek filtrów i wyszukiwarka -->
-        <div class="catalog-toolbar">
-          <div class="category-filters" id="categoryFilters">
-            <button class="filter-btn active" data-category="all">Wszystkie (<span id="totalCount">8</span>)</button>
-            <button class="filter-btn" data-category="audio">Audio & Muzyka</button>
-            <button class="filter-btn" data-category="electronics">Elektronika</button>
-            <button class="filter-btn" data-category="wearables">Smartwatche</button>
-            <button class="filter-btn" data-category="home">Dom & AGD</button>
-          </div>
-
-          <div class="catalog-search">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" id="searchInput" placeholder="Szukaj produktu (np. Sony, Apple, ekspres)..." aria-label="Szukaj produktu w katalogu">
-          </div>
-        </div>
-
-        <!-- Siatka Produktów (Product Grid) -->
-        <div class="products-grid" id="productsGrid">
+        <div class="products-grid">
           
           <!-- Produkt 1: Sony WH-1000XM5 -->
-          <article class="product-card" data-category="audio" data-title="Sony WH-1000XM5 Słuchawki Bezprzewodowe ANC">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Sony WH-1000XM5 na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Sony WH-1000XM5 Słuchawki ANC" loading="lazy" class="product-image">
-                <span class="discount-badge">-43%</span>
-                <span class="stock-pill">⚡ Tylko 1 sztuka</span>
+          <article class="product-card">
+            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Sony WH-1000XM5 na Instagramie">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Sony WH-1000XM5 Słuchawki ANC" loading="lazy" class="product-img">
+                <span class="badge-discount">-43%</span>
               </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Audio & ANC</span>
-                  <span class="condition-tag condition-new">Stan: Otwarty karton</span>
+              <div class="card-content">
+                <div class="card-condition">Stan: Nowy / Otwarty karton</div>
+                <h3 class="card-title">Sony WH-1000XM5 Słuchawki ANC</h3>
+                <div class="card-pricing">
+                  <span class="price-amz">Cena Amazon: 1 499 zł</span>
+                  <span class="price-ours">Nasza cena: <strong>849 zł</strong></span>
                 </div>
-
-                <h3 class="product-title">Sony WH-1000XM5 Słuchawki Bezprzewodowe ANC</h3>
-                <p class="product-summary">Flagowe słuchawki z redukcją hałasu. Kompletne akcesoria, etui i okablowanie. 100% sprawne.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">1 499 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">849 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>650 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
+                <div class="card-cta">
                   <span>Kup / Zapytaj na Instagramie</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
                 </div>
               </div>
             </a>
           </article>
 
           <!-- Produkt 2: Apple Watch Series 9 -->
-          <article class="product-card" data-category="wearables" data-title="Apple Watch Series 9 GPS 45mm Midnight">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Apple Watch Series 9 na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=700&q=80" alt="Apple Watch Series 9 GPS" loading="lazy" class="product-image">
-                <span class="discount-badge">-41%</span>
-                <span class="stock-pill hot">🔥 Bestseller</span>
+          <article class="product-card">
+            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Apple Watch Series 9 na Instagramie">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=700&q=80" alt="Apple Watch Series 9" loading="lazy" class="product-img">
+                <span class="badge-discount">-41%</span>
               </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Smartwatch</span>
-                  <span class="condition-tag condition-mint">Stan: Klasa A+ (jak nowy)</span>
+              <div class="card-content">
+                <div class="card-condition">Stan: Klasa A+ (stan idealny)</div>
+                <h3 class="card-title">Apple Watch Series 9 GPS 45mm</h3>
+                <div class="card-pricing">
+                  <span class="price-amz">Cena Amazon: 2 199 zł</span>
+                  <span class="price-ours">Nasza cena: <strong>1 290 zł</strong></span>
                 </div>
-
-                <h3 class="product-title">Apple Watch Series 9 GPS 45mm Midnight</h3>
-                <p class="product-summary">Praktycznie bez śladów użytkowania, bateria 100%, oryginalna ładowarka i pasek w zestawie.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">2 199 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">1 290 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>909 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
+                <div class="card-cta">
                   <span>Kup / Zapytaj na Instagramie</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
                 </div>
               </div>
             </a>
           </article>
 
-          <!-- Produkt 3: De'Longhi Magnifica S -->
-          <article class="product-card" data-category="home" data-title="DeLonghi Magnifica S Ekspres Ciśnieniowy">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o DeLonghi Magnifica S na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=700&q=80" alt="Ekspres do kawy DeLonghi" loading="lazy" class="product-image">
-                <span class="discount-badge">-42%</span>
-                <span class="stock-pill">⚡ Tylko 1 sztuka</span>
+          <!-- Produkt 3: Dyson V11 Absolute -->
+          <article class="product-card">
+            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Dyson V11 na Instagramie">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=700&q=80" alt="Dyson V11 Absolute" loading="lazy" class="product-img">
+                <span class="badge-discount">-46%</span>
               </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Dom & AGD</span>
-                  <span class="condition-tag condition-tested">Stan: Powystawowy / Testowany</span>
+              <div class="card-content">
+                <div class="card-condition">Stan: Sprawdzony / Klasa A</div>
+                <h3 class="card-title">Dyson V11 Odkurzacz Bezprzewodowy</h3>
+                <div class="card-pricing">
+                  <span class="price-amz">Cena Amazon: 2 699 zł</span>
+                  <span class="price-ours">Nasza cena: <strong>1 450 zł</strong></span>
                 </div>
-
-                <h3 class="product-title">De'Longhi Magnifica S Ekspres Ciśnieniowy</h3>
-                <p class="product-summary">Zwrot 14-dniowy. W pełni odkamieniony, przetestowany i zapakowany w karton z instrukcją.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">1 549 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">890 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>659 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
+                <div class="card-cta">
                   <span>Kup / Zapytaj na Instagramie</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
                 </div>
               </div>
             </a>
           </article>
 
-          <!-- Produkt 4: Logitech MX Master 3S -->
-          <article class="product-card" data-category="electronics" data-title="Logitech MX Master 3S Mysz Bezprzewodowa">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Logitech MX Master 3S na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=700&q=80" alt="Logitech MX Master 3S" loading="lazy" class="product-image">
-                <span class="discount-badge">-48%</span>
-                <span class="stock-pill">✨ Fabrycznie Nowy</span>
+          <!-- Produkt 4: JBL Charge 5 -->
+          <article class="product-card">
+            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o JBL Charge 5 na Instagramie">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80" alt="JBL Charge 5" loading="lazy" class="product-img">
+                <span class="badge-discount">-48%</span>
               </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Elektronika / Biuro</span>
-                  <span class="condition-tag condition-new">Stan: Nowy fabrycznie</span>
+              <div class="card-content">
+                <div class="card-condition">Stan: Otwarty karton / jak nowy</div>
+                <h3 class="card-title">JBL Charge 5 Głośnik Bluetooth</h3>
+                <div class="card-pricing">
+                  <span class="price-amz">Cena Amazon: 699 zł</span>
+                  <span class="price-ours">Nasza cena: <strong>360 zł</strong></span>
                 </div>
-
-                <h3 class="product-title">Logitech MX Master 3S Mysz Bezprzewodowa</h3>
-                <p class="product-summary">Nadwyżka magazynowa Amazon. Oryginalne plomby nienaruszone, kolor grafitowy (Quiet Clicks).</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">479 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">249 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>230 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
+                <div class="card-cta">
                   <span>Kup / Zapytaj na Instagramie</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 5: JBL Charge 5 -->
-          <article class="product-card" data-category="audio" data-title="JBL Charge 5 Głośnik Bluetooth Wodoodporny">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o JBL Charge 5 na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80" alt="JBL Charge 5 Głośnik Bluetooth" loading="lazy" class="product-image">
-                <span class="discount-badge">-48%</span>
-                <span class="stock-pill">⚡ Tylko 1 sztuka</span>
-              </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Audio & Portables</span>
-                  <span class="condition-tag condition-mint">Stan: Klasa A (bdb stan)</span>
-                </div>
-
-                <h3 class="product-title">JBL Charge 5 Głośnik Bluetooth Wodoodporny</h3>
-                <p class="product-summary">Mocne brzmienie, funkcja powerbanku. Oryginalny kabel USB-C, czysty głośnik bez uszkodzeń.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">699 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">360 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>339 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
-                  <span>Kup / Zapytaj na Instagramie</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 6: Dyson V11 Odkurzacz -->
-          <article class="product-card" data-category="home" data-title="Dyson V11 Absolute Odkurzacz Bezprzewodowy">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Dyson V11 na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=700&q=80" alt="Dyson V11 Odkurzacz" loading="lazy" class="product-image">
-                <span class="discount-badge">-46%</span>
-                <span class="stock-pill hot">💰 Oszczędzasz 1249 zł</span>
-              </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Dom & AGD Premium</span>
-                  <span class="condition-tag condition-tested">Stan: Otwarty karton / sprawdzony</span>
-                </div>
-
-                <h3 class="product-title">Dyson V11 Absolute Odkurzacz Bezprzewodowy</h3>
-                <p class="product-summary">Bateria z pełną pojemnością, komplet ssawek i elektroszczotka. Zdezynfekowany i gotowy do pracy.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">2 699 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">1 450 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>1 249 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                  <span>Kup / Zapytaj na Instagramie</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 7: Kindle Paperwhite 5 -->
-          <article class="product-card" data-category="electronics" data-title="Amazon Kindle Paperwhite 5 (16GB) 6.8 cala">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Kindle Paperwhite 5 na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=700&q=80" alt="Kindle Paperwhite Czytnik Ebooków" loading="lazy" class="product-image">
-                <span class="discount-badge">-43%</span>
-                <span class="stock-pill">⚡ Tylko 1 sztuka</span>
-              </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Elektronika / Czytniki</span>
-                  <span class="condition-tag condition-new">Stan: Nowy / Nadwyżka</span>
-                </div>
-
-                <h3 class="product-title">Kindle Paperwhite 5 (16GB) Ekran 6.8"</h3>
-                <p class="product-summary">Regulowane ciepłe podświetlenie, USB-C, wodoodporność IPX8. Fabryczna folia ochronna na ekranie.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">789 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">450 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>339 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                  <span>Kup / Zapytaj na Instagramie</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 8: Razer BlackShark V2 Pro -->
-          <article class="product-card" data-category="audio" data-title="Razer BlackShark V2 Pro Zestaw Gamingowy">
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="product-card-link" aria-label="Zapytaj o Razer BlackShark V2 Pro na Instagramie">
-              <div class="card-media">
-                <img src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=700&q=80" alt="Razer Słuchawki Gamingowe" loading="lazy" class="product-image">
-                <span class="discount-badge">-54%</span>
-                <span class="stock-pill">⚡ Tylko 1 sztuka</span>
-              </div>
-
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="category-tag">Gaming & Audio</span>
-                  <span class="condition-tag condition-new">Stan: Otwarty karton</span>
-                </div>
-
-                <h3 class="product-title">Razer BlackShark V2 Pro Gaming Wireless</h3>
-                <p class="product-summary">Bezprzewodowe słuchawki e-sportowe z mikrofonem HyperClear. Komplet kabli i dongle USB 2.4GHz.</p>
-
-                <div class="price-container">
-                  <div class="price-col">
-                    <span class="price-label">Cena Amazon:</span>
-                    <span class="original-price">699 zł</span>
-                  </div>
-                  <div class="price-col price-main">
-                    <span class="price-label highlight">Nasza cena:</span>
-                    <span class="current-price">320 zł</span>
-                  </div>
-                </div>
-
-                <div class="savings-note">
-                  Oszczędzasz <strong>379 zł</strong> względem nowej sztuki
-                </div>
-
-                <div class="card-btn">
-                  <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                  <span>Kup / Zapytaj na Instagramie</span>
                 </div>
               </div>
             </a>
           </article>
 
         </div>
-
-        <!-- Empty state gdy brak wyników wyszukiwania -->
-        <div class="empty-results hidden" id="emptyResults">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-          <h3>Nie znaleziono takiego produktu</h3>
-          <p>Szukany przedmiot mógł zostać już zarezerwowany lub jest jeszcze w trakcie testów. Napisz do nas na Instagramie – sprawdzimy, czy mamy go na magazynie!</p>
-          <button class="btn btn-secondary-hero" id="resetFiltersBtn">Pokaż wszystkie dostępne oferty</button>
-        </div>
-
       </div>
     </section>
+  </main>
 
-    <!-- SEKCJA INFORMACYJNA (JAK TO DZIAŁA? - 3 PROSTE KROKI) -->
-    <section class="how-it-works-section" id="jak-to-dziala">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">PROSTY ZAKUP BEZ ZBĘDNYCH FORMULARZY</div>
-          <h2 class="section-title">Jak to działa? 3 Proste Kroki</h2>
-          <p class="section-desc">
-            Nie potrzebujesz konta ani rejestracji. Sprzedajemy bezpośrednio przez Instagram, gdzie na bieżąco wrzucamy zdjęcia realnego stanu i odpowiadamy na Twoje pytania.
-          </p>
-        </div>
-
-        <div class="steps-grid">
+  <!-- STOPKA: SOCIALE I NOTA PRAWNA -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      
+      <!-- Social Media & Partnerzy -->
+      <div class="socials-wrapper">
+        <h3 class="socials-title">Znajdź nas & Napisz do nas</h3>
+        <div class="socials-grid">
           
-          <!-- Krok 1 -->
-          <div class="step-card">
-            <div class="step-number-badge">1</div>
-            <div class="step-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <h3 class="step-title">1. Wybierasz produkt z katalogu</h3>
-            <p class="step-desc">
-              Przeglądasz aktualną listę przetestowanych przedmiotów. Wszystkie ceny, rabaty i stan wizualny są od razu podane jak na dłoni.
-            </p>
-          </div>
-
-          <!-- Krok 2 -->
-          <div class="step-card featured-step">
-            <div class="step-number-badge accent">2</div>
-            <div class="step-icon-wrapper">
-              <svg class="ig-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </div>
-            <h3 class="step-title">2. Piszesz do nas na Instagramie</h3>
-            <p class="step-desc">
-              Klikasz w kartę produktu lub przycisk i przechodzisz bezpośrednio do wiadomości prywatnej (DM). Możemy dosłać Ci dodatkowe zdjęcia i wideo działania.
-            </p>
-          </div>
-
-          <!-- Krok 3 -->
-          <div class="step-card">
-            <div class="step-number-badge">3</div>
-            <div class="step-icon-wrapper">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-              </svg>
-            </div>
-            <h3 class="step-title">3. Rezerwujesz i finalizujemy</h3>
-            <p class="step-desc">
-              Rezerwujemy sztukę dla Ciebie, podajesz dane do wysyłki (Paczkomat InPost lub Kurier) i bezpiecznie finalizujemy transakcję. Paczkę nadajemy w 24h.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="how-it-works-cta">
-          <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="btn btn-instagram-hero">
-            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="social-item ig-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
-            <span>Przejdź na profil Instagram i zarezerwuj</span>
+            <div>
+              <strong>Instagram</strong>
+              <span>Główny profil & Sprzedaż</span>
+            </div>
           </a>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- SEKCJA KLASYFIKACJI STANU TOWARU (TRANSPARENTNOŚĆ) -->
-    <section class="conditions-section" id="klasy-stanu">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-tag">UCZCIWE I PRZEJRZYSTE ZASADY</div>
-          <h2 class="section-title">Jak Oznaczamy Stan Przedmiotów?</h2>
-          <p class="section-desc">
-            Nie ukrywamy wad ani historii sprzętu. Kupując u nas, dokładnie wiesz, w jakim stanie otrzymasz paczkę.
-          </p>
-        </div>
-
-        <div class="conditions-grid">
-          
-          <div class="condition-card">
-            <div class="condition-header">
-              <span class="condition-badge-lg badge-new">Nowy / Otwarty Karton</span>
-              <span class="condition-discount-est">-30% do -50%</span>
+          <a href="https://facebook.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="social-item fb-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            <div>
+              <strong>Facebook</strong>
+              <span>Społeczność & Newsy</span>
             </div>
-            <p class="condition-text">
-              Sprzęt z nienaruszonymi fabrycznymi foliami lub z kartonem otwartym jedynie przez klienta w celu obejrzenia zawartości. Brak śladów użytkowania, pełen komplet akcesoriów.
-            </p>
-          </div>
+          </a>
 
-          <div class="condition-card">
-            <div class="condition-header">
-              <span class="condition-badge-lg badge-mint">Klasa A+ (Stan Idealny)</span>
-              <span class="condition-discount-est">-40% do -60%</span>
+          <a href="https://amazon.de" target="_blank" rel="noopener noreferrer" class="social-item amz-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+            <div>
+              <strong>Amazon.de</strong>
+              <span>Platforma źródłowa</span>
             </div>
-            <p class="condition-text">
-              Przedmioty powystawowe lub zwroty 14-dniowe. Mogą posiadać mikroryski widoczne pod światło. 100% sprawne technicznie, bateria i podzespoły w stanie nienagannym.
-            </p>
-          </div>
+          </a>
 
-          <div class="condition-card">
-            <div class="condition-header">
-              <span class="condition-badge-lg badge-tested">Klasa A / B (Sprawdzony)</span>
-              <span class="condition-discount-est">-55% do -75%</span>
-            </div>
-            <p class="condition-text">
-              Sprzęt w 100% przetestowany przez nas. Może posiadać zastępcze opakowanie lub delikatne ślady transportowe, co rekompensuje potężny rabat cenowy.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SEKCJA FAQ -->
-    <section class="faq-section" id="faq">
-      <div class="container faq-container">
-        <div class="section-header">
-          <div class="section-tag">NAJCZĘŚCIEJ ZADAWANE PYTANIA</div>
-          <h2 class="section-title">Wszystko, co musisz wiedzieć</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Skąd pochodzą oferowane przez Was produkty?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Zaopatrujemy się bezpośrednio w legalne palety ze zwrotami konsumenckimi (customer returns), nadwyżkami magazynowymi (overstock) oraz końcówkami serii z europejskich magazynów Amazon (m.in. Amazon.de).
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Czy sprzęt jest sprawny i sprawdzany?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Tak! Każdy produkt jest przez nas fizycznie rozpakowywany, podłączany do zasilania i gruntownie testowany pod kątem funkcjonalnym. Nie sprzedajemy "w ciemno". Na życzenie na Instagramie dosyłamy zdjęcia i nagrania wideo.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Jak wygląda wysyłka i płatność?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Najpopularniejszą formą jest Paczkomat InPost (szybka wysyłka w 24h) lub przesyłka kurierska. Płatność realizujemy wygodnie poprzez BLIK, przelew lub za pobraniem po wcześniejszym ustaleniu w wiadomości prywatnej.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Dlaczego zamówienia przyjmujecie przez Instagram, a nie przez koszyk?</span>
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Większość produktów to pojedyncze, unikalne sztuki (tzw. "kto pierwszy, ten lepszy"). Kontakt na Instagramie pozwala na bezpośredni, ludzki kontakt, natychmiastowe pokazanie dodatkowych ujęć i szybką rezerwację bez ryzyka, że system koszykowy sprzeda dwóm osobom tę samą rzecz.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- PŁYWAJĄCY PRZYCISK INSTAGRAM (FLOATING ACTION BUTTON) -->
-  <aside class="floating-ig-container" aria-label="Szybki kontakt Instagram">
-    <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="floating-ig-btn" title="Napisz do nas na Instagramie">
-      <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-      <span class="floating-text">Napisz na Instagramie</span>
-    </a>
-  </aside>
-
-  <!-- STOPKA (FOOTER) -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-logo">
-            <div class="logo-badge">AMZ</div>
-            <div class="logo-text">
-              <span class="logo-name">RETURNS<strong>OUTLET</strong></span>
-              <span class="logo-sub">Okazje ze zwrotów konsumenckich</span>
-            </div>
-          </div>
-          <p class="footer-about">
-            Niezależny outlet oferujący przetestowane artykuły ze zwrotów konsumenckich i nadwyżek magazynowych sieci Amazon. Kupuj oryginalne marki w cenach do 70% niższych niż rynkowe.
-          </p>
-        </div>
-
-        <div class="footer-social-col">
-          <h4 class="footer-title">Nasze Kanały & Partnerzy</h4>
-          <div class="social-links-grid">
-            
-            <!-- Instagram -->
-            <a href="https://instagram.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="social-card ig-card">
-              <div class="social-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </div>
-              <div class="social-meta">
-                <span class="social-label">Główny profil & Sprzedaż</span>
-                <span class="social-name">Instagram (@twoj_profil)</span>
-              </div>
-              <svg class="external-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-
-            <!-- Facebook -->
-            <a href="https://facebook.com/twoj_profil" target="_blank" rel="noopener noreferrer" class="social-card fb-card">
-              <div class="social-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </div>
-              <div class="social-meta">
-                <span class="social-label">Społeczność & Aktualności</span>
-                <span class="social-name">Facebook Fanpage</span>
-              </div>
-              <svg class="external-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-
-            <!-- Amazon.de -->
-            <a href="https://amazon.de" target="_blank" rel="noopener noreferrer" class="social-card amz-card">
-              <div class="social-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-              </div>
-              <div class="social-meta">
-                <span class="social-label">Źródło towaru & Porównywarka</span>
-                <span class="social-name">Amazon.de Marketplace</span>
-              </div>
-              <svg class="external-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Nota prawna / Legal Disclaimer -->
-      <div class="footer-legal">
-        <div class="legal-box">
-          <strong>Zastrzeżenie prawne & Informacja o niezależności:</strong>
-          <p>
-            Niniejsza strona internetowa ma charakter wyłącznie pokazowo-katalogowy i informacyjny. Nie stanowi sklepu internetowego w rozumieniu przepisów prawa, nie prowadzi automatycznej sprzedaży, nie gromadzi płatności ani danych osobowych w bazach danych serwisu. 
-            Wszelkie transakcje i zapytania są realizowane indywidualnie i bezpośrednio za pośrednictwem profilu Instagram. 
-            Serwis jest całkowicie niezależnym resellerem i nie jest oficjalnym sklepem, przedstawicielem, dystrybutorem ani podmiotem powiązanym z marką Amazon, Amazon.com, Inc. lub Amazon EU S.à r.l.
-            Wszelkie znaki towarowe, nazwy handlowe, logo marek oraz zdjęcia podglądowe produktów należą do ich odpowiednich właścicieli i zostały użyte wyłącznie w celach identyfikacyjnych i informacyjnych.
-          </p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear">2026</span> AMZ Returns Outlet. Wszelkie prawa zastrzeżone. Sprzedaż przez profil Instagram.</p>
-        <div class="footer-badges">
-          <span>📦 Sprawdzony towar</span>
-          <span>🔒 Bezpieczna rezerwacja</span>
-          <span>⚡ Dostawa w 24h</span>
-        </div>
+      <!-- Nota prawna -->
+      <div class="legal-notice">
+        <p>
+          <strong>Nota prawna:</strong> Strona ma charakter wyłącznie pokazowo-katalogowy. 
+          Serwis jest niezależnym resellerem zwrotów konsumenckich i nie jest powiązany, prowadzony ani sponsorowany przez Amazon.com, Inc. lub Amazon EU S.à r.l.
+          Wszelkie znaki towarowe należą do ich właścicieli.
+        </p>
+      </div>
+
+      <div class="copyright">
+        &copy; <span id="year">2026</span> AMZ Returns Outlet. Wszelkie prawa zastrzeżone.
       </div>
 
     </div>
