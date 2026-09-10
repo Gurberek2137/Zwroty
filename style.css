@@ -544,11 +544,11 @@ img {
   color: #1877F2;
 }
 
-.amz-item:hover {
-  border-color: var(--amz-orange);
+.ebay-item:hover {
+  border-color: #0064D2;
 }
-.amz-item svg {
-  color: var(--amz-orange);
+.ebay-item svg {
+  color: #0064D2;
 }
 
 .legal-notice {

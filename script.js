@@ -3,9 +3,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Nazwa Twojego profilu na Instagramie
-  const INSTAGRAM_HANDLE = 'letino_outlet';
-  const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
+  // Pełny link do Twojego profilu Instagram
+  const INSTAGRAM_URL = 'https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr';
 
   // Aktualizacja linków Instagram na stronie
   document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
