@@ -113,27 +113,39 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform var(--transition-normal);
 }
 
-.logo-badge {
-  background: var(--amz-orange);
-  color: #070a12;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.95rem;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.8px;
-  box-shadow: 0 2px 10px var(--amz-glow);
+.logo:hover {
+  transform: translateY(-1px);
 }
 
-.logo-name {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 1px;
-  color: #fff;
+.logo-icon-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform var(--transition-normal), filter var(--transition-normal);
+}
+
+.logo:hover .logo-icon-img {
+  transform: scale(1.06) rotate(3deg);
+  filter: drop-shadow(0 0 12px rgba(225, 48, 108, 0.4));
+}
+
+.logo-banner-img {
+  height: 34px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.25));
+  transition: filter var(--transition-normal), transform var(--transition-normal);
+}
+
+.logo:hover .logo-banner-img {
+  filter: drop-shadow(0 2px 16px rgba(212, 175, 55, 0.5));
 }
 
 .nav-ig-link {
@@ -191,6 +203,106 @@ img {
   position: relative;
   z-index: 1;
   max-width: 800px;
+}
+
+/* Hero Instagram Profile Card */
+.hero-brand-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 18px 8px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 26px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.hero-brand-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 117, 140, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(225, 48, 108, 0.25);
+}
+
+.hero-brand-avatar-wrap {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-brand-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.hero-brand-card:hover .hero-brand-avatar {
+  transform: scale(1.08);
+}
+
+.hero-brand-meta {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-brand-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid rgba(255, 153, 0, 0.3);
+  color: var(--amz-orange-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.hero-brand-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.hero-brand-arrow {
+  margin-left: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background: var(--ig-gradient);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(225, 48, 108, 0.3);
+  transition: transform var(--transition-normal);
+  white-space: nowrap;
+}
+
+.hero-brand-card:hover .hero-brand-arrow {
+  transform: translateX(3px);
 }
 
 .hero-badge {
@@ -551,6 +663,35 @@ img {
   color: #0064D2;
 }
 
+.social-avatar-round {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.footer-brand-badge {
+  margin-bottom: 22px;
+}
+
+.footer-logo-banner {
+  height: 38px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.2));
+  transition: opacity var(--transition-normal), transform var(--transition-normal), filter var(--transition-normal);
+}
+
+.footer-logo-banner:hover {
+  opacity: 1;
+  transform: scale(1.04);
+  filter: drop-shadow(0 2px 16px rgba(212, 175, 55, 0.45));
+}
+
 .legal-notice {
   max-width: 680px;
   margin-bottom: 24px;
@@ -579,6 +720,30 @@ img {
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 640px) {
+  .logo-icon-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-banner-img {
+    height: 26px;
+    max-width: 120px;
+  }
+
+  .hero-brand-card {
+    padding: 6px 12px 6px 8px;
+    gap: 10px;
+  }
+
+  .hero-brand-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-brand-arrow {
+    display: none;
+  }
+
   .hero {
     padding: 55px 0 45px;
   }
