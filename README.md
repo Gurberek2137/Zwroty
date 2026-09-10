@@ -1,27 +1,27 @@
-# 🛒 AMZ Returns Outlet – Minimalistyczny Landing Page
+# 🛒 Letino Outlet – Minimalistyczny Landing Page
 
-Ultra-minimalistyczny, nowoczesny i w pełni responsywny one-page prezentujący okazyjne zwroty konsumenckie z Amazona (Amazon Returns / Outlet).
+Ultra-minimalistyczny, nowoczesny i w pełni responsywny one-page prezentujący okazyjne zwroty konsumenckie z Amazona dla marki **Letino Outlet**.
 
-### 🎯 Główne elementy strony:
+### 🎯 Główne sekcje:
 1. **Strona Tytułowa (Hero)**:
-   - Chwytliwy nagłówek i podtytuł wyjaśniający pochodzenie towaru (zwroty konsumenckie / nadwyżki).
-   - Wyrazisty przycisk Call to Action (CTA): *"Zobacz na Instagramie"*.
-2. **Katalog Ofert (4 wybrane okazje)**:
+   - Branding **Letino Outlet**, nagłówek i podtytuł wyjaśniający pochodzenie towaru.
+   - Przycisk Call to Action (CTA): *"Zobacz na Instagramie"*.
+2. **Katalog 4 Wybranych Ofert**:
    - Sony WH-1000XM5 (-43%)
    - Apple Watch Series 9 (-41%)
    - Dyson V11 Absolute (-46%)
    - JBL Charge 5 (-48%)
-   - Ceny regularne Amazon vs nasze okazje oraz bezpośrednie przejście do rezerwacji na Instagramie.
+   - Ceny regularne Amazon vs okazje w Letino Outlet.
 3. **Stopka & Social Media**:
-   - Bezpośrednie linki do kanałów: **Instagram**, **Facebook**, **Amazon.de**.
-   - Przejrzysta nota prawna o niezależności outletu od firmy Amazon.
+   - Bezpośrednie linki: **Instagram (@letino_outlet)**, **Facebook**, **Amazon.de**.
+   - Nota prawna o niezależności od marki Amazon.
 
 ---
 
 ### ⚙️ Konfiguracja profilu Instagram
 
-W pliku `script.js` zmień nazwę profilu:
+W pliku `script.js` możesz w dowolnym momencie zmienić nazwę profilu:
 ```javascript
-const INSTAGRAM_HANDLE = 'twoj_profil_outlet';
+const INSTAGRAM_HANDLE = 'letino_outlet';
 ```
 Wszystkie linki na stronie zaktualizują się automatycznie!

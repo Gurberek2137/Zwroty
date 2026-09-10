@@ -1,14 +1,14 @@
 /**
- * AMZ RETURNS OUTLET - MINIMALIST SCRIPT
+ * LETINO OUTLET - MINIMALIST SCRIPT
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Podaj swój profil Instagram
-  const INSTAGRAM_HANDLE = 'twoj_profil_outlet';
+  // Nazwa Twojego profilu na Instagramie
+  const INSTAGRAM_HANDLE = 'letino_outlet';
   const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
 
   // Aktualizacja linków Instagram na stronie
-  document.querySelectorAll('a[href*="instagram.com/twoj_profil"]').forEach(link => {
+  document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
     link.href = INSTAGRAM_URL;
   });
 
