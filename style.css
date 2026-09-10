@@ -231,6 +231,97 @@ img {
 }
 
 /* ==========================================================================
+   HEADER RIGHT & LANGUAGE SWITCHER (3 KAFELKI)
+   ========================================================================== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lang-tile {
+  appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 5px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  outline: none;
+}
+
+.lang-tile .lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+  filter: saturate(1.15);
+  transition: transform 0.2s ease;
+}
+
+.lang-tile .lang-code {
+  line-height: 1;
+}
+
+.lang-tile:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.lang-tile:hover .lang-flag {
+  transform: scale(1.15);
+}
+
+.lang-tile:active {
+  transform: scale(0.94);
+}
+
+/* Aktywny kafelek z poświatą Letino */
+.lang-tile.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.28), rgba(225, 48, 108, 0.32));
+  border: 1px solid rgba(255, 153, 0, 0.75);
+  box-shadow: 0 2px 14px rgba(255, 153, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.lang-tile.active .lang-flag {
+  transform: scale(1.1);
+}
+
+/* Animacja przejścia przy zmianie języka */
+[data-i18n] {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+body.lang-fade-out [data-i18n] {
+  opacity: 0.25;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
    HERO SECTION
    ========================================================================== */
 .hero {
@@ -828,6 +919,25 @@ img {
 @media (max-width: 640px) {
   .header {
     padding: 10px 0;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .lang-switcher {
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .lang-tile {
+    padding: 4px 7px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  .lang-tile .lang-flag {
+    font-size: 0.85rem;
   }
 
   .logo {
