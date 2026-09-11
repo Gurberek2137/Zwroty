@@ -1421,11 +1421,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactSection = document.getElementById('kontakt');
     const trackedSections = [
       { id: 'instagram-feed', key: 'instagram-feed' },
+      { id: 'o-letino', key: 'o-letino' },
+      { id: 'kategorie', key: 'kategorie' },
       { id: 'dlaczego-letino', key: 'dlaczego-letino' },
       { id: 'produkty', key: 'produkty' },
       { id: 'abc-ware', key: 'abc-ware' },
-      { id: 'o-letino', key: 'o-letino' },
-      { id: 'kategorie', key: 'kategorie' },
       { id: 'platformy', key: 'platformy' },
       { id: 'faq', key: 'faq' },
       { id: 'kontakt', key: 'kontakt' }
