@@ -1183,14 +1183,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Dopasowanie pozycji po załadowaniu fontów
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => {
-        const currentActive = document.querySelector('.desktop-nav .nav-link.active');
-        if (currentActive) updateGlideTo(currentActive);
-      });
-    }
-
     const contactSection = document.getElementById('kontakt');
     const trackedSections = [
       { id: 'produkty', key: 'produkty' },
@@ -1198,6 +1190,32 @@ document.addEventListener('DOMContentLoaded', () => {
       { id: 'kategorie', key: 'kategorie' },
       { id: 'kontakt', key: 'kontakt' }
     ];
+
+    const trackedElements = trackedSections.map(item => ({
+      key: item.key,
+      el: document.getElementById(item.id)
+    })).filter(item => item.el !== null);
+
+    let sectionPositions = [];
+    function updateSectionPositions() {
+      sectionPositions = trackedElements.map(item => {
+        const top = item.el.offsetTop;
+        const height = item.el.offsetHeight;
+        return { key: item.key, top, bottom: top + height };
+      });
+    }
+
+    updateSectionPositions();
+    window.addEventListener('resize', updateSectionPositions, { passive: true });
+
+    // Dopasowanie pozycji po załadowaniu fontów
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        updateSectionPositions();
+        const currentActive = document.querySelector('.desktop-nav .nav-link.active');
+        if (currentActive) updateGlideTo(currentActive);
+      });
+    }
 
     return function onNavScrollTick(scrollY) {
       if (isFaqPage) {
@@ -1218,15 +1236,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPos = scrollY + 200;
         let currentKey = null;
 
-        for (const item of trackedSections) {
-          const el = document.getElementById(item.id);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPos >= top && scrollPos < top + height) {
-              currentKey = item.key;
-              break;
-            }
+        for (let i = 0; i < sectionPositions.length; i++) {
+          const item = sectionPositions[i];
+          if (scrollPos >= item.top && scrollPos < item.bottom) {
+            currentKey = item.key;
+            break;
           }
         }
 

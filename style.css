@@ -24,9 +24,9 @@
   
   /* Tła i powierzchnie */
   --bg-deep: #07090F;
-  --bg-surface: rgba(13, 17, 27, 0.72);
-  --bg-card: rgba(16, 22, 36, 0.68);
-  --bg-card-hover: rgba(22, 30, 48, 0.88);
+  --bg-surface: rgba(13, 17, 27, 0.82);
+  --bg-card: rgba(16, 22, 36, 0.88);
+  --bg-card-hover: rgba(22, 30, 48, 0.95);
   
   /* Obramowania */
   --border-subtle: rgba(255, 255, 255, 0.08);
@@ -62,8 +62,8 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
   
-  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 0.25s ease;
+  --transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  --transition-normal: 0.2s ease;
 }
 
 *, *::before, *::after {
@@ -104,7 +104,6 @@ body::before {
   pointer-events: none;
   z-index: 0;
   transform: translateZ(0);
-  will-change: transform;
 }
 
 body.menu-open {
@@ -115,10 +114,9 @@ body.menu-open {
 .ambient-orbs-container,
 .bg-ambient-layer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
@@ -129,70 +127,67 @@ body.menu-open {
 .ambient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.6;
+  opacity: 0.85;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
-  will-change: transform;
   animation: floatAmbient 22s ease-in-out infinite alternate;
   contain: layout style paint;
 }
 
 .orb-gold-top {
-  width: 580px;
-  height: 400px;
-  top: -120px;
+  width: 650px;
+  height: 480px;
+  top: -140px;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(245, 208, 97, 0.22) 0%, rgba(212, 175, 55, 0.08) 60%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(245, 208, 97, 0.22) 0%, rgba(212, 175, 55, 0.12) 35%, rgba(212, 175, 55, 0.03) 65%, transparent 75%);
 }
 
 .orb-magenta-right {
-  width: 520px;
-  height: 520px;
-  top: 15%;
-  right: -100px;
-  background: radial-gradient(circle, rgba(225, 29, 142, 0.18) 0%, rgba(211, 0, 197, 0.06) 60%, transparent 80%);
+  width: 580px;
+  height: 580px;
+  top: 12%;
+  right: -120px;
+  background: radial-gradient(circle at center, rgba(225, 29, 142, 0.18) 0%, rgba(211, 0, 197, 0.08) 40%, rgba(211, 0, 197, 0.02) 65%, transparent 75%);
   animation-duration: 24s;
   animation-delay: -5s;
 }
 
 .orb-amber-left {
-  width: 480px;
-  height: 480px;
-  top: 48%;
-  left: -120px;
-  background: radial-gradient(circle, rgba(255, 170, 0, 0.12) 0%, rgba(212, 175, 55, 0.04) 60%, transparent 80%);
+  width: 540px;
+  height: 540px;
+  top: 45%;
+  left: -140px;
+  background: radial-gradient(circle at center, rgba(255, 170, 0, 0.14) 0%, rgba(212, 175, 55, 0.06) 40%, rgba(212, 175, 55, 0.01) 65%, transparent 75%);
   animation-duration: 26s;
   animation-delay: -9s;
 }
 
 .orb-magenta-bottom {
-  width: 550px;
-  height: 450px;
-  bottom: -100px;
-  right: 15%;
-  background: radial-gradient(circle, rgba(225, 29, 142, 0.14) 0%, rgba(125, 10, 94, 0.05) 60%, transparent 80%);
+  width: 600px;
+  height: 500px;
+  bottom: -120px;
+  right: 12%;
+  background: radial-gradient(ellipse at center, rgba(225, 29, 142, 0.15) 0%, rgba(125, 10, 94, 0.06) 40%, rgba(125, 10, 94, 0.01) 65%, transparent 75%);
   animation-duration: 22s;
   animation-delay: -14s;
 }
 
 @keyframes floatAmbient {
-  0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(26px) scale(1.06); }
-  100% { transform: translateY(-20px) scale(0.96); }
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 24px, 0); }
+  100% { transform: translate3d(0, -18px, 0); }
 }
 
 .bg-mesh-texture {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
   background-size: 52px 52px;
-  opacity: 0.65;
-  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 50%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 50%, transparent 100%);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .container {
@@ -309,10 +304,9 @@ button {
   pointer-events: none;
   opacity: 0;
   transform: translateX(0);
-  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
-              width 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.25s ease;
-  will-change: transform, width, opacity;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              width 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.22s ease;
   z-index: 2;
 }
 
@@ -403,10 +397,9 @@ button {
   pointer-events: none;
   opacity: 0;
   transform: translateX(0);
-  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1), 
-              width 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.22s ease;
-  will-change: transform, width, opacity;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+              width 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.2s ease;
   z-index: 1;
 }
 
@@ -761,10 +754,9 @@ button {
   transform: translateX(-50%);
   width: 900px;
   height: 520px;
-  background: radial-gradient(ellipse 65% 55% at 50% 30%, rgba(245, 208, 97, 0.2) 0%, rgba(225, 29, 142, 0.12) 45%, transparent 75%);
+  background: radial-gradient(ellipse 65% 55% at 50% 30%, rgba(245, 208, 97, 0.22) 0%, rgba(225, 29, 142, 0.12) 35%, rgba(225, 29, 142, 0.03) 60%, transparent 72%);
   pointer-events: none;
   z-index: 0;
-  filter: blur(20px);
 }
 
 .hero-inner {
@@ -993,8 +985,6 @@ section {
 .product-card {
   position: relative;
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(212, 175, 55, 0.22);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1253,8 +1243,6 @@ section {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 28px 24px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -1420,8 +1408,6 @@ section {
   border-radius: var(--radius-full);
   margin-bottom: 12px;
   width: fit-content;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .ebay-color-logo {
@@ -1467,12 +1453,10 @@ section {
   display: flex;
   align-items: center;
   gap: 24px;
-  background: rgba(11, 15, 25, 0.6);
+  background: rgba(11, 15, 25, 0.85);
   border: 1px solid rgba(245, 208, 97, 0.22);
   border-radius: var(--radius-md);
   padding: 16px 22px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .ebay-stat-box {
@@ -1776,7 +1760,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(225, 48, 108, 0.12);
+  background: rgba(225, 48, 108, 0.16);
   border: 1px solid rgba(225, 48, 108, 0.35);
   color: #ffa3b8;
   font-size: 0.84rem;
@@ -1785,8 +1769,6 @@ section {
   padding: 6px 18px;
   border-radius: var(--radius-full);
   margin-bottom: 22px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 12px rgba(225, 48, 108, 0.18);
   transition: var(--transition);
 }
@@ -2439,7 +2421,7 @@ section {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(16, 22, 36, 0.85);
+  background: rgba(16, 22, 36, 0.95);
   border: 1px solid rgba(245, 208, 97, 0.45);
   color: var(--letino-gold-light);
   display: flex;
@@ -2451,7 +2433,6 @@ section {
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(212, 175, 55, 0.2);
 }
 
@@ -2588,7 +2569,7 @@ body.lang-fade-out [data-i18n] {
   }
 
   .hero-glow {
-    width: 100vw;
+    width: 100%;
     height: 340px;
     top: -50px;
   }
