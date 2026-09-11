@@ -27,6 +27,11 @@
 </head>
 <body>
 
+  <!-- Subtelny znak wodny z logo firmy w tle -->
+  <div class="bg-brand-watermark" aria-hidden="true">
+    <img src="assets/letino-logo-transparent.png" alt="" class="watermark-img">
+  </div>
+
   <!-- Minimalistyczny Nagłówek -->
   <header class="header">
     <div class="container header-inner">
@@ -73,61 +78,12 @@
   </header>
 
   <main>
-    <!-- STRONA TYTUŁOWA (HERO) -->
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-inner">
-
-        <!-- Karta profilu Instagram z oficjalnym logo -->
-        <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-brand-card" aria-label="Odwiedź profil Letino Outlet na Instagramie">
-          <div class="hero-brand-avatar-wrap">
-            <img src="assets/letino-logo-round.png" alt="Letino Outlet Avatar" class="hero-brand-avatar">
-          </div>
-          <div class="hero-brand-meta">
-            <div class="hero-brand-name">
-              <span>Letino Outlet</span>
-              <span class="hero-live-badge" data-i18n="hero_live_badge"><span class="pulse-dot"></span> DOSTAWA Z AMAZON</span>
-            </div>
-            <span class="hero-brand-sub" data-i18n="hero_brand_sub">@letino.outlet &bull; Zamówienia i kontakt przez DM</span>
-          </div>
-          <span class="hero-brand-arrow" data-i18n="hero_brand_arrow">
-            Napisz DM &rarr;
-          </span>
-        </a>
-
-        <h1 class="hero-title" data-i18n="hero_title">
-          Okazje i Zwroty z Amazon <br>
-          <span class="gradient-text">Najlepsze Ceny</span>
-        </h1>
-
-        <p class="hero-subtitle" data-i18n="hero_subtitle">
-          W <strong>Letino Outlet</strong> oferujemy sprawdzony towar ze zwrotów konsumenckich w ułamku ceny rynkowej. 
-          Zakupy, rezerwacje i bezpośredni kontakt prowadzimy przez nasz profil na Instagramie.
-        </p>
-
-        <div class="hero-cta">
-          <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span data-i18n="hero_cta">Zobacz na Instagramie</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- WYBRANE OKAZJE (4 PRODUKTY) -->
     <section class="products-section">
       <div class="container">
         <div class="section-title-wrap">
           <span class="section-badge" data-i18n="section_badge">OSTATNIA DOSTAWA PALET</span>
-          <h2 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h2>
+          <h1 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h1>
         </div>
 
         <div class="products-grid">
@@ -235,6 +191,56 @@
         </div>
       </div>
     </section>
+
+    <!-- STRONA TYTUŁOWA (HERO) -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+
+        <!-- Karta profilu Instagram z oficjalnym logo -->
+        <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-brand-card" aria-label="Odwiedź profil Letino Outlet na Instagramie">
+          <div class="hero-brand-avatar-wrap">
+            <img src="assets/letino-logo-round.png" alt="Letino Outlet Avatar" class="hero-brand-avatar">
+          </div>
+          <div class="hero-brand-meta">
+            <div class="hero-brand-name">
+              <span>Letino Outlet</span>
+              <span class="hero-live-badge" data-i18n="hero_live_badge"><span class="pulse-dot"></span> DOSTAWA Z AMAZON</span>
+            </div>
+            <span class="hero-brand-sub" data-i18n="hero_brand_sub">@letino.outlet &bull; Zamówienia i kontakt przez DM</span>
+          </div>
+          <span class="hero-brand-arrow" data-i18n="hero_brand_arrow">
+            Napisz DM &rarr;
+          </span>
+        </a>
+
+        <h2 class="hero-title" data-i18n="hero_title">
+          Okazje i Zwroty z Amazon <br>
+          <span class="gradient-text">Najlepsze Ceny</span>
+        </h2>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          W <strong>Letino Outlet</strong> oferujemy sprawdzony towar ze zwrotów konsumenckich w ułamku ceny rynkowej. 
+          Zakupy, rezerwacje i bezpośredni kontakt prowadzimy przez nasz profil na Instagramie.
+        </p>
+
+        <div class="hero-cta">
+          <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span data-i18n="hero_cta">Zobacz na Instagramie</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- STOPKA: SOCIALE I NOTA PRAWNA -->
