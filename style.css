@@ -224,7 +224,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -233,6 +234,7 @@ button {
   gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo-icon-img {
@@ -267,13 +269,17 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
+  flex-shrink: 1;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: clamp(10px, 1.5vw, 22px);
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
@@ -281,8 +287,11 @@ button {
   font-weight: 600;
   color: var(--text-secondary);
   position: relative;
-  padding: 6px 0;
+  padding: 8px 0;
   transition: color var(--transition);
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .nav-link::after {
@@ -291,10 +300,11 @@ button {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 2.5px;
   background: var(--letino-gold-gradient);
   border-radius: var(--radius-full);
-  transition: width 0.25s ease;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  pointer-events: none;
 }
 
 .nav-link:hover,
@@ -307,10 +317,23 @@ button {
   width: 100%;
 }
 
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: var(--letino-gold-gradient);
+  box-shadow: 0 0 12px rgba(245, 208, 97, 0.7), 0 0 4px rgba(225, 29, 142, 0.4);
+}
+
 .header-right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Language Switcher */
@@ -585,10 +608,17 @@ button {
 }
 
 .mobile-nav-link:hover,
-.mobile-nav-link:active {
+.mobile-nav-link:focus-visible {
   color: #fff;
   background: rgba(212, 175, 55, 0.1);
   border-left: 3px solid var(--letino-gold);
+}
+
+.mobile-nav-link.active {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.18) 0%, rgba(225, 29, 142, 0.12) 100%);
+  border-left: 3px solid var(--letino-gold);
+  font-weight: 700;
 }
 
 .mobile-drawer-footer {
@@ -1918,6 +1948,16 @@ body.lang-fade-out [data-i18n] {
 /* ==========================================================================
    RESPONSYWNOŚĆ (MEDIA QUERIES)
    ========================================================================== */
+@media (max-width: 1120px) {
+  .nav-ig-btn {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+
 @media (max-width: 1024px) {
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;

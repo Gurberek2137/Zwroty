@@ -912,4 +912,155 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // =========================================================================
+  // AKTYWNA KRESKA W NAGŁÓWKU & PŁYNNE PRZEJŚCIA (FAQ / KONTAKT / SEKCJE)
+  // =========================================================================
+  function initNavIndicator() {
+    const isFaqPage = window.location.pathname.endsWith('faq.html') || 
+                      window.location.pathname.includes('faq') || 
+                      document.body.getAttribute('data-page') === 'faq' || 
+                      document.querySelector('.faq-page-main') !== null;
+    const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links .mobile-nav-link');
+    const allNavLinks = [...desktopLinks, ...mobileLinks];
+
+    function setActiveKey(key) {
+      allNavLinks.forEach(link => {
+        const href = link.getAttribute('href') || '';
+        let isMatch = false;
+
+        if (key === 'faq') {
+          isMatch = href.includes('faq.html') && !href.includes('#kontakt');
+        } else if (key === 'kontakt') {
+          isMatch = href.endsWith('#kontakt');
+        } else if (key === 'produkty') {
+          isMatch = href.endsWith('#produkty');
+        } else if (key === 'dlaczego-letino') {
+          isMatch = href.endsWith('#dlaczego-letino');
+        } else if (key === 'kategorie') {
+          isMatch = href.endsWith('#kategorie');
+        }
+
+        link.classList.toggle('active', isMatch);
+      });
+    }
+
+    // Kliknięcie w linki nawigacji
+    allNavLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href') || '';
+
+        if (href === '#kontakt' || (isFaqPage && href.endsWith('#kontakt'))) {
+          const targetEl = document.getElementById('kontakt');
+          if (targetEl) {
+            e.preventDefault();
+            setActiveKey('kontakt');
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, '#kontakt');
+            } else {
+              location.hash = '#kontakt';
+            }
+          }
+        } else if (isFaqPage && href.includes('faq.html') && !href.includes('#')) {
+          e.preventDefault();
+          setActiveKey('faq');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (history.pushState) {
+            history.pushState(null, null, window.location.pathname);
+          }
+        } else if (href.startsWith('#')) {
+          const targetId = href.replace('#', '');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            setActiveKey(targetId);
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, '#' + targetId);
+            }
+          }
+        } else if (href.includes('faq.html')) {
+          setActiveKey('faq');
+        }
+      });
+    });
+
+    if (isFaqPage) {
+      // Domyślnie na stronie FAQ kreska jest pod FAQ
+      if (window.location.hash === '#kontakt') {
+        setActiveKey('kontakt');
+        setTimeout(() => {
+          const targetEl = document.getElementById('kontakt');
+          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else {
+        setActiveKey('faq');
+      }
+
+      // Scroll Spy na stronie FAQ (FAQ vs Kontakt)
+      const contactSection = document.getElementById('kontakt');
+
+      if (contactSection) {
+        const checkFaqScroll = () => {
+          const contactRect = contactSection.getBoundingClientRect();
+          if (contactRect.top <= window.innerHeight * 0.45) {
+            setActiveKey('kontakt');
+          } else {
+            setActiveKey('faq');
+          }
+        };
+
+        window.addEventListener('scroll', checkFaqScroll, { passive: true });
+      }
+    } else {
+      // Strona główna (index.html)
+      const currentHash = window.location.hash.replace('#', '');
+      if (['produkty', 'dlaczego-letino', 'kategorie', 'kontakt'].includes(currentHash)) {
+        setActiveKey(currentHash);
+      }
+
+      const trackedSections = [
+        { id: 'produkty', key: 'produkty' },
+        { id: 'dlaczego-letino', key: 'dlaczego-letino' },
+        { id: 'kategorie', key: 'kategorie' },
+        { id: 'kontakt', key: 'kontakt' }
+      ];
+
+      function updateActiveOnScroll() {
+        if (window.scrollY < 200) {
+          allNavLinks.forEach(l => {
+            if (!l.getAttribute('href').includes('faq.html')) {
+              l.classList.remove('active');
+            }
+          });
+          return;
+        }
+
+        const scrollPos = window.scrollY + 200;
+        let currentKey = null;
+
+        for (const item of trackedSections) {
+          const el = document.getElementById(item.id);
+          if (el) {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+              currentKey = item.key;
+              break;
+            }
+          }
+        }
+
+        if (currentKey) {
+          setActiveKey(currentKey);
+        }
+      }
+
+      window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+    }
+  }
+
+  initNavIndicator();
 });

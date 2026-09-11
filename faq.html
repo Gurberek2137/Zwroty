@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji -->
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <link rel="stylesheet" href="style.css?v=2.3">
 
   <!-- Schema.org JSON-LD FAQPage -->
   <script type="application/ld+json">
@@ -96,36 +96,36 @@
       },
       {
         "@type": "Question",
-        "name": "Jak skontaktować się w sprawie produktu lub rezerwacji?",
+        "name": "Jak zarezerwować lub kupić dany produkt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet lub kontakt poprzez platformę eBay / Facebook."
+          "text": "Wystarczy wysłać do nas wiadomość prywatną (DM) na Instagramie @letino.outlet lub skorzystać z naszych ofert na platformie handlowej eBay. Odpowiadamy, potwierdzamy dostępność i ustalamy dogodny sposób realizacji."
         }
       },
       {
         "@type": "Question",
-        "name": "W jaki sposób realizowana jest wysyłka?",
+        "name": "Czy istnieje możliwość odbioru osobistego?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wysyłka realizowana jest bezpieczną przesyłką kurierską lub do paczkomatów, w starannie zabezpieczonych opakowaniach. Szczegóły wysyłki ustalane są bezpośrednio podczas składania zapytania lub zgodnie z zasadami platformy eBay."
+          "text": "Kwestię ewentualnego odbioru osobistego lub szczegółów wysyłki ustalamy indywidualnie podczas kontaktu w wiadomości prywatnej (DM) na Instagramie."
         }
       },
       {
         "@type": "Question",
-        "name": "Czy Letino Outlet jest powiązane z zewnętrznymi korporacjami lub producentami marek?",
+        "name": "Jak zgłosić pytanie, którego nie ma na tej liście?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nie. Serwis Letino Outlet jest w 100% niezależnym sprzedawcą produktów outletowych i nie jest podmiotem zależnym, powiązanym ani sponsorowanym przez producentów oferowanych marek. Wszelkie nazwy handlowe i znaki towarowe zostały użyte wyłącznie w celach informacyjnych."
+          "text": "Napisz bezpośrednio na Instagramie @letino.outlet lub poprzez Messenger na naszym profilu Facebook. Staramy się odpowiadać najszybciej jak to możliwe."
         }
       }
     ]
   }
   </script>
 </head>
-<body data-page="faq">
+<body>
 
-  <!-- Warstwa ambientowa tła -->
-  <div class="bg-ambient-layer" aria-hidden="true">
+  <!-- Ambient Orbs & Background Mesh -->
+  <div class="ambient-orbs-container" aria-hidden="true">
     <div class="ambient-orb orb-gold-top"></div>
     <div class="ambient-orb orb-magenta-right"></div>
     <div class="ambient-orb orb-amber-left"></div>
@@ -144,12 +144,11 @@
       <!-- Główna nawigacja desktopowa -->
       <nav class="desktop-nav" aria-label="Główna nawigacja">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Strona Główna</a></li>
           <li><a href="index.html#produkty" class="nav-link" data-i18n="nav_deals">Okazje</a></li>
           <li><a href="index.html#dlaczego-letino" class="nav-link" data-i18n="nav_why">Dlaczego Letino?</a></li>
           <li><a href="index.html#kategorie" class="nav-link" data-i18n="nav_categories">Kategorie</a></li>
           <li><a href="faq.html" class="nav-link active" data-i18n="nav_faq">FAQ</a></li>
-          <li><a href="index.html#kontakt" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
+          <li><a href="#kontakt" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -240,7 +239,7 @@
         <a href="index.html#dlaczego-letino" class="mobile-nav-link" data-i18n="nav_why">Dlaczego Letino?</a>
         <a href="index.html#kategorie" class="mobile-nav-link" data-i18n="nav_categories">Kategorie</a>
         <a href="faq.html" class="mobile-nav-link active" data-i18n="nav_faq">FAQ</a>
-        <a href="index.html#kontakt" class="mobile-nav-link" data-i18n="nav_contact">Kontakt</a>
+        <a href="#kontakt" class="mobile-nav-link" data-i18n="nav_contact">Kontakt</a>
       </nav>
 
       <div class="mobile-drawer-footer">
@@ -517,6 +516,65 @@
 
       </div>
     </section>
+
+    <!-- SEKCJA: KONTAKT -->
+    <section class="contact-section" id="kontakt">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge" data-i18n="contact_badge">KONTAKT</span>
+          <h2 class="section-heading" data-i18n="contact_heading">Skontaktuj się z nami</h2>
+          <p class="section-subtext" data-i18n="contact_subtext">Odpowiadamy najszybciej na Instagramie i platformach sprzedażowych.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Kanał 1: Instagram -->
+          <div class="contact-card contact-highlight">
+            <div class="contact-icon-wrap ig-gradient-bg">
+              <svg class="ig-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <h3 class="contact-title" data-i18n="contact_ig_title">Instagram (Rekomendowany)</h3>
+            <p class="contact-desc" data-i18n="contact_ig_desc">Napisz do nas w wiadomości prywatnej (DM). Odpowiadamy na pytania o stan, dostępność i rezerwacje.</p>
+            <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="contact-btn ig-btn-link" data-i18n="contact_ig_btn">
+              Napisz na Instagramie &rarr;
+            </a>
+          </div>
+
+          <!-- Kanał 2: Facebook -->
+          <div class="contact-card">
+            <div class="contact-icon-wrap fb-gradient-bg">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </div>
+            <h3 class="contact-title" data-i18n="contact_fb_title">Facebook</h3>
+            <p class="contact-desc" data-i18n="contact_fb_desc">Profil Letino na Facebooku. Możliwość kontaktu poprzez wiadomość Messenger.</p>
+            <a href="https://www.facebook.com/people/Letino/61554488427516/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-btn fb-btn-link" data-i18n="contact_fb_btn">
+              Przejdź do profilu Facebook &rarr;
+            </a>
+          </div>
+
+          <!-- Kanał 3: eBay.de Store -->
+          <div class="contact-card">
+            <div class="contact-icon-wrap ebay-gradient-bg">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <h3 class="contact-title" data-i18n="contact_ebay_title">Sklep eBay.de</h3>
+            <p class="contact-desc" data-i18n="contact_ebay_desc">Bezpośredni zakup z ochroną kupującego oraz opcja kontaktu ze sprzedającym na eBay.</p>
+            <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="contact-btn ebay-btn-link" data-i18n="contact_ebay_btn">
+              Odwiedź sklep na eBay &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- STOPKA STRONY -->
@@ -623,6 +681,6 @@
     </svg>
   </button>
 
-  <script src="script.js?v=2.2"></script>
+  <script src="script.js?v=2.3"></script>
 </body>
 </html>
