@@ -834,13 +834,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // SYSTEM ZMIANY JĘZYKA
   // =========================================================================
-  function setLanguage(lang) {
-    const selectedLang = translations[lang] ? lang : 'pl';
+  function setLanguage(lang, isImmediate = false) {
+    const selectedLang = translations[lang] ? lang : 'de';
     const dict = translations[selectedLang];
 
-    document.body.classList.add('lang-fade-out');
-
-    setTimeout(() => {
+    const applyLanguage = () => {
       document.documentElement.lang = selectedLang;
       const isFaq = document.body.getAttribute('data-page') === 'faq';
       if (isFaq && dict.faq_doc_title) {
@@ -881,9 +879,17 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         localStorage.setItem('letino_lang', selectedLang);
       } catch (e) {}
+    };
 
-      document.body.classList.remove('lang-fade-out');
-    }, 120);
+    if (isImmediate) {
+      applyLanguage();
+    } else {
+      document.body.classList.add('lang-fade-out');
+      setTimeout(() => {
+        applyLanguage();
+        document.body.classList.remove('lang-fade-out');
+      }, 120);
+    }
   }
 
   // =========================================================================
@@ -980,27 +986,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeTile) updateLangGlideTo(activeTile);
   }, { passive: true });
 
-  // Inicjalizacja języka
-  let initialLang = 'pl';
+  // Inicjalizacja języka (domyślny: niemiecki 'de')
+  let initialLang = 'de';
   try {
     const saved = localStorage.getItem('letino_lang');
     if (saved && translations[saved]) {
       initialLang = saved;
-    } else {
-      const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (browserLang.startsWith('de')) {
-        initialLang = 'de';
-      } else if (browserLang.startsWith('en')) {
-        initialLang = 'en';
-      }
     }
   } catch (e) {
-    initialLang = 'pl';
+    initialLang = 'de';
   }
 
-  if (initialLang !== 'pl') {
-    setLanguage(initialLang);
-  }
+  // Natychmiastowe zastosowanie domyślnego języka (bez opóźnienia)
+  setLanguage(initialLang, true);
 
   // =========================================================================
   // MENU MOBILNE (DRAWER)
