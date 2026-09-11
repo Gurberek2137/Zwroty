@@ -377,6 +377,7 @@ button {
 
 /* Language Switcher */
 .lang-switcher {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 3px;
@@ -387,6 +388,26 @@ button {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+}
+
+/* Płynnie sunąca pigułka aktywnego języka (Language Gliding Pill) */
+.lang-indicator-glide {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.35) 0%, rgba(225, 29, 142, 0.28) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.85);
+  box-shadow: 0 2px 14px rgba(212, 175, 55, 0.45), 0 0 12px rgba(225, 29, 142, 0.28);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1), 
+              width 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.22s ease;
+  will-change: transform, width, opacity;
+  z-index: 1;
 }
 
 .lang-tile {
@@ -403,8 +424,10 @@ button {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
+  position: relative;
+  z-index: 2;
 }
 
 .lang-flag-box {
@@ -417,6 +440,7 @@ button {
   justify-content: center;
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .lang-flag-svg {
@@ -427,14 +451,40 @@ button {
 
 .lang-tile:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.06);
+}
+
+.lang-tile:hover .lang-flag-box {
+  border-color: rgba(245, 208, 97, 0.75);
+  transform: scale(1.06);
 }
 
 .lang-tile.active {
   color: #ffffff;
+}
+
+.lang-tile.active .lang-flag-box {
+  border-color: rgba(245, 208, 97, 0.9);
+}
+
+/* Kiedy działa wskaźnik sunący, kafelki nie mają własnych statycznych teł */
+.has-glide-indicator .lang-tile,
+.has-glide-indicator .lang-tile.active {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Fallback gdy JS nie doda wskaźnika */
+.lang-switcher:not(.has-glide-indicator) .lang-tile.active {
+  color: #ffffff;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.32) 0%, rgba(225, 29, 142, 0.28) 100%);
   border-color: rgba(245, 208, 97, 0.85);
   box-shadow: 0 2px 12px rgba(212, 175, 55, 0.4), 0 0 10px rgba(225, 29, 142, 0.25);
+}
+
+.lang-switcher:not(.has-glide-indicator) .lang-tile:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Nav Instagram Button */
@@ -444,9 +494,13 @@ button {
   gap: 8px;
   padding: 5px 12px 5px 7px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: var(--transition);
+  background: rgba(14, 18, 28, 0.7);
+  border: 1px solid var(--border-gold-subtle);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-ig-icon-wrap {
@@ -458,7 +512,9 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(225, 48, 108, 0.35);
+  border: 1px solid rgba(245, 208, 97, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
 }
 
 .nav-ig-icon-wrap .ig-icon {
@@ -480,12 +536,14 @@ button {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: #ff758c;
+  transition: color 0.2s ease;
 }
 
 .nav-ig-handle {
   font-size: 0.82rem;
   font-weight: 700;
   color: #fff;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .nav-ig-arrow {
@@ -495,16 +553,31 @@ button {
   transition: transform 0.25s ease, stroke 0.25s ease;
 }
 
+/* Efekt podświetlenia po najechaniu - spójny ze złotym stylem reszty strony */
 .nav-ig-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 117, 140, 0.45);
-  box-shadow: 0 4px 16px rgba(225, 48, 108, 0.25);
-  transform: translateY(-1px);
+  background: rgba(22, 28, 44, 0.9);
+  border-color: rgba(245, 208, 97, 0.85);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45), 0 0 22px rgba(212, 175, 55, 0.35), 0 0 10px rgba(225, 29, 142, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-ig-btn:hover .nav-ig-tag {
+  color: #ffa3b8;
+}
+
+.nav-ig-btn:hover .nav-ig-handle {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(245, 208, 97, 0.4);
 }
 
 .nav-ig-btn:hover .nav-ig-arrow {
   transform: translateX(3px);
-  stroke: #fff;
+  stroke: var(--letino-gold-light);
+}
+
+.nav-ig-btn:hover .nav-ig-icon-wrap {
+  box-shadow: 0 0 14px rgba(245, 208, 97, 0.5), 0 2px 10px rgba(225, 48, 108, 0.4);
+  border-color: rgba(245, 208, 97, 0.7);
 }
 
 /* Mobile Menu Toggle (Hamburger) */
