@@ -1455,11 +1455,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    let contactTopCached = contactSection ? (contactSection.offsetTop || 0) : 0;
+    function updateFaqContactOffset() {
+      if (contactSection) contactTopCached = contactSection.offsetTop;
+    }
+    if (isFaqPage) {
+      window.addEventListener('resize', updateFaqContactOffset, { passive: true });
+      updateFaqContactOffset();
+    }
+
     return function onNavScrollTick(scrollY) {
       if (isFaqPage) {
         if (contactSection) {
-          const contactRect = contactSection.getBoundingClientRect();
-          if (contactRect.top <= window.innerHeight * 0.45) {
+          if (scrollY + window.innerHeight * 0.45 >= contactTopCached) {
             if (activeKey !== 'kontakt') setActiveKey('kontakt');
           } else {
             if (activeKey !== 'faq') setActiveKey('faq');
@@ -1495,15 +1503,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const onNavScrollTick = initNavIndicator();
 
   let isScrollTicking = false;
-  function handleScrollFrame() {
-    const scrollY = window.scrollY;
+  let lastScrollY = -1;
+  let isBackToTopVisible = false;
 
-    // 1. Widoczność przycisku Back To Top
+  function handleScrollFrame() {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (scrollY === lastScrollY) {
+      isScrollTicking = false;
+      return;
+    }
+    lastScrollY = scrollY;
+
+    // 1. Widoczność przycisku Back To Top (tylko przy zmianie stanu)
     if (backToTopBtn) {
-      if (scrollY > 350) {
-        backToTopBtn.classList.add('is-visible');
-      } else {
-        backToTopBtn.classList.remove('is-visible');
+      const shouldShow = scrollY > 350;
+      if (shouldShow !== isBackToTopVisible) {
+        isBackToTopVisible = shouldShow;
+        backToTopBtn.classList.toggle('is-visible', shouldShow);
       }
     }
 
