@@ -98,12 +98,12 @@
       <!-- Główna nawigacja desktopowa -->
       <nav class="desktop-nav" aria-label="Główna nawigacja">
         <ul class="nav-links">
-          <li><a href="#o-letino" class="nav-link" data-i18n="nav_about">O Letino</a></li>
-          <li><a href="#abc-ware" class="nav-link" data-i18n="nav_abc">ABC Ware</a></li>
+          <li><a href="#instagram-feed" class="nav-link" data-i18n="nav_instagram">Instagram</a></li>
           <li><a href="#produkty" class="nav-link" data-i18n="nav_deals">Okazje</a></li>
+          <li><a href="#abc-ware" class="nav-link" data-i18n="nav_abc">ABC Ware</a></li>
+          <li><a href="#o-letino" class="nav-link" data-i18n="nav_about">O Letino</a></li>
           <li><a href="#kategorie" class="nav-link" data-i18n="nav_categories">Kategorie</a></li>
           <li><a href="#platformy" class="nav-link" data-i18n="nav_platforms">Platformy</a></li>
-          <li><a href="#instagram-feed" class="nav-link" data-i18n="nav_instagram">Instagram</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
           <li><a href="#kontakt" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
         </ul>
@@ -192,12 +192,12 @@
 
       <nav class="mobile-nav-links">
         <a href="#top" class="mobile-nav-link" data-i18n="nav_home">Strona Główna</a>
-        <a href="#o-letino" class="mobile-nav-link" data-i18n="nav_about">O Letino</a>
-        <a href="#abc-ware" class="mobile-nav-link" data-i18n="nav_abc">ABC Ware</a>
+        <a href="#instagram-feed" class="mobile-nav-link" data-i18n="nav_instagram">Instagram</a>
         <a href="#produkty" class="mobile-nav-link" data-i18n="nav_deals">Okazje</a>
+        <a href="#abc-ware" class="mobile-nav-link" data-i18n="nav_abc">ABC Ware</a>
+        <a href="#o-letino" class="mobile-nav-link" data-i18n="nav_about">O Letino</a>
         <a href="#kategorie" class="mobile-nav-link" data-i18n="nav_categories">Kategorie</a>
         <a href="#platformy" class="mobile-nav-link" data-i18n="nav_platforms">Platformy</a>
-        <a href="#instagram-feed" class="mobile-nav-link" data-i18n="nav_instagram">Instagram</a>
         <a href="#faq" class="mobile-nav-link" data-i18n="nav_faq">FAQ</a>
         <a href="#kontakt" class="mobile-nav-link" data-i18n="nav_contact">Kontakt</a>
       </nav>
@@ -271,166 +271,178 @@
       </div>
     </section>
 
-    <!-- SEKCJA: O LETINO -->
-    <section class="about-section" id="o-letino">
+    <!-- SEKCJA: PUBLIKACJE Z INSTAGRAMA (LIVE FEED) -->
+    <section class="ig-feed-section" id="instagram-feed">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="about_badge">POZNAJ NAS</span>
-          <h2 class="section-heading" data-i18n="about_heading">O Letino Outlet</h2>
-          <p class="section-subtext" data-i18n="about_subtext">Uczciwy i transparentny outlet sprawdzonych produktów ze zwrotów i nadwyżek magazynowych.</p>
+          <div class="ig-badge-pill" style="margin: 0 auto 14px; width: fit-content;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@letino.outlet</span>
+          </div>
+          <h2 class="section-heading" data-i18n="ig_feed_heading">Najnowsze Publikacje z Instagrama</h2>
+          <p class="section-subtext" data-i18n="ig_feed_subtext">
+            Codzienne promocje, nowe dostawy i unboxingi. Kliknij dowolny post lub reel, aby przejść bezpośrednio na Instagram.
+          </p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-content">
-            <p class="about-lead" data-i18n="about_lead">
-              <strong>Letino Outlet</strong> to niezależny outlet oferujący oryginalne, markowe produkty w cenach znacznie niższych od regularnych stawek rynkowych.
-            </p>
-            <p class="about-text" data-i18n="about_text_1">
-              Specjalizujemy się w sprzedaży towarów pochodzących ze zwrotów konsumenckich (m.in. ustawowych zwrotów e-commerce) oraz nadwyżek magazynowych i końcówek partii towarowych z rynku europejskiego.
-            </p>
-            <p class="about-text" data-i18n="about_text_2">
-              Sprzedaż outletowa polega na daniu w pełni wartościowym produktom drugiego życia. Każdy egzemplarz trafiający do Letino Outlet przechodzi staranną weryfikację techniczną oraz kontrolę kompletności. Ponieważ towar pochodzi ze zwrotów i nadwyżek, poszczególne sztuki mogą różnić się stanem wizualnym opakowania i sprzętu – od produktów fabrycznie nowych w otwartym kartonie, przez egzemplarze powystawowe, po sprzęt ze śladami użytkowania.
-            </p>
-            <p class="about-text" data-i18n="about_text_3">
-              Dla pełnej przejrzystości stosujemy czytelny standard klasyfikacji <strong>ABC Ware</strong>, dzięki któremu zawsze dokładnie wiesz, w jakim stanie technicznym i wizualnym kupujesz dany przedmiot.
-            </p>
-
-            <div class="about-points">
-              <div class="about-point-card">
-                <div class="about-point-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <div class="about-point-info">
-                  <h4 data-i18n="about_point_1_title">Weryfikacja każdego egzemplarza</h4>
-                  <p data-i18n="about_point_1_desc">Sprawdzamy działanie kluczowych funkcji i kompletność fabrycznego wyposażenia.</p>
-                </div>
-              </div>
-
-              <div class="about-point-card">
-                <div class="about-point-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                </div>
-                <div class="about-point-info">
-                  <h4 data-i18n="about_point_2_title">Transparentne opisy i zdjęcia</h4>
-                  <p data-i18n="about_point_2_desc">Rzetelnie informujemy o stanie wizualnym i ewentualnych mankamentach opakowania.</p>
-                </div>
+        <div class="ig-feed-grid" id="instagramFeedGrid">
+          <!-- Karta 1 -->
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
+            <div class="ig-feed-media">
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" alt="Audio z nowej dostawy" loading="lazy">
+              <div class="ig-feed-type-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
               </div>
             </div>
-          </div>
-
-          <div class="about-media-col">
-            <div class="owner-card-wrap">
-              <!-- Miejsce przygotowane na zdjęcie profilowe właścicielki (wystarczy umieścić plik np. assets/wlascicielka.jpg) -->
-              <div class="owner-photo-slot" id="ownerPhotoSlot">
-                <svg class="owner-placeholder-icon" viewBox="0 0 24 24" width="76" height="76" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
+            <div class="ig-feed-body">
+              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWA DOSTAWA</span>
+              <p class="ig-feed-caption" data-i18n="ig_post_1_cap">Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!</p>
+              <div class="ig-feed-footer">
+                <span data-i18n="ig_view_post">Zobacz post</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </div>
-              <div class="owner-badge" data-i18n="about_owner_badge">Właścicielka Letino Outlet</div>
-              <p class="owner-note" data-i18n="about_owner_note">Osobiście dbam o staranną selekcję, rzetelne testy i bezpieczne zakupy dla każdego klienta.</p>
             </div>
-          </div>
+          </a>
+
+          <!-- Karta 2 -->
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
+            <div class="ig-feed-media">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smartwatche i elektronika" loading="lazy">
+              <div class="ig-feed-type-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="ig-feed-body">
+              <span class="ig-feed-date" data-i18n="ig_post_tag">OKAZJA DNIA</span>
+              <p class="ig-feed-caption" data-i18n="ig_post_2_cap">Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.</p>
+              <div class="ig-feed-footer">
+                <span data-i18n="ig_view_post">Zobacz post</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Karta 3 -->
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
+            <div class="ig-feed-media">
+              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80" alt="AGD i drobny sprzęt domowy" loading="lazy">
+              <div class="ig-feed-type-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="ig-feed-body">
+              <span class="ig-feed-date" data-i18n="ig_post_tag">UNBOXING & TEST</span>
+              <p class="ig-feed-caption" data-i18n="ig_post_3_cap">Testujemy odkurzacze pionowe i roboty sprzątające przed wystawieniem. Pełna sprawność gwarantowana.</p>
+              <div class="ig-feed-footer">
+                <span data-i18n="ig_view_post">Zobacz post</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Karta 4 -->
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
+            <div class="ig-feed-media">
+              <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" alt="Głośniki i akcesoria" loading="lazy">
+              <div class="ig-feed-type-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="ig-feed-body">
+              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWOŚĆ</span>
+              <p class="ig-feed-caption" data-i18n="ig_post_4_cap">Głośniki Bluetooth i akcesoria mobilne w oryginalnych zestawach fabrycznych. Napisz do nas DM!</p>
+              <div class="ig-feed-footer">
+                <span data-i18n="ig_view_post">Zobacz post</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="ig-feed-header-action" style="margin-top: 32px; text-align: center;">
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span data-i18n="ig_banner_btn">Obserwuj profil @letino.outlet</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- SEKCJA: ABC WARE (KLASY JAKOŚCI) -->
-    <section class="abc-section" id="abc-ware">
+    <!-- SEKCJA: DLACZEGO LETINO? -->
+    <section class="features-section" id="dlaczego-letino">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="abc_badge">STANDARD JAKOŚCI</span>
-          <h2 class="section-heading" data-i18n="abc_heading">Klasy Jakości ABC Ware</h2>
-          <p class="section-subtext" data-i18n="abc_subtext">Przejrzysty system klasyfikacji towarów outletowych. U nas zawsze wiesz, co kupujesz.</p>
+          <span class="section-badge" data-i18n="why_badge">NASZE ATUTY</span>
+          <h2 class="section-heading" data-i18n="why_heading">Dlaczego Letino?</h2>
+          <p class="section-subtext" data-i18n="why_subtext">Uczciwe zasady, rzetelna selekcja i sprawdzone źródła towaru.</p>
         </div>
 
-        <div class="abc-grid">
-          <!-- Klasa A -->
-          <div class="abc-card abc-card-a">
-            <div class="abc-badge abc-badge-a" data-i18n="abc_a_badge">Klasa A / A+</div>
-            <h3 class="abc-title" data-i18n="abc_a_title">Stan idealny / Nowy</h3>
-            <p class="abc-desc" data-i18n="abc_a_desc">
-              Sprzęt w 100% sprawny technicznie, w stanie niemal fabrycznym lub nowym. Towary z otwartych kartonów w celu weryfikacji lub z delikatnie naruszonymi w transporcie opakowaniami zewnętrznymi.
+        <div class="features-grid">
+          <!-- Cecha 1: Atrakcyjne ceny -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="why_1_title">Atrakcyjne ceny</h3>
+            <p class="feature-desc" data-i18n="why_1_desc">
+              Realne oszczędności sięgające od kilkudziesięciu procent w stosunku do standardowych cen sklepowych.
             </p>
-            <ul class="abc-list">
-              <li data-i18n="abc_a_f1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                100% sprawności technicznej
-              </li>
-              <li data-i18n="abc_a_f2">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Brak widocznych śladów użytkowania
-              </li>
-              <li data-i18n="abc_a_f3">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Kompletny zestaw akcesoriów
-              </li>
-              <li data-i18n="abc_a_f4">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Oryginalne pudełko (może być otwarte)
-              </li>
-            </ul>
           </div>
 
-          <!-- Klasa B -->
-          <div class="abc-card abc-card-b">
-            <div class="abc-badge abc-badge-b" data-i18n="abc_b_badge">Klasa B</div>
-            <h3 class="abc-title" data-i18n="abc_b_title">Stan bardzo dobry / Powystawowy</h3>
-            <p class="abc-desc" data-i18n="abc_b_desc">
-              Sprzęt w 100% sprawny i przetestowany. Egzemplarze powystawowe lub z krótkich zwrotów konsumenckich. Mogą posiadać drobne ślady kosmetyczne (np. mikro-ryski na obudowie) lub zastępcze opakowanie.
+          <!-- Cecha 2: Sprawdzone produkty -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="why_2_title">Sprawdzone produkty</h3>
+            <p class="feature-desc" data-i18n="why_2_desc">
+              Każdy produkt jest rzetelnie sprawdzany pod kątem działania i stanu wizualnego przed wystawieniem.
             </p>
-            <ul class="abc-list">
-              <li data-i18n="abc_b_f1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                100% sprawności technicznej
-              </li>
-              <li data-i18n="abc_b_f2">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Możliwe drobne ślady wizualne
-              </li>
-              <li data-i18n="abc_b_f3">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Główne akcesoria w zestawie
-              </li>
-              <li data-i18n="abc_b_f4">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Bardzo atrakcyjna cena
-              </li>
-            </ul>
           </div>
 
-          <!-- Klasa C -->
-          <div class="abc-card abc-card-c">
-            <div class="abc-badge abc-badge-c" data-i18n="abc_c_badge">Klasa C</div>
-            <h3 class="abc-title" data-i18n="abc_c_title">Stan z widocznymi śladami / Okazja</h3>
-            <p class="abc-desc" data-i18n="abc_c_desc">
-              Sprzęt sprawny bazowo lub ze wskazaną specyfiką działania, dokładnie opisaną w ofercie. Może posiadać wyraźniejsze ślady eksploatacji, rysy lub brak pojedynczego, niekluczowego akcesorium.
+          <!-- Cecha 3: Znane marki -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="why_3_title">Znane marki</h3>
+            <p class="feature-desc" data-i18n="why_3_desc">
+              Oryginalny sprzęt czołowych producentów elektroniki, urządzeń domowych i akcesoriów.
             </p>
-            <ul class="abc-list">
-              <li data-i18n="abc_c_f1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Przetestowane działanie
-              </li>
-              <li data-i18n="abc_c_f2">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Wyraźniejsze ślady kosmetyczne
-              </li>
-              <li data-i18n="abc_c_f3">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Dokładnie wyszczególniony stan
-              </li>
-              <li data-i18n="abc_c_f4">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Maksymalna obniżka ceny
-              </li>
-            </ul>
+          </div>
+
+          <!-- Cecha 4: Regularnie nowe okazje -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="why_4_title">Regularnie nowe okazje</h3>
+            <p class="feature-desc" data-i18n="why_4_desc">
+              Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.
+            </p>
           </div>
         </div>
       </div>
@@ -579,137 +591,166 @@
       </div>
     </section>
 
-    <!-- SEKCJA: DLACZEGO LETINO? -->
-    <section class="features-section" id="dlaczego-letino">
+    <!-- SEKCJA: ABC WARE (KLASY JAKOŚCI) -->
+    <section class="abc-section" id="abc-ware">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="why_badge">NASZE ATUTY</span>
-          <h2 class="section-heading" data-i18n="why_heading">Dlaczego Letino?</h2>
-          <p class="section-subtext" data-i18n="why_subtext">Uczciwe zasady, rzetelna selekcja i sprawdzone źródła towaru.</p>
+          <span class="section-badge" data-i18n="abc_badge">STANDARD JAKOŚCI</span>
+          <h2 class="section-heading" data-i18n="abc_heading">Klasy Jakości ABC Ware</h2>
+          <p class="section-subtext" data-i18n="abc_subtext">Przejrzysty system klasyfikacji towarów outletowych. U nas zawsze wiesz, co kupujesz.</p>
         </div>
 
-        <div class="features-grid">
-          <!-- Cecha 1: Atrakcyjne ceny -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <h3 class="feature-title" data-i18n="why_1_title">Atrakcyjne ceny</h3>
-            <p class="feature-desc" data-i18n="why_1_desc">
-              Realne oszczędności sięgające od kilkudziesięciu procent w stosunku do standardowych cen sklepowych.
+        <div class="abc-grid">
+          <!-- Klasa A -->
+          <div class="abc-card abc-card-a">
+            <div class="abc-badge abc-badge-a" data-i18n="abc_a_badge">Klasa A / A+</div>
+            <h3 class="abc-title" data-i18n="abc_a_title">Stan idealny / Nowy</h3>
+            <p class="abc-desc" data-i18n="abc_a_desc">
+              Sprzęt w 100% sprawny technicznie, w stanie niemal fabrycznym lub nowym. Towary z otwartych kartonów w celu weryfikacji lub z delikatnie naruszonymi w transporcie opakowaniami zewnętrznymi.
             </p>
+            <ul class="abc-list">
+              <li data-i18n="abc_a_f1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                100% sprawności technicznej
+              </li>
+              <li data-i18n="abc_a_f2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Brak widocznych śladów użytkowania
+              </li>
+              <li data-i18n="abc_a_f3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Kompletny zestaw akcesoriów
+              </li>
+              <li data-i18n="abc_a_f4">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Oryginalne pudełko (może być otwarte)
+              </li>
+            </ul>
           </div>
 
-          <!-- Cecha 2: Sprawdzone produkty -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-            </div>
-            <h3 class="feature-title" data-i18n="why_2_title">Sprawdzone produkty</h3>
-            <p class="feature-desc" data-i18n="why_2_desc">
-              Każdy produkt jest rzetelnie sprawdzany pod kątem działania i stanu wizualnego przed wystawieniem.
+          <!-- Klasa B -->
+          <div class="abc-card abc-card-b">
+            <div class="abc-badge abc-badge-b" data-i18n="abc_b_badge">Klasa B</div>
+            <h3 class="abc-title" data-i18n="abc_b_title">Stan bardzo dobry / Powystawowy</h3>
+            <p class="abc-desc" data-i18n="abc_b_desc">
+              Sprzęt w 100% sprawny i przetestowany. Egzemplarze powystawowe lub z krótkich zwrotów konsumenckich. Mogą posiadać drobne ślady kosmetyczne (np. mikro-ryski na obudowie) lub zastępcze opakowanie.
             </p>
+            <ul class="abc-list">
+              <li data-i18n="abc_b_f1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                100% sprawności technicznej
+              </li>
+              <li data-i18n="abc_b_f2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Możliwe drobne ślady wizualne
+              </li>
+              <li data-i18n="abc_b_f3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Główne akcesoria w zestawie
+              </li>
+              <li data-i18n="abc_b_f4">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Bardzo atrakcyjna cena
+              </li>
+            </ul>
           </div>
 
-          <!-- Cecha 3: Znane marki -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="feature-title" data-i18n="why_3_title">Znane marki</h3>
-            <p class="feature-desc" data-i18n="why_3_desc">
-              Oryginalny sprzęt czołowych producentów elektroniki, urządzeń domowych i akcesoriów.
+          <!-- Klasa C -->
+          <div class="abc-card abc-card-c">
+            <div class="abc-badge abc-badge-c" data-i18n="abc_c_badge">Klasa C</div>
+            <h3 class="abc-title" data-i18n="abc_c_title">Stan z widocznymi śladami / Okazja</h3>
+            <p class="abc-desc" data-i18n="abc_c_desc">
+              Sprzęt sprawny bazowo lub ze wskazaną specyfiką działania, dokładnie opisaną w ofercie. Może posiadać wyraźniejsze ślady eksploatacji, rysy lub brak pojedynczego, niekluczowego akcesorium.
             </p>
-          </div>
-
-          <!-- Cecha 4: Regularnie nowe okazje -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <h3 class="feature-title" data-i18n="why_4_title">Regularnie nowe okazje</h3>
-            <p class="feature-desc" data-i18n="why_4_desc">
-              Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.
-            </p>
+            <ul class="abc-list">
+              <li data-i18n="abc_c_f1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Przetestowane działanie
+              </li>
+              <li data-i18n="abc_c_f2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Wyraźniejsze ślady kosmetyczne
+              </li>
+              <li data-i18n="abc_c_f3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dokładnie wyszczególniony stan
+              </li>
+              <li data-i18n="abc_c_f4">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Maksymalna obniżka ceny
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SEKCJA: NAJWIĘKSZE PLATFORMY SPRZEDAŻOWE -->
-    <section class="ebay-proof-section" id="platformy" aria-label="Największe platformy sprzedażowe">
+    <!-- SEKCJA: O LETINO -->
+    <section class="about-section" id="o-letino">
       <div class="container">
-        <div class="ebay-proof-card">
-          <div class="ebay-proof-grid">
-            
-            <!-- Lewa kolumna: Tytuł i odznaka -->
-            <div class="ebay-proof-info">
-              <div class="ebay-badge-pill">
-                <span class="ebay-color-logo" aria-hidden="true">
-                  <span class="eb-e">e</span><span class="eb-b">b</span><span class="eb-a">a</span><span class="eb-y">y</span>
-                </span>
-                <span class="ebay-badge-text" data-i18n="platforms_badge">ZWERYFIKOWANY PROFIL</span>
-              </div>
-              <h2 class="ebay-proof-title" data-i18n="platforms_title">Największe platformy sprzedażowe</h2>
-              <p class="ebay-proof-subtext" data-i18n="platforms_subtext">
-                Sprawdź nasz oficjalny sklep na platformie eBay oraz rzeczywiste opinie i zadowolenie kupujących.
-              </p>
-            </div>
+        <div class="section-title-wrap">
+          <span class="section-badge" data-i18n="about_badge">POZNAJ NAS</span>
+          <h2 class="section-heading" data-i18n="about_heading">O Letino Outlet</h2>
+          <p class="section-subtext" data-i18n="about_subtext">Uczciwy i transparentny outlet sprawdzonych produktów ze zwrotów i nadwyżek magazynowych.</p>
+        </div>
 
-            <!-- Środkowa kolumna: Statystyki -->
-            <div class="ebay-stats-group">
-              <!-- Stat 1: Oceny -->
-              <div class="ebay-stat-box">
-                <div class="ebay-stat-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-lead" data-i18n="about_lead">
+              <strong>Letino Outlet</strong> to niezależny outlet oferujący oryginalne, markowe produkty w cenach znacznie niższych od regularnych stawek rynkowych.
+            </p>
+            <p class="about-text" data-i18n="about_text_1">
+              Specjalizujemy się w sprzedaży towarów pochodzących ze zwrotów konsumenckich (m.in. ustawowych zwrotów e-commerce) oraz nadwyżek magazynowych i końcówek partii towarowych z rynku europejskiego.
+            </p>
+            <p class="about-text" data-i18n="about_text_2">
+              Sprzedaż outletowa polega na daniu w pełni wartościowym produktom drugiego życia. Każdy egzemplarz trafiający do Letino Outlet przechodzi staranną weryfikację techniczną oraz kontrolę kompletności. Ponieważ towar pochodzi ze zwrotów i nadwyżek, poszczególne sztuki mogą różnić się stanem wizualnym opakowania i sprzętu – od produktów fabrycznie nowych w otwartym kartonie, przez egzemplarze powystawowe, po sprzęt ze śladami użytkowania.
+            </p>
+            <p class="about-text" data-i18n="about_text_3">
+              Dla pełnej przejrzystości stosujemy czytelny standard klasyfikacji <strong>ABC Ware</strong>, dzięki któremu zawsze dokładnie wiesz, w jakim stanie technicznym i wizualnym kupujesz dany przedmiot.
+            </p>
+
+            <div class="about-points">
+              <div class="about-point-card">
+                <div class="about-point-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
                   </svg>
                 </div>
-                <div class="ebay-stat-data">
-                  <div class="ebay-stat-val" data-i18n="ebay_stat_score">99,3%</div>
-                  <div class="ebay-stat-label" data-i18n="ebay_stat_score_label">pozytywnych ocen</div>
+                <div class="about-point-info">
+                  <h4 data-i18n="about_point_1_title">Weryfikacja każdego egzemplarza</h4>
+                  <p data-i18n="about_point_1_desc">Sprawdzamy działanie kluczowych funkcji i kompletność fabrycznego wyposażenia.</p>
                 </div>
               </div>
 
-              <div class="ebay-stats-divider" aria-hidden="true"></div>
-
-              <!-- Stat 2: Sprzedaż -->
-              <div class="ebay-stat-box">
-                <div class="ebay-stat-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+              <div class="about-point-card">
+                <div class="about-point-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
                 </div>
-                <div class="ebay-stat-data">
-                  <div class="ebay-stat-val" data-i18n="ebay_stat_sales">1300+</div>
-                  <div class="ebay-stat-label" data-i18n="ebay_stat_sales_label">sprzedanych produktów</div>
+                <div class="about-point-info">
+                  <h4 data-i18n="about_point_2_title">Transparentne opisy i zdjęcia</h4>
+                  <p data-i18n="about_point_2_desc">Rzetelnie informujemy o stanie wizualnym i ewentualnych mankamentach opakowania.</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Prawa kolumna: CTA i uwaga -->
-            <div class="ebay-proof-action-col">
-              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="btn btn-ebay-action">
-                <span data-i18n="ebay_proof_btn">Zobacz sklep na eBay &rarr;</span>
-              </a>
-              <span class="ebay-proof-disclaimer" data-i18n="ebay_proof_disclaimer">
-                * Dane ze sklepu eBay mogą ulegać bieżącym zmianom.
-              </span>
+          <div class="about-media-col">
+            <div class="owner-card-wrap">
+              <!-- Miejsce przygotowane na zdjęcie profilowe właścicielki (wystarczy umieścić plik np. assets/wlascicielka.jpg) -->
+              <div class="owner-photo-slot" id="ownerPhotoSlot">
+                <svg class="owner-placeholder-icon" viewBox="0 0 24 24" width="76" height="76" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="owner-badge" data-i18n="about_owner_badge">Właścicielka Letino Outlet</div>
+              <p class="owner-note" data-i18n="about_owner_note">Osobiście dbam o staranną selekcję, rzetelne testy i bezpieczne zakupy dla każdego klienta.</p>
             </div>
-
           </div>
         </div>
       </div>
@@ -818,111 +859,70 @@
       </div>
     </section>
 
-    <!-- SEKCJA: PUBLIKACJE Z INSTAGRAMA (LIVE FEED) -->
-    <section class="ig-feed-section" id="instagram-feed">
+    <!-- SEKCJA: NAJWIĘKSZE PLATFORMY SPRZEDAŻOWE -->
+    <section class="ebay-proof-section" id="platformy" aria-label="Największe platformy sprzedażowe">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="ig-badge-pill" style="margin: 0 auto 14px; width: fit-content;">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>@letino.outlet</span>
+        <div class="ebay-proof-card">
+          <div class="ebay-proof-grid">
+            
+            <!-- Lewa kolumna: Tytuł i odznaka -->
+            <div class="ebay-proof-info">
+              <div class="ebay-badge-pill">
+                <span class="ebay-color-logo" aria-hidden="true">
+                  <span class="eb-e">e</span><span class="eb-b">b</span><span class="eb-a">a</span><span class="eb-y">y</span>
+                </span>
+                <span class="ebay-badge-text" data-i18n="platforms_badge">ZWERYFIKOWANY PROFIL</span>
+              </div>
+              <h2 class="ebay-proof-title" data-i18n="platforms_title">Największe platformy sprzedażowe</h2>
+              <p class="ebay-proof-subtext" data-i18n="platforms_subtext">
+                Sprawdź nasz oficjalny sklep na platformie eBay oraz rzeczywiste opinie i zadowolenie kupujących.
+              </p>
+            </div>
+
+            <!-- Środkowa kolumna: Statystyki -->
+            <div class="ebay-stats-group">
+              <!-- Stat 1: Oceny -->
+              <div class="ebay-stat-box">
+                <div class="ebay-stat-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="ebay-stat-data">
+                  <div class="ebay-stat-val" data-i18n="ebay_stat_score">99,3%</div>
+                  <div class="ebay-stat-label" data-i18n="ebay_stat_score_label">pozytywnych ocen</div>
+                </div>
+              </div>
+
+              <div class="ebay-stats-divider" aria-hidden="true"></div>
+
+              <!-- Stat 2: Sprzedaż -->
+              <div class="ebay-stat-box">
+                <div class="ebay-stat-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <div class="ebay-stat-data">
+                  <div class="ebay-stat-val" data-i18n="ebay_stat_sales">1300+</div>
+                  <div class="ebay-stat-label" data-i18n="ebay_stat_sales_label">sprzedanych produktów</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prawa kolumna: CTA i uwaga -->
+            <div class="ebay-proof-action-col">
+              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="btn btn-ebay-action">
+                <span data-i18n="ebay_proof_btn">Zobacz sklep na eBay &rarr;</span>
+              </a>
+              <span class="ebay-proof-disclaimer" data-i18n="ebay_proof_disclaimer">
+                * Dane ze sklepu eBay mogą ulegać bieżącym zmianom.
+              </span>
+            </div>
+
           </div>
-          <h2 class="section-heading" data-i18n="ig_feed_heading">Najnowsze Publikacje z Instagrama</h2>
-          <p class="section-subtext" data-i18n="ig_feed_subtext">
-            Codzienne promocje, nowe dostawy i unboxingi. Kliknij dowolny post lub reel, aby przejść bezpośrednio na Instagram.
-          </p>
-        </div>
-
-        <div class="ig-feed-grid" id="instagramFeedGrid">
-          <!-- Karta 1 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" alt="Audio z nowej dostawy" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWA DOSTAWA</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_1_cap">Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- Karta 2 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smartwatche i elektronika" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">OKAZJA DNIA</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_2_cap">Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- Karta 3 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80" alt="AGD i drobny sprzęt domowy" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">UNBOXING & TEST</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_3_cap">Testujemy odkurzacze pionowe i roboty sprzątające przed wystawieniem. Pełna sprawność gwarantowana.</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- Karta 4 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" alt="Głośniki i akcesoria" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWOŚĆ</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_4_cap">Głośniki Bluetooth i akcesoria mobilne w oryginalnych zestawach fabrycznych. Napisz do nas DM!</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="ig-feed-header-action" style="margin-top: 32px; text-align: center;">
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span data-i18n="ig_banner_btn">Obserwuj profil @letino.outlet</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
         </div>
       </div>
     </section>

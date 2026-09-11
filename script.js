@@ -1420,12 +1420,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactSection = document.getElementById('kontakt');
     const trackedSections = [
-      { id: 'o-letino', key: 'o-letino' },
-      { id: 'abc-ware', key: 'abc-ware' },
+      { id: 'instagram-feed', key: 'instagram-feed' },
+      { id: 'dlaczego-letino', key: 'dlaczego-letino' },
       { id: 'produkty', key: 'produkty' },
+      { id: 'abc-ware', key: 'abc-ware' },
+      { id: 'o-letino', key: 'o-letino' },
       { id: 'kategorie', key: 'kategorie' },
       { id: 'platformy', key: 'platformy' },
-      { id: 'instagram-feed', key: 'instagram-feed' },
       { id: 'faq', key: 'faq' },
       { id: 'kontakt', key: 'kontakt' }
     ];
