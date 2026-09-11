@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'PYTANIA I ODPOWIEDZI',
-      faq_heading: 'Najczęściej zadawane pytania',
+      faq_heading: 'Pytania i Odpowiedzi (FAQ)',
       faq_subtext: 'Praktyczne informacje o pochodzeniu sprzętu i realizacji zakupów.',
       faq_q1: 'Czy produkty są nowe?',
       faq_a1: 'W ofercie Letino Outlet znajdują się towary ze zwrotów konsumenckich oraz nadwyżek magazynowych. Część produktów to egzemplarze w otwartych lub uszkodzonych opakowaniach, a część to urządzenia powystawowe lub ze zwrotów. Dokładny stan wizualny każdego oferowanego przedmiotu jest zawsze rzetelnie podany w opisie.',
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       crumb_home: "Strona Główna",
       crumb_faq: "FAQ",
       faq_page_badge: "CENTRUM POMOCY & FAQ",
-      faq_page_title: "Najczęściej Zadawane <br><span class=\"gradient-text\">Pytania i Odpowiedzi</span>",
+      faq_page_title: "Centrum Pomocy <br><span class=\"gradient-text\">Pytania i Odpowiedzi (FAQ)</span>",
       faq_page_subtitle: "Wszystko, co warto wiedzieć o produktach, weryfikacji stanu technicznego, rezerwacjach oraz realizacji zamówień w Letino Outlet.",
       faq_tab_all: "Wszystkie",
       faq_tab_products: "Produkty i stan",
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_cta_desc: "Napisz do nas w wiadomości prywatnej (DM) na Instagramie @letino.outlet. Chętnie doradzimy i odpowiemy na wszelkie pytania o sprzęt!",
       faq_cta_btn: "Napisz na Instagramie &rarr;",
       faq_cta_home: "Wróć do strony głównej",
-      faq_doc_title: "FAQ – Najczęściej Zadawane Pytania | Letino Outlet",
+      faq_doc_title: "FAQ – Pytania i Odpowiedzi | Letino Outlet",
       faq_doc_desc: "Odpowiedzi na pytania dotyczące pochodzenia sprzętu, weryfikacji stanu technicznego, zakupu oraz wysyłki w Letino Outlet.",
     },
 
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'QUESTIONS & ANSWERS',
-      faq_heading: 'Frequently Asked Questions',
+      faq_heading: 'Questions & Answers (FAQ)',
       faq_subtext: 'Practical answers about stock origin and buying process.',
       faq_q1: 'Are the products brand new?',
       faq_a1: 'Letino Outlet offers goods from customer returns and warehouse overstocks. Some items are in opened or distressed boxes, while others are demo/display units. Exact cosmetic grade is always stated transparently.',
@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
       crumb_home: "Home",
       crumb_faq: "FAQ",
       faq_page_badge: "HELP CENTER & FAQ",
-      faq_page_title: "Frequently Asked <br><span class=\"gradient-text\">Questions & Answers</span>",
+      faq_page_title: "Help Center <br><span class=\"gradient-text\">Questions & Answers (FAQ)</span>",
       faq_page_subtitle: "Everything you need to know about products, condition checks, reservations, and order fulfillment at Letino Outlet.",
       faq_tab_all: "All",
       faq_tab_products: "Products & Condition",
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_cta_desc: "Send us a Direct Message (DM) on Instagram @letino.outlet. We are happy to help and answer any questions!",
       faq_cta_btn: "Message on Instagram &rarr;",
       faq_cta_home: "Return to Homepage",
-      faq_doc_title: "FAQ – Frequently Asked Questions | Letino Outlet",
+      faq_doc_title: "FAQ – Questions & Answers | Letino Outlet",
       faq_doc_desc: "Answers to questions regarding item provenance, technical condition verification, purchasing, and shipping at Letino Outlet.",
     },
 
@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'FRAGEN & ANTWORTEN',
-      faq_heading: 'Häufig gestellte Fragen',
+      faq_heading: 'Fragen & Antworten (FAQ)',
       faq_subtext: 'Wissenswertes über Herkunft und Kaufabwicklung bei Letino Outlet.',
       faq_q1: 'Sind die Produkte neu?',
       faq_a1: 'Bei Letino Outlet finden Sie Waren aus Kundenretouren und Restposten. Manche Produkte sind in geöffneter Verpackung, andere Vorführgeräte. Der genaue Zustand wird stets transparent deklariert.',
@@ -578,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
       crumb_home: "Startseite",
       crumb_faq: "FAQ",
       faq_page_badge: "HILFE-CENTER & FAQ",
-      faq_page_title: "Häufig gestellte <br><span class=\"gradient-text\">Fragen & Antworten</span>",
+      faq_page_title: "Hilfe-Center <br><span class=\"gradient-text\">Fragen & Antworten (FAQ)</span>",
       faq_page_subtitle: "Alles Wissenswerte über Produkte, Zustandsprüfung, Reservierungen und Bestellabwicklung bei Letino Outlet.",
       faq_tab_all: "Alle",
       faq_tab_products: "Produkte & Zustand",
@@ -623,7 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_cta_desc: "Schreiben Sie uns per Direktnachricht (DM) auf Instagram @letino.outlet. Wir beraten Sie gerne persönlich!",
       faq_cta_btn: "Auf Instagram schreiben &rarr;",
       faq_cta_home: "Zur Startseite zurückkehren",
-      faq_doc_title: "FAQ – Häufig gestellte Fragen | Letino Outlet",
+      faq_doc_title: "FAQ – Fragen & Antworten | Letino Outlet",
       faq_doc_desc: "Antworten auf Fragen zu Produktherkunft, Zustandsprüfung, Bestellung und Versand bei Letino Outlet.",
     }
   };
