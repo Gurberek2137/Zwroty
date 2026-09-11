@@ -89,6 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
       why_4_title: 'Regularnie nowe okazje',
       why_4_desc: 'Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.',
 
+      // Social Proof z eBay
+      ebay_proof_badge: 'ZWERYFIKOWANY PROFIL',
+      ebay_proof_title: 'Sprawdź nas również na eBay',
+      ebay_proof_subtext: 'Rzeczywiste opinie i zadowolenie kupujących w naszym oficjalnym sklepie.',
+      ebay_stat_score: '99,3%',
+      ebay_stat_score_label: 'pozytywnych ocen',
+      ebay_stat_sales: '1300+',
+      ebay_stat_sales_label: 'sprzedanych produktów',
+      ebay_proof_btn: 'Zobacz sklep na eBay &rarr;',
+      ebay_proof_disclaimer: '* Dane ze sklepu eBay mogą ulegać bieżącym zmianom.',
+
       // Jak to działa?
       how_badge: 'PROSTY PROCES',
       how_heading: 'Jak to działa?',
@@ -292,6 +303,17 @@ document.addEventListener('DOMContentLoaded', () => {
       why_4_title: 'Regular New Drops',
       why_4_desc: 'Frequently updated stock and unique single items at competitive prices.',
 
+      // eBay Social Proof
+      ebay_proof_badge: 'VERIFIED STORE',
+      ebay_proof_title: 'Find us on eBay as well',
+      ebay_proof_subtext: 'Real customer feedback and verified buyer satisfaction on our official store.',
+      ebay_stat_score: '99.3%',
+      ebay_stat_score_label: 'positive feedback',
+      ebay_stat_sales: '1,300+',
+      ebay_stat_sales_label: 'items sold',
+      ebay_proof_btn: 'Visit eBay store &rarr;',
+      ebay_proof_disclaimer: '* eBay store ratings and stats may vary over time.',
+
       // How It Works
       how_badge: 'SIMPLE PROCESS',
       how_heading: 'How It Works',
@@ -494,6 +516,17 @@ document.addEventListener('DOMContentLoaded', () => {
       why_3_desc: 'Originalware renommierter Hersteller von Elektronik und Haushaltsgeräten.',
       why_4_title: 'Regelmäßig neue Drops',
       why_4_desc: 'Regelmäßig wechselndes Sortiment und seltene Einzelstücke zu attraktiven Preisen.',
+
+      // eBay Social Proof
+      ebay_proof_badge: 'VERIFIZIERTES VERKÄUFERPROFIL',
+      ebay_proof_title: 'Besuchen Sie uns auch auf eBay',
+      ebay_proof_subtext: 'Transparente Bewertungen und verifizierte Kundenzufriedenheit in unserem offiziellen Shop.',
+      ebay_stat_score: '99,3%',
+      ebay_stat_score_label: 'positive Bewertungen',
+      ebay_stat_sales: '1.300+',
+      ebay_stat_sales_label: 'verkaufte Artikel',
+      ebay_proof_btn: 'eBay-Shop ansehen &rarr;',
+      ebay_proof_disclaimer: '* Daten basieren auf dem eBay-Verkäuferprofil und können sich laufend ändern.',
 
       // Wie funktioniert es?
       how_badge: 'EINFACHER ABLAUF',
