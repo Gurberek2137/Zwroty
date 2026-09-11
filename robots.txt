@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://letino-outlet.pl/sitemap.xml

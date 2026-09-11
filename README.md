@@ -1,15 +1,58 @@
-# Letino Outlet – Landing Page
+# 🛒 Letino Outlet – Witryna Handlowa & Showroom Online
 
-## ✨ Funkcje
+Nowoczesna, lekka i w pełni responsywna strona internetowa dla marki **Letino Outlet** – resellera zweryfikowanych towarów ze zwrotów konsumenckich oraz nadwyżek magazynowych z czołowych europejskich platform handlowych.
 
-- **Czysty kod** – lekki projekt w czystym HTML, CSS i JavaScript (brak ciężkich frameworków i zbędnych zależności).
-- **Wielojęzyczność** – dynamiczna obsługa języka polskiego, angielskiego oraz niemieckiego (PL / EN / DE).
-- **Responsywność (RWD)** – dopracowany układ na telefony komórkowe, tablety i ekrany komputerowe.
-- **Kanały sprzedaży** – bezpośrednie odnośniki do profilu Instagram (@letino.outlet) oraz sklepu eBay.
+---
 
-## 📁 Struktura projektu
+### 🎯 Główne sekcje strony:
+1. **Hero**:
+   - Branding **Letino Outlet** (logo i sygnet).
+   - Mocny nagłówek: *„Markowe produkty. Ceny, które robią różnicę.”*
+   - Rzetelny opis pochodzenia towaru.
+   - Główne Call to Action: *„Zobacz aktualne okazje”* (bezpośrednie przekierowanie do profilu na Instagramie).
+2. **Aktualne Okazje (Karty Produktów)**:
+   - Wybrane egzemplarze (Sony WH-1000XM5, Apple Watch Series 9, Dyson V11, JBL Charge 5).
+   - Weryfikacja stanu technicznego i wizualnego (*Nowy / Otwarty karton*, *Klasa A+*).
+   - Informacja o kompletności zestawu akcesoriów.
+   - Porównanie cen regularnych z ofertą Letino Outlet oraz kalkulacja oszczędności.
+   - Bezpośredni zakup na eBay oraz zapytanie na Instagramie.
+3. **Dlaczego Letino?**:
+   - 4 konkretne atuty biznesowe: *Atrakcyjne ceny*, *Sprawdzone produkty*, *Znane marki*, *Regularnie nowe okazje*.
+4. **Jak to działa?**:
+   - 4-krokowy transparentny proces:
+     - `01 — Pozyskujemy produkty`
+     - `02 — Weryfikujemy`
+     - `03 — Publikujemy okazje`
+     - `04 — Kupujesz`
+5. **Kategorie Produktów**:
+   - Audio, Elektronika, AGD, Akcesoria, Inne.
+6. **Instagram CTA**:
+   - Dedykowana sekcja wspierająca główny kanał sprzedaży i prezentacji nowości (@letino.outlet).
+7. **FAQ (Akordeon)**:
+   - Najczęściej zadawane pytania dotyczące stanu urządzeń, testowania, pochodzenia i zakupu.
+8. **Kontakt**:
+   - Oficjalne kanały: Instagram Direct (@letino.outlet), Facebook oraz oficjalny sklep eBay.de.
+9. **Stopka & Nota Prawna**:
+   - Szybka nawigacja i kanały społecznościowe.
+   - Nota prawna o niezależności od marki Amazon.
+   - Okno modalne z wzorem Polityki Prywatności i Regulaminu Serwisu.
+   - Przycisk powrotu na górę strony.
 
-- `index.html` – struktura strony i prezentacja ofert
-- `style.css` – style, system kolorów i zaawansowana responsywność
-- `script.js` – przełączanie języków i konfiguracja linków
-- `assets/` – logotypy, sygnet i ikony
+---
+
+### 🌐 Wielojęzyczność (i18n):
+Strona posiada wbudowany silnik obsługujący 3 języki:
+- 🇵🇱 **Polski (PL)** – domyślny
+- 🇬🇧 **English (EN)**
+- 🇩🇪 **Deutsch (DE)**
+
+Wybór języka jest natychmiastowy, nie wymaga przeładowania strony i jest zapamiętywany w `localStorage`.
+
+---
+
+### 🔍 SEO & Optymalizacja:
+- Poprawna hierarchia nagłówków H1 / H2 / H3.
+- Pełne znaczniki Open Graph i Twitter Card.
+- Dane strukturalne Schema.org JSON-LD (`Store` / `Organization`).
+- Pliki `robots.txt` oraz `sitemap.xml` z obsługą hreflang.
+- Lekki kod bez zewnętrznych ciężkich bibliotek, zoptymalizowany pod kątem Core Web Vitals.
