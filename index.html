@@ -27,9 +27,13 @@
 </head>
 <body>
 
-  <!-- Subtelny znak wodny z logo firmy w tle -->
-  <div class="bg-brand-watermark" aria-hidden="true">
-    <img src="assets/letino-logo-transparent.png" alt="" class="watermark-img">
+  <!-- Ambientne warstwy oświetlenia bazujące na oficjalnych barwach z logo Letino Outlet (ciepłe złoto i fuksja/magenta) -->
+  <div class="bg-ambient-layer" aria-hidden="true">
+    <div class="ambient-orb orb-gold-top"></div>
+    <div class="ambient-orb orb-magenta-right"></div>
+    <div class="ambient-orb orb-amber-left"></div>
+    <div class="ambient-orb orb-magenta-bottom"></div>
+    <div class="bg-mesh-texture"></div>
   </div>
 
   <!-- Minimalistyczny Nagłówek -->
@@ -41,18 +45,37 @@
       </a>
 
       <div class="header-right">
-        <!-- 3 klikalne kafelki zmiany języka -->
-        <div class="lang-switcher" role="group" aria-label="Wybór języka / Language selection">
-          <button type="button" class="lang-tile active" data-lang="pl" title="Polski" aria-pressed="true">
-            <span class="lang-flag">🇵🇱</span>
+        <!-- Nowoczesny, dopracowany panel wyboru języka z wektorowymi flagami SVG -->
+        <div class="lang-switcher" role="radiogroup" aria-label="Wybór języka / Language selection">
+          <button type="button" class="lang-tile active" data-lang="pl" title="Polski" aria-label="Język Polski" role="radio" aria-checked="true">
+            <span class="lang-flag-box">
+              <svg class="lang-flag-svg" viewBox="0 0 640 480" width="20" height="20" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="640" height="240" fill="#FFFFFF"/>
+                <rect y="240" width="640" height="240" fill="#DC143C"/>
+              </svg>
+            </span>
             <span class="lang-code">PL</span>
           </button>
-          <button type="button" class="lang-tile" data-lang="en" title="English" aria-pressed="false">
-            <span class="lang-flag">🇬🇧</span>
+          <button type="button" class="lang-tile" data-lang="en" title="English" aria-label="English language" role="radio" aria-checked="false">
+            <span class="lang-flag-box">
+              <svg class="lang-flag-svg" viewBox="0 0 640 480" width="20" height="20" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <path fill="#012169" d="M0 0h640v480H0z"/>
+                <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                <path fill="#C8102E" d="m424 288 216 159v33h-44L380 318l44-30zM640 0v10L456 148l44 32L640 70V0zM196 192 0 47V0h40l200 148-44 44zm-16 96L0 410v70h20l200-149-40-43z"/>
+                <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                <path fill="#C8102E" d="M267 0v480h106V0H267zM0 187v106h640V187H0z"/>
+              </svg>
+            </span>
             <span class="lang-code">EN</span>
           </button>
-          <button type="button" class="lang-tile" data-lang="de" title="Deutsch" aria-pressed="false">
-            <span class="lang-flag">🇩🇪</span>
+          <button type="button" class="lang-tile" data-lang="de" title="Deutsch" aria-label="Deutsche Sprache" role="radio" aria-checked="false">
+            <span class="lang-flag-box">
+              <svg class="lang-flag-svg" viewBox="0 0 640 480" width="20" height="20" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="640" height="160" fill="#000000"/>
+                <rect y="160" width="640" height="160" fill="#DD0000"/>
+                <rect y="320" width="640" height="160" fill="#FFCE00"/>
+              </svg>
+            </span>
             <span class="lang-code">DE</span>
           </button>
         </div>
@@ -78,12 +101,61 @@
   </header>
 
   <main>
+    <!-- STRONA TYTUŁOWA (HERO) -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+
+        <!-- Karta profilu Instagram z oficjalnym logo -->
+        <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-brand-card" aria-label="Odwiedź profil Letino Outlet na Instagramie">
+          <div class="hero-brand-avatar-wrap">
+            <img src="assets/letino-logo-round.png" alt="Letino Outlet Avatar" class="hero-brand-avatar">
+          </div>
+          <div class="hero-brand-meta">
+            <div class="hero-brand-name">
+              <span>Letino Outlet</span>
+              <span class="hero-live-badge" data-i18n="hero_live_badge"><span class="pulse-dot"></span> DOSTAWA Z AMAZON</span>
+            </div>
+            <span class="hero-brand-sub" data-i18n="hero_brand_sub">@letino.outlet &bull; Zamówienia i kontakt przez DM</span>
+          </div>
+          <span class="hero-brand-arrow" data-i18n="hero_brand_arrow">
+            Napisz DM &rarr;
+          </span>
+        </a>
+
+        <h1 class="hero-title" data-i18n="hero_title">
+          Okazje i Zwroty z Amazon <br>
+          <span class="gradient-text">Najlepsze Ceny</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          W <strong>Letino Outlet</strong> oferujemy sprawdzony towar ze zwrotów konsumenckich w ułamku ceny rynkowej. 
+          Zakupy, rezerwacje i bezpośredni kontakt prowadzimy przez nasz profil na Instagramie.
+        </p>
+
+        <div class="hero-cta">
+          <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span data-i18n="hero_cta">Zobacz na Instagramie</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- WYBRANE OKAZJE (4 PRODUKTY) -->
     <section class="products-section">
       <div class="container">
         <div class="section-title-wrap">
           <span class="section-badge" data-i18n="section_badge">OSTATNIA DOSTAWA PALET</span>
-          <h1 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h1>
+          <h2 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h2>
         </div>
 
         <div class="products-grid">
@@ -191,56 +263,6 @@
         </div>
       </div>
     </section>
-
-    <!-- STRONA TYTUŁOWA (HERO) -->
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-inner">
-
-        <!-- Karta profilu Instagram z oficjalnym logo -->
-        <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-brand-card" aria-label="Odwiedź profil Letino Outlet na Instagramie">
-          <div class="hero-brand-avatar-wrap">
-            <img src="assets/letino-logo-round.png" alt="Letino Outlet Avatar" class="hero-brand-avatar">
-          </div>
-          <div class="hero-brand-meta">
-            <div class="hero-brand-name">
-              <span>Letino Outlet</span>
-              <span class="hero-live-badge" data-i18n="hero_live_badge"><span class="pulse-dot"></span> DOSTAWA Z AMAZON</span>
-            </div>
-            <span class="hero-brand-sub" data-i18n="hero_brand_sub">@letino.outlet &bull; Zamówienia i kontakt przez DM</span>
-          </div>
-          <span class="hero-brand-arrow" data-i18n="hero_brand_arrow">
-            Napisz DM &rarr;
-          </span>
-        </a>
-
-        <h2 class="hero-title" data-i18n="hero_title">
-          Okazje i Zwroty z Amazon <br>
-          <span class="gradient-text">Najlepsze Ceny</span>
-        </h2>
-
-        <p class="hero-subtitle" data-i18n="hero_subtitle">
-          W <strong>Letino Outlet</strong> oferujemy sprawdzony towar ze zwrotów konsumenckich w ułamku ceny rynkowej. 
-          Zakupy, rezerwacje i bezpośredni kontakt prowadzimy przez nasz profil na Instagramie.
-        </p>
-
-        <div class="hero-cta">
-          <a href="https://www.instagram.com/letino.outlet?igsh=dW1zdHdwbDJkbzJr&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span data-i18n="hero_cta">Zobacz na Instagramie</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- STOPKA: SOCIALE I NOTA PRAWNA -->
