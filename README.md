@@ -1,116 +1,164 @@
-# 🛒 Letino Outlet – Witryna Handlowa & Showroom Online (v3.0)
+# Letino Outlet
 
-Nowoczesna, lekka i w pełni responsywna strona internetowa marki **Letino Outlet** – niezależnego sprzedawcy oferującego markowe produkty z nadwyżek magazynowych, końcówek serii oraz zwrotów konsumenckich w atrakcyjnych cenach.
-
----
-
-## 📌 Czym jest Letino Outlet?
-**Letino Outlet** to niezależna marka handlowa zajmująca się selekcją i sprzedażą sprawdzonych towarów pochodzących z nadwyżek magazynowych, wyprzedaży zapasów oraz zwrotów konsumenckich z rynku europejskiego. W ofercie znajdują się produkty znanych światowych marek (m.in. sprzęt audio, elektronika użytkowa, małe AGD oraz akcesoria) w cenach znacznie niższych od standardowych cen rynkowych.
+Nowoczesna, lekka i w pełni responsywna witryna handlowa oraz showroom online marki **Letino Outlet** – niezależnego sprzedawcy oferującego sprawdzone produkty ze zwrotów konsumenckich, nadwyżek magazynowych oraz końcówek serii z rynku europejskiego.
 
 ---
 
-## 🎯 Cel strony
-Witryna pełni rolę oficjalnej wizytówki oraz showroomu online marki Letino Outlet:
-- Przedstawia profil działalności, zasady weryfikacji sprzętu oraz korzyści dla kupujących.
-- Prezentuje przykładowy asortyment oraz orientacyjny poziom oszczędności.
-- Buduje zaufanie i wiarygodność poprzez potwierdzone statystyki sprzedaży i opinie (Social Proof).
-- Prowadzi bezpośrednio do głównych kanałów sprzedaży oraz bezpośredniego kontaktu z klientem: profilu na **Instagramie** (@letino.outlet) oraz oficjalnego **sklepu eBay**.
+### Opis projektu
+
+Witryna pełni rolę oficjalnej wizytówki oraz showroomu online:
+* Prezentuje profil działalności, zasady weryfikacji sprzętu oraz korzyści dla kupujących.
+* Przedstawia przykładowy asortyment wraz z orientacyjnym poziomem oszczędności względem cen rynkowych.
+* Buduje wiarygodność poprzez potwierdzone statystyki sprzedaży (Social Proof z platformy eBay: 99,3% pozytywnych ocen, 1300+ zamówień).
+* Prowadzi bezpośrednio do głównych kanałów komunikacji i sprzedaży: profilu na **Instagramie** (`@letino.outlet`), profilu **Facebook** oraz oficjalnego **sklepu eBay**.
+* Zawiera wielojęzyczny silnik w czasie rzeczywistym (PL / EN / DE) oraz dedykowaną podstronę pytań i odpowiedzi (`faq.html`).
 
 ---
 
-## 🚀 Główne funkcje serwisu
-1. **Sekcja Hero**:
-   - Nowoczesny nagłówek z sygnetem marki i hasłem przewodnim: *„Markowe produkty. Ceny, które robią różnicę.”*
-   - Transparentna informacja o pochodzeniu produktów.
-   - Główne przyciski Call to Action (przejście do Instagrama i przeglądania oferty).
-2. **Karty Przykładowych Produktów**:
-   - Prezentacja reprezentatywnych modeli (m.in. słuchawki z ANC, smartwatche, odkurzacze pionowe, głośniki Bluetooth).
-   - Oznaczenia stanu technicznego (np. *„Nowy / Otwarty karton”*, *„Klasa A+”*) oraz kompletności zestawu.
-   - Porównanie cen rynkowych z cenami outletowymi wraz z wyliczonym poziomem oszczędności.
-   - Szybkie zapytanie o dostępność przez Instagram Direct Message.
-3. **Nasze Atuty („Dlaczego Letino?”)**:
-   - 4 kluczowe filary: *Atrakcyjne ceny*, *Sprawdzone produkty*, *Znane marki*, *Regularnie nowe okazje*.
-4. **Social Proof z eBay**:
-   - Dedykowana sekcja budująca zaufanie oparta o rzeczywiste dane ze sklepu eBay: **99,3% pozytywnych ocen** oraz **1300+ sprzedanych produktów**.
-   - Bezpośredni link do profilu sprzedawcy na eBay.de z informacją o dynamicznym charakterze statystyk.
-5. **Kategorie Produktów**:
-   - Przejrzysty podział asortymentu: *Audio*, *Elektronika*, *AGD*, *Akcesoria*, *Inne*.
-6. **Dedykowany Baner Instagram**:
-   - Promocja głównego kanału premier i szybkich zakupów (@letino.outlet).
-7. **Centrum Pomocy & FAQ**:
-   - Sekcja pytań i odpowiedzi na stronie głównej w formie akordeonu.
-   - Rozbudowana dedykowana podstrona `faq.html` z podziałem tematycznym na zakładki (*Produkty i stan*, *Zakup i rezerwacje*, *Wysyłka i realizacja*, *Bezpieczeństwo i kontakt*) oraz danymi strukturalnymi Schema.org `FAQPage`.
-8. **Kanały Kontaktu & Informacje Prawne**:
-   - Bezpośrednie odnośniki do Instagrama, profilu na Facebooku oraz sklepu na eBay.de.
-   - Modal z wzorem Polityki Prywatności i Regulaminu Serwisu.
-   - Transparentna nota prawna o niezależności marki.
-9. **Płynna Nawigacja & Wskaźniki Wizualne**:
-   - Pływające wskaźniki (gliding indicator pills) dla aktywnej sekcji menu oraz przełącznika językowego w nagłówku.
+### Technologie
+
+W projekcie wykorzystano wyłącznie technologie natywne (Vanilla Web Stack), eliminując zbędne narzuty frameworków i podatności zewnętrznych zależności:
+
+* **HTML5**: Semantyczna struktura dokumentu, WAI-ARIA, metadane Open Graph, Twitter Cards oraz Schema.org JSON-LD (`Store`, `FAQPage`).
+* **CSS3 (Vanilla CSS)**: Custom Properties (zmienne CSS), Flexbox, CSS Grid, efekty szklane (glassmorphism), animacje akcentów świetlnych oraz pełna responsywność (Mobile-First).
+* **JavaScript (Vanilla JS ES6+)**: Lekki, natywny silnik bez bibliotek zewnętrznych (zero runtime dependencies) – obsługa wielojęzyczności (i18n), gliding indicators, szuflady mobilnej, modali i akordeonu FAQ.
+* **Wektorowa grafika SVG**: Skalowalne ikony systemowe i flagi osadzone bezpośrednio w kodzie.
 
 ---
 
-## 🌐 Wersje językowe (PL / EN / DE)
-Strona posiada zintegrowany mechanizm wielojęzyczności w czasie rzeczywistym:
-- 🇵🇱 **Polski (PL)** – domyślny język serwisu.
-- 🇬🇧 **English (EN)** – pełna wersja angielska.
-- 🇩🇪 **Deutsch (DE)** – naturalnie brzmiąca, dostosowana wersja niemiecka.
+### Struktura projektu
 
-Wybór języka odbywa się natychmiastowo bez konieczności przeładowywania strony, a preferencja użytkownika jest zapamiętywana w przeglądarce (`localStorage`).
-
----
-
-## 📱 Responsywność (RWD)
-Projekt został przygotowany z zachowaniem zasad **Mobile-First**:
-- Pełna czytelność i optymalizacja na smartfonach, tabletach i komputerach stacjonarnych.
-- Dedykowane, lekkie menu mobilne z blokadą przewijania tła (scroll lock) i zoptymalizowanymi strefami dotykowymi.
-- Brak niepożądanego przewijania poziomego (overflow-x protection).
-
----
-
-## 🏷️ Prezentacja przykładowych produktów & Informacja o cenach
-> [!IMPORTANT]
-> Ze względu na specyfikę outletu oraz dużą dynamikę rotacji towaru, wszelkie produkty, specyfikacje i ceny widoczne na stronie mają **charakter przykładowy i poglądowy**. Służą one zilustrowaniu profilu oferty i orientacyjnego poziomu oszczędności. Aktualnie dostępne pojedyncze sztuki publikowane są na bieżąco na profilu Instagram oraz na platformie eBay.
-
----
-
-## 📸 Integracja z Instagramem
-Profil **[@letino.outlet](https://www.instagram.com/letino.outlet/)** stanowi główny kanał komunikacji marki:
-- Codzienne relacje z dostaw i prezentacje stanu konkretnych egzemplarzy.
-- Bezpośredni kontakt i składanie zamówień poprzez wiadomości prywatne (DM).
+```text
+Zwroty/
+├── assets/                          # Zasoby graficzne i brandingowe
+│   ├── letino-logo-banner.png       # Oficjalne logo w formacie poziomym
+│   ├── letino-logo-round.png        # Okrągły sygnet marki (ikona)
+│   └── letino-logo-transparent.png  # Logo z przezroczystym tłem (watermark)
+├── .env.example                     # Szablon zmiennych środowiskowych z wytycznymi bezpieczeństwa
+├── .gitignore                       # Zabezpieczenie przed wyciekiem sekretów, plików .env, kluczy i logów
+├── _headers                         # Konfiguracja nagłówków bezpieczeństwa (Cloudflare Pages / Netlify)
+├── faq.html                         # Dedykowana podstrona FAQ z filtrowaniem i danymi Schema.org
+├── favicon.ico                      # Wielorozdzielcza ikona serwisu wygenerowana z oficjalnego logo
+├── index.html                       # Strona główna serwisu (Hero, Katalog, Social Proof, Kontakt)
+├── README.md                        # Dokumentacja techniczna projektu
+├── robots.txt                       # Reguły indeksowania dla wyszukiwarek
+├── script.js                        # Główna logika frontendowa, słowniki i18n oraz interakcje UI
+├── sitemap.xml                      # Mapa witryny z wersjami językowymi (hreflang)
+└── style.css                        # Zunifikowany arkusz stylów v3.0 (Dark Slate & Gold Amber)
+```
 
 ---
 
-## 🛒 Oficjalny sklep eBay
-Letino Outlet prowadzi również sprzedaż na platformie eBay:
-- **Bezpośredni link do sklepu:** [https://www.ebay.de/str/letinooutlet](https://www.ebay.de/str/letinooutlet)
-- Zakupy objęte oficjalną ochroną kupujących (eBay Buyer Protection).
-- Zweryfikowane wskaźniki: **99,3% pozytywnych ocen** oraz **1300+ sprzedanych produktów**.
+### Instalacja
 
----
+Projekt jest aplikacją statyczną typu **zero-build** i nie wymaga instalowania żadnych zewnętrznych paczek ani zależności runtime.
 
-## 💻 Wykorzystane technologie
-- **HTML5**: Semantyczna, dostępna struktura dokumentu (WAI-ARIA, znaczniki SEO).
-- **CSS3 (Vanilla CSS)**: Zmienne CSS (Custom Properties), układ Flexbox i CSS Grid, zaawansowane efekty glassmorphism, gradienty oraz złote akcenty stylistyczne v3.0.
-- **JavaScript (Vanilla JS ES6+)**: Lekki, natywny kod bez zewnętrznych bibliotek (React, jQuery itp.) – zarządzanie stanem języków, mobilnym menu, animacją gliding pills i akordeonem FAQ.
-- **SVG**: Skalowalna grafika wektorowa dla wszystkich ikon systemowych.
-- **Schema.org & Open Graph**: Dane strukturalne JSON-LD (`Store`, `Organization`, `FAQPage`) dla lepszej indeksacji w wyszukiwarkach.
-
----
-
-## 🛠️ Sposób uruchomienia lokalnie
-Projekt nie wymaga instalowania dodatkowych zależności ani procesu budowania (zero-build project).
-
-Możesz uruchomić go na kilka sposobów:
-1. **Bezpośrednio w przeglądarce**:
-   - Otwórz plik `index.html` w dowolnej nowoczesnej przeglądarce internetowej (Chrome, Firefox, Edge, Safari).
-2. **Za pomocą rozszerzenia Live Server (VS Code)**:
-   - Kliknij prawym przyciskiem myszy na plik `index.html` i wybierz opcję **„Open with Live Server”**.
-3. **Za pomocą Node.js (`npx serve`)**:
+Aby rozpocząć pracę z kodem:
+1. Sklonuj repozytorium na dysk lokalny:
    ```bash
-   npx serve .
+   git clone https://github.com/Gurberek2137/Zwroty.git
+   cd Zwroty
    ```
-4. **Za pomocą Pythona**:
-   ```bash
-   python -m http.server 8000
-   ```
-   Następnie przejdź w przeglądarce pod adres `http://localhost:8000`.
+2. Projekt jest natychmiast gotowy do uruchomienia – nie wymaga uruchamiania `npm install`.
+
+---
+
+### Uruchomienie lokalne
+
+Serwis można uruchomić lokalnie za pomocą dowolnego serwera statycznego lub bezpośrednio w przeglądarce:
+
+#### Opcja 1: Wbudowany serwer Python
+```bash
+python -m http.server 8080
+```
+Następnie otwórz w przeglądarce adres: `http://localhost:8080`
+
+#### Opcja 2: Node.js (npx serve)
+```bash
+npx serve .
+```
+
+#### Opcja 3: Rozszerzenie Live Server (VS Code)
+Kliknij prawym przyciskiem myszy na plik `index.html` i wybierz opcję **„Open with Live Server”**.
+
+#### Opcja 4: Bezpośrednie otwarcie
+Plik `index.html` można również otworzyć bezpośrednio w przeglądarce (dwuklik).
+
+---
+
+### Environment Variables
+
+Projekt jest w 100% statyczną aplikacją frontendową działającą po stronie przeglądarki klienta. Wszystkie zasoby i skrypty JavaScript są publicznie dostępne dla użytkowników.
+
+* W repozytorium znajduje się plik wzorcowy [`.env.example`](file:///c:/Users/Dawid%20Cudak/Desktop/Agata%20-%20Outlet/Zwroty/.env.example).
+* **NIGDY nie umieszczaj w plikach środowiskowych ani w kodzie frontendowym żadnych prywatnych kluczy API, haseł, tokenów dostępowych ani sekretów backendowych.**
+* Prawdziwe pliki `.env` oraz `.env.*` są zablokowane i ignorowane przez `.gitignore`.
+
+Przykładowa zawartość `.env.example`:
+```env
+# URL produkcyjny serwisu (opcjonalny parametr dla narzędzi CI/CD lub hostingu)
+SITE_URL=https://letino-outlet.pl
+
+# Identyfikatory narzędzi analitycznych (jeśli zostaną wdrożone w przyszłości przez właściciela)
+# GA_MEASUREMENT_ID=
+# META_PIXEL_ID=
+```
+
+---
+
+### Build
+
+Dzięki wykorzystaniu czystych technologii webowych (Vanilla HTML5 / CSS3 / ES6+) aplikacja **nie wymaga procesu kompilacji ani bundlera** (brak Webpacka, Vite czy Rollupa).
+
+* Kod źródłowy jest jednocześnie kodem produkcyjnym gotowym do dystrybucji.
+* Opcjonalnie przed wdrożeniem można zastosować minifikację plików CSS/JS, jednak pliki są już zoptymalizowane pod kątem wydajności (czas renderowania 60fps, płynne transitions, cache busters `?v=3.0`).
+
+---
+
+### Deployment
+
+Serwis może zostać wdrożony na dowolnym hostingu statycznym lub serwerze WWW:
+
+1. **Cloudflare Pages / Netlify**:
+   * Podłącz repozytorium Git.
+   * Katalog publikacji: katalog główny (`.`).
+   * Brak komendy builda (pozostaw puste).
+   * Plik [`_headers`](file:///c:/Users/Dawid%20Cudak/Desktop/Agata%20-%20Outlet/Zwroty/_headers) automatycznie zaaplikuje nagłówki bezpieczeństwa.
+2. **GitHub Pages**:
+   * Przejdź do *Settings -> Pages* w repozytorium GitHub.
+   * Wybierz gałąź `main` oraz katalog `/ (root)`.
+3. **Nginx / Apache**:
+   * Skopiuj wszystkie pliki projektu do katalogu webroot serwera (np. `/var/www/html/letino-outlet`).
+   * Skonfiguruj nagłówki bezpieczeństwa zgodnie z wytycznymi w sekcji *Security*.
+
+---
+
+### Security
+
+W ramach audytu bezpieczeństwa przed wdrożeniem produkcyjnym zrealizowano:
+
+* **Brak sekretów**: Zweryfikowano całą historię repozytorium Git (wszystkie commity i obiekty packfile) – w projekcie nie ma hardcoded credentials, tokenów ani kluczy API.
+* **Ochrona repozytorium (.gitignore)**: Plik `.gitignore` został skonfigurowany pod kątem blokowania plików `.env*`, kluczy prywatnych (`*.pem`, `*.key`), certyfikatów, logów oraz katalogów narzędziowych (`node_modules/`, `.cache/`).
+* **Bezpieczeństwo frontendu**:
+  * Wszystkie linki zewnętrzne otwierające nowe karty posiadają atrybuty `target="_blank" rel="noopener noreferrer"`, co chroni przed atakami typu Reverse Tabnabbing.
+  * Brak niebezpiecznych manipulacji DOM bazujących na danych wejściowych użytkownika – brak podatności na DOM XSS.
+  * Brak elementów `iframe` oraz formularzy gromadzących dane wrażliwe (transakcje realizowane są bezpośrednio na platformie handlowej eBay lub przez Instagram DM).
+  * Dodano atrybut `<meta name="referrer" content="strict-origin-when-cross-origin">`.
+* **Rekomendowane nagłówki bezpieczeństwa (Security Headers)**:
+  W pliku [`_headers`](file:///c:/Users/Dawid%20Cudak/Desktop/Agata%20-%20Outlet/Zwroty/_headers) zdefiniowano gotowy zestaw reguł:
+  * `Content-Security-Policy`: Restrykcyjna polityka dopuszczająca wyłącznie zasoby własne oraz oficjalne fonty Google (`fonts.googleapis.com`, `fonts.gstatic.com`).
+  * `X-Frame-Options: DENY`: Ochrona przed Clickjackingiem.
+  * `X-Content-Type-Options: nosniff`: Ochrona przed atakami MIME-sniffing.
+  * `Referrer-Policy: strict-origin-when-cross-origin`: Ochrona prywatności użytkowników przy przekierowaniach.
+  * `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`: Blokada niepotrzebnych uprawnień sprzętowych przeglądarki.
+
+---
+
+### Status
+
+* **Status projektu**: **Production Ready (Gotowy do wdrożenia)**
+* Przeprowadzono kompleksowy audyt bezpieczeństwa.
+* Wyeliminowano rozbieżności w kanonicznych adresach URL w `faq.html`.
+* Wygenerowano wielorozdzielczą ikonę serwisu `favicon.ico`.
+* Zweryfikowano poprawność składni JavaScript i poprawność danych strukturalnych Schema.org JSON-LD.
+* Wygląd, kolorystyka, layout i zachowanie zaakceptowane przez właścicielkę pozostały w 100% nienaruszone.

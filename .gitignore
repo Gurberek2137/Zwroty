@@ -1,8 +1,39 @@
-# OS & IDE
+# OS & System
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# IDE & Edytory
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
 
-# Logs
+# Środowisko i sekrety (krytyczne dla bezpieczeństwa)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_rsa.pub
+
+# Logi i diagnostyka
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Narzędzia developerskie, cache i ewentualne artefakty builda
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.temp/
+.tmp/
+
