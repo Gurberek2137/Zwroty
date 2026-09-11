@@ -670,12 +670,49 @@ document.addEventListener('DOMContentLoaded', () => {
         tile.tabIndex = isActive ? 0 : -1;
       });
 
+      const activeTile = document.querySelector(`.lang-tile[data-lang="${selectedLang}"]`);
+      if (activeTile) {
+        updateLangGlideTo(activeTile);
+      }
+
       try {
         localStorage.setItem('letino_lang', selectedLang);
       } catch (e) {}
 
       document.body.classList.remove('lang-fade-out');
     }, 120);
+  }
+
+  // =========================================================================
+  // PŁYNNIE SUNĄCY WSKAŹNIK WYBORU JĘZYKA (LANGUAGE GLIDING PILL)
+  // =========================================================================
+  const langSwitcher = document.querySelector('.lang-switcher');
+  let langGlidePill = document.querySelector('.lang-indicator-glide');
+  if (langSwitcher && !langGlidePill) {
+    langGlidePill = document.createElement('span');
+    langGlidePill.className = 'lang-indicator-glide';
+    langGlidePill.setAttribute('aria-hidden', 'true');
+    langSwitcher.appendChild(langGlidePill);
+  }
+  if (langSwitcher) {
+    langSwitcher.classList.add('has-glide-indicator');
+  }
+
+  function updateLangGlideTo(tileElement) {
+    if (!langGlidePill || !langSwitcher || !tileElement) {
+      if (langGlidePill) langGlidePill.style.opacity = '0';
+      return;
+    }
+    const switcherRect = langSwitcher.getBoundingClientRect();
+    const tileRect = tileElement.getBoundingClientRect();
+    if (switcherRect.width === 0 || tileRect.width === 0) return;
+
+    const left = tileRect.left - switcherRect.left;
+    const width = tileRect.width;
+
+    langGlidePill.style.transform = `translateX(${left}px)`;
+    langGlidePill.style.width = `${width}px`;
+    langGlidePill.style.opacity = '1';
   }
 
   // Obsługa kafelków językowych
@@ -686,6 +723,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const lang = tile.getAttribute('data-lang');
       setLanguage(lang);
       tile.focus();
+    });
+
+    // Płynne podążanie pigułki za kursorem myszy (hover preview)
+    tile.addEventListener('mouseenter', () => {
+      updateLangGlideTo(tile);
     });
 
     tile.addEventListener('keydown', (e) => {
@@ -706,6 +748,34 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Płynny powrót do aktualnie aktywnego języka po zjechaniu kursora
+  if (langSwitcher) {
+    langSwitcher.addEventListener('mouseleave', () => {
+      const currentActive = document.querySelector('.lang-tile.active');
+      if (currentActive) {
+        updateLangGlideTo(currentActive);
+      }
+    });
+  }
+
+  // Inicjalizacja pozycji pigułki po wyrenderowaniu strony i fontów
+  requestAnimationFrame(() => {
+    const activeTile = document.querySelector('.lang-tile.active') || langTiles[0];
+    if (activeTile) updateLangGlideTo(activeTile);
+  });
+
+  if (document.fonts) {
+    document.fonts.ready.then(() => {
+      const activeTile = document.querySelector('.lang-tile.active') || langTiles[0];
+      if (activeTile) updateLangGlideTo(activeTile);
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    const activeTile = document.querySelector('.lang-tile.active');
+    if (activeTile) updateLangGlideTo(activeTile);
+  }, { passive: true });
 
   // Inicjalizacja języka
   let initialLang = 'pl';
