@@ -17,21 +17,15 @@ Nowoczesna, lekka i w pełni responsywna strona internetowa dla marki **Letino O
    - Bezpośrednie zapytanie o dostępność przez Instagram DM.
 3. **Dlaczego Letino?**:
    - 4 konkretne atuty: *Atrakcyjne ceny*, *Sprawdzone produkty*, *Znane marki*, *Regularnie nowe okazje*.
-4. **Jak to działa?**:
-   - 4-krokowy transparentny proces:
-     - `01 — Pozyskujemy produkty`
-     - `02 — Weryfikujemy`
-     - `03 — Publikujemy okazje`
-     - `04 — Kupujesz`
-5. **Kategorie Produktów**:
+4. **Kategorie Produktów**:
    - Audio, Elektronika, AGD, Akcesoria, Inne.
-6. **Instagram CTA**:
+5. **Instagram CTA**:
    - Dedykowana sekcja wspierająca główny kanał sprzedaży i prezentacji nowości (@letino.outlet).
-7. **FAQ (Akordeon)**:
+6. **FAQ (Akordeon)**:
    - Najczęściej zadawane pytania dotyczące stanu urządzeń, testowania, pochodzenia i zakupu.
-8. **Kontakt**:
+7. **Kontakt**:
    - Kanały kontaktu: Instagram Direct (@letino.outlet), Facebook oraz sklep eBay.de.
-9. **Stopka & Nota Prawna**:
+8. **Stopka & Nota Prawna**:
    - Szybka nawigacja i profile społecznościowe.
    - Nota prawna o pełnej niezależności od podmiotów trzecich i właścicieli znaków towarowych.
    - Okno modalne z wzorem Polityki Prywatności i Regulaminu Serwisu.
