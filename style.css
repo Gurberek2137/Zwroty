@@ -81,14 +81,6 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--bg-deep);
-  background-image: 
-    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(212, 175, 55, 0.17) 0%, transparent 72%),
-    radial-gradient(circle 750px at 88% 22%, rgba(225, 29, 142, 0.11) 0%, transparent 68%),
-    radial-gradient(circle 650px at 12% 48%, rgba(245, 208, 97, 0.08) 0%, transparent 65%),
-    radial-gradient(circle 800px at 85% 78%, rgba(225, 29, 142, 0.09) 0%, transparent 68%),
-    radial-gradient(circle 700px at 50% 100%, rgba(212, 175, 55, 0.07) 0%, transparent 75%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -99,11 +91,28 @@ body {
   overflow-x: hidden;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(212, 175, 55, 0.17) 0%, transparent 72%),
+    radial-gradient(circle 750px at 88% 22%, rgba(225, 29, 142, 0.11) 0%, transparent 68%),
+    radial-gradient(circle 650px at 12% 48%, rgba(245, 208, 97, 0.08) 0%, transparent 65%),
+    radial-gradient(circle 800px at 85% 78%, rgba(225, 29, 142, 0.09) 0%, transparent 68%),
+    radial-gradient(circle 700px at 50% 100%, rgba(212, 175, 55, 0.07) 0%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 body.menu-open {
   overflow: hidden;
 }
 
 /* Wielowarstwowa poświata ambientowa bazująca na logo Letino */
+.ambient-orbs-container,
 .bg-ambient-layer {
   position: fixed;
   top: 0;
@@ -113,16 +122,20 @@ body.menu-open {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  contain: strict;
+  transform: translateZ(0);
 }
 
 .ambient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(95px);
-  opacity: 0.65;
+  filter: blur(60px);
+  opacity: 0.6;
   pointer-events: none;
-  will-change: transform, opacity;
-  animation: floatAmbient 20s ease-in-out infinite alternate;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  animation: floatAmbient 22s ease-in-out infinite alternate;
+  contain: layout style paint;
 }
 
 .orb-gold-top {
@@ -218,6 +231,7 @@ button {
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transform: translateZ(0);
 }
 
 .header-inner {
@@ -280,6 +294,31 @@ button {
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
+  position: relative;
+}
+
+/* Płynnie sunąca złota linia wskaźnika (Gliding Indicator) */
+.nav-indicator-glide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  background: var(--letino-gold-gradient);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 14px rgba(245, 208, 97, 0.8), 0 0 6px rgba(225, 29, 142, 0.45);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              width 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.25s ease;
+  will-change: transform, width, opacity;
+  z-index: 2;
+}
+
+/* Gdy aktywny jest wskaźnik sunący, wyłączamy statyczne pseudo-elementy */
+.has-glide-indicator .nav-link::after {
+  display: none;
 }
 
 .nav-link {

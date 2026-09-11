@@ -788,14 +788,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const backToTopBtn = document.getElementById('backToTopBtn');
   if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 350) {
-        backToTopBtn.classList.add('is-visible');
-      } else {
-        backToTopBtn.classList.remove('is-visible');
-      }
-    }, { passive: true });
-
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
@@ -914,7 +906,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // AKTYWNA KRESKA W NAGŁÓWKU & PŁYNNE PRZEJŚCIA (FAQ / KONTAKT / SEKCJE)
+  // AKTYWNA KRESKA W NAGŁÓWKU (GLIDING INDICATOR) & PŁYNNE PRZEJŚCIA
   // =========================================================================
   function initNavIndicator() {
     const isFaqPage = window.location.pathname.endsWith('faq.html') || 
@@ -924,8 +916,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link');
     const mobileLinks = document.querySelectorAll('.mobile-nav-links .mobile-nav-link');
     const allNavLinks = [...desktopLinks, ...mobileLinks];
+    const navLinksList = document.querySelector('.nav-links');
 
-    function setActiveKey(key) {
+    // Dynamiczny element płynnie sunącej złotej kreski
+    let glideIndicator = document.querySelector('.nav-indicator-glide');
+    if (navLinksList && !glideIndicator) {
+      glideIndicator = document.createElement('li');
+      glideIndicator.className = 'nav-indicator-glide';
+      glideIndicator.setAttribute('aria-hidden', 'true');
+      navLinksList.appendChild(glideIndicator);
+      navLinksList.classList.add('has-glide-indicator');
+    }
+
+    let activeKey = isFaqPage ? 'faq' : null;
+
+    function updateGlideTo(linkElement) {
+      if (!glideIndicator || !navLinksList || !linkElement) {
+        if (glideIndicator) glideIndicator.style.opacity = '0';
+        return;
+      }
+      
+      const listRect = navLinksList.getBoundingClientRect();
+      const linkRect = linkElement.getBoundingClientRect();
+      const left = linkRect.left - listRect.left;
+      const width = linkRect.width;
+
+      glideIndicator.style.transform = `translateX(${left}px)`;
+      glideIndicator.style.width = `${width}px`;
+      glideIndicator.style.opacity = '1';
+    }
+
+    function setActiveKey(key, forceGlide = true) {
+      activeKey = key;
+      let activeDesktopLink = null;
+
       allNavLinks.forEach(link => {
         const href = link.getAttribute('href') || '';
         let isMatch = false;
@@ -943,6 +967,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         link.classList.toggle('active', isMatch);
+        if (isMatch && link.closest('.desktop-nav')) {
+          activeDesktopLink = link;
+        }
+      });
+
+      if (forceGlide) {
+        if (activeDesktopLink) {
+          updateGlideTo(activeDesktopLink);
+        } else if (glideIndicator && !key) {
+          glideIndicator.style.opacity = '0';
+        }
+      }
+    }
+
+    // Płynne podążanie kreski za kursorem myszy z powrotem do aktywnej pozycji
+    desktopLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        updateGlideTo(link);
+      });
+    });
+
+    if (navLinksList) {
+      navLinksList.addEventListener('mouseleave', () => {
+        const currentActive = document.querySelector('.desktop-nav .nav-link.active');
+        if (currentActive) {
+          updateGlideTo(currentActive);
+        } else if (glideIndicator) {
+          glideIndicator.style.opacity = '0';
+        }
+      });
+    }
+
+    // Aktualizacja pozycji przy zmianie rozmiaru ekranu
+    window.addEventListener('resize', () => {
+      const currentActive = document.querySelector('.desktop-nav .nav-link.active');
+      if (currentActive) {
+        updateGlideTo(currentActive);
+      }
+    }, { passive: true });
+
+    // Płynne, precyzyjne przewijanie z uwzględnieniem sticky header
+    function smoothScrollTo(targetEl) {
+      if (!targetEl) return;
+      const headerOffset = 70;
+      const elementPosition = targetEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
 
@@ -956,7 +1029,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (targetEl) {
             e.preventDefault();
             setActiveKey('kontakt');
-            targetEl.scrollIntoView({ behavior: 'smooth' });
+            smoothScrollTo(targetEl);
             if (history.pushState) {
               history.pushState(null, null, '#kontakt');
             } else {
@@ -976,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (targetEl) {
             e.preventDefault();
             setActiveKey(targetId);
-            targetEl.scrollIntoView({ behavior: 'smooth' });
+            smoothScrollTo(targetEl);
             if (history.pushState) {
               history.pushState(null, null, '#' + targetId);
             }
@@ -987,58 +1060,59 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Inicjalizacja stanu
     if (isFaqPage) {
-      // Domyślnie na stronie FAQ kreska jest pod FAQ
       if (window.location.hash === '#kontakt') {
         setActiveKey('kontakt');
         setTimeout(() => {
           const targetEl = document.getElementById('kontakt');
-          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+          if (targetEl) smoothScrollTo(targetEl);
         }, 150);
       } else {
         setActiveKey('faq');
       }
-
-      // Scroll Spy na stronie FAQ (FAQ vs Kontakt)
-      const contactSection = document.getElementById('kontakt');
-
-      if (contactSection) {
-        const checkFaqScroll = () => {
-          const contactRect = contactSection.getBoundingClientRect();
-          if (contactRect.top <= window.innerHeight * 0.45) {
-            setActiveKey('kontakt');
-          } else {
-            setActiveKey('faq');
-          }
-        };
-
-        window.addEventListener('scroll', checkFaqScroll, { passive: true });
-      }
     } else {
-      // Strona główna (index.html)
       const currentHash = window.location.hash.replace('#', '');
       if (['produkty', 'dlaczego-letino', 'kategorie', 'kontakt'].includes(currentHash)) {
         setActiveKey(currentHash);
+      } else if (glideIndicator) {
+        glideIndicator.style.opacity = '0';
       }
+    }
 
-      const trackedSections = [
-        { id: 'produkty', key: 'produkty' },
-        { id: 'dlaczego-letino', key: 'dlaczego-letino' },
-        { id: 'kategorie', key: 'kategorie' },
-        { id: 'kontakt', key: 'kontakt' }
-      ];
+    // Dopasowanie pozycji po załadowaniu fontów
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        const currentActive = document.querySelector('.desktop-nav .nav-link.active');
+        if (currentActive) updateGlideTo(currentActive);
+      });
+    }
 
-      function updateActiveOnScroll() {
-        if (window.scrollY < 200) {
-          allNavLinks.forEach(l => {
-            if (!l.getAttribute('href').includes('faq.html')) {
-              l.classList.remove('active');
-            }
-          });
+    const contactSection = document.getElementById('kontakt');
+    const trackedSections = [
+      { id: 'produkty', key: 'produkty' },
+      { id: 'dlaczego-letino', key: 'dlaczego-letino' },
+      { id: 'kategorie', key: 'kategorie' },
+      { id: 'kontakt', key: 'kontakt' }
+    ];
+
+    return function onNavScrollTick(scrollY) {
+      if (isFaqPage) {
+        if (contactSection) {
+          const contactRect = contactSection.getBoundingClientRect();
+          if (contactRect.top <= window.innerHeight * 0.45) {
+            if (activeKey !== 'kontakt') setActiveKey('kontakt');
+          } else {
+            if (activeKey !== 'faq') setActiveKey('faq');
+          }
+        }
+      } else {
+        if (scrollY < 180) {
+          if (activeKey !== null) setActiveKey(null);
           return;
         }
 
-        const scrollPos = window.scrollY + 200;
+        const scrollPos = scrollY + 200;
         let currentKey = null;
 
         for (const item of trackedSections) {
@@ -1053,14 +1127,43 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
 
-        if (currentKey) {
+        if (currentKey && currentKey !== activeKey) {
           setActiveKey(currentKey);
         }
       }
-
-      window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
-    }
+    };
   }
 
-  initNavIndicator();
+  // =========================================================================
+  // WYSOKOWYDAJNY MOTOR PRZEWIJANIA (REQUEST ANIMATION FRAME)
+  // =========================================================================
+  const onNavScrollTick = initNavIndicator();
+
+  let isScrollTicking = false;
+  function handleScrollFrame() {
+    const scrollY = window.scrollY;
+
+    // 1. Widoczność przycisku Back To Top
+    if (backToTopBtn) {
+      if (scrollY > 350) {
+        backToTopBtn.classList.add('is-visible');
+      } else {
+        backToTopBtn.classList.remove('is-visible');
+      }
+    }
+
+    // 2. Wskaźnik nagłówka & Scroll Spy
+    if (onNavScrollTick) {
+      onNavScrollTick(scrollY);
+    }
+
+    isScrollTicking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!isScrollTicking) {
+      window.requestAnimationFrame(handleScrollFrame);
+      isScrollTicking = true;
+    }
+  }, { passive: true });
 });
