@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Instagram Banner
       ig_banner_title: 'Najnowsze okazje znajdziesz na Instagramie',
       ig_banner_desc: 'Nasza oferta regularnie się zmienia. Obserwuj nas, aby nie przegapić nowych produktów.',
-      ig_banner_btn: 'Przejdź do profilu @letino.outlet',
+      ig_banner_btn: 'Przejdź do profilu',
 
       // FAQ
       faq_badge: 'PYTANIA I ODPOWIEDZI',
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Instagram Banner
       ig_banner_title: 'Find the latest drops on Instagram',
       ig_banner_desc: 'Our stock rotates quickly. Follow our profile so you do not miss new arrivals.',
-      ig_banner_btn: 'Visit @letino.outlet profile',
+      ig_banner_btn: 'Visit profile',
 
       // FAQ
       faq_badge: 'QUESTIONS & ANSWERS',
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Instagram Banner
       ig_banner_title: 'Die neuesten Schnäppchen auf Instagram',
       ig_banner_desc: 'Unser Sortiment wechselt schnell. Folgen Sie uns, um keine Deals zu verpassen.',
-      ig_banner_btn: 'Zum @letino.outlet Profil',
+      ig_banner_btn: 'Zum Profil',
 
       // FAQ
       faq_badge: 'FRAGEN & ANTWORTEN',
