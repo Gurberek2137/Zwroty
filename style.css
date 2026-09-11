@@ -705,25 +705,26 @@ button {
   align-items: center;
   gap: 14px;
   background: rgba(14, 18, 28, 0.7);
-  border: 1px solid rgba(212, 175, 55, 0.28);
+  border: 1px solid rgba(245, 208, 97, 0.4);
   padding: 8px 18px 8px 10px;
   border-radius: var(--radius-full);
   margin-bottom: 28px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(212, 175, 55, 0.15);
   transition: var(--transition);
 }
 
 .hero-brand-card:hover {
   background: rgba(22, 28, 44, 0.9);
-  border-color: rgba(245, 208, 97, 0.6);
+  border-color: rgba(245, 208, 97, 0.75);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(225, 29, 142, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 24px rgba(212, 175, 55, 0.35);
 }
 
 .hero-brand-avatar {
   border-radius: 50%;
+  border: 1px solid rgba(245, 208, 97, 0.5);
 }
 
 .hero-brand-meta {
@@ -747,11 +748,12 @@ button {
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  color: var(--letino-gold-light);
-  padding: 2px 8px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(245, 208, 97, 0.1) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.65);
+  color: #FFF1A8;
+  padding: 2px 9px;
   border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
 }
 
 .pulse-dot {
@@ -875,15 +877,16 @@ section {
   font-family: var(--font-heading);
   font-size: 0.78rem;
   font-weight: 800;
-  color: var(--letino-gold-light);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(225, 29, 142, 0.12));
-  border: 1px solid rgba(212, 175, 55, 0.38);
+  color: #FFF2A8;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(245, 208, 97, 0.12) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.55);
   padding: 5px 16px;
   border-radius: var(--radius-full);
   display: inline-block;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 12px;
+  box-shadow: 0 2px 14px rgba(212, 175, 55, 0.25);
 }
 
 .section-heading {
@@ -915,10 +918,11 @@ section {
 }
 
 .product-card {
+  position: relative;
   background: var(--bg-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(212, 175, 55, 0.22);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
@@ -926,11 +930,29 @@ section {
   transition: var(--transition);
 }
 
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 5%, var(--letino-gold-light) 50%, transparent 95%);
+  opacity: 0.7;
+  z-index: 2;
+  transition: opacity 0.35s ease, height 0.35s ease;
+}
+
 .product-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(212, 175, 55, 0.45);
+  border-color: rgba(245, 208, 97, 0.65);
   background: var(--bg-card-hover);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(212, 175, 55, 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 28px rgba(212, 175, 55, 0.22);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+  height: 3px;
 }
 
 .card-link {
@@ -991,12 +1013,13 @@ section {
   font-weight: 700;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: var(--letino-gold-light);
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #FFF2A8;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(180, 143, 68, 0.12) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.55);
   padding: 3px 8px;
   border-radius: var(--radius-xs);
   align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
 }
 
 .card-condition {
@@ -1033,13 +1056,20 @@ section {
 .card-pricing {
   margin-top: auto;
   padding: 12px 14px;
-  background: rgba(7, 10, 18, 0.65);
+  background: linear-gradient(180deg, rgba(14, 20, 34, 0.85) 0%, rgba(20, 27, 44, 0.8) 100%);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  box-shadow: inset 0 1px 0 rgba(245, 208, 97, 0.22), 0 4px 16px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   margin-bottom: 14px;
+  transition: var(--transition);
+}
+
+.product-card:hover .card-pricing {
+  border-color: rgba(245, 208, 97, 0.55);
+  box-shadow: inset 0 1px 0 rgba(245, 208, 97, 0.35), 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(212, 175, 55, 0.15);
 }
 
 .price-row-top {
@@ -1058,10 +1088,13 @@ section {
 .price-savings {
   font-size: 0.74rem;
   font-weight: 700;
-  color: #F87171;
-  background: rgba(220, 38, 38, 0.12);
-  padding: 2px 6px;
+  color: #FFF0A0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(245, 208, 97, 0.15) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.55);
+  padding: 2px 8px;
   border-radius: var(--radius-xs);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 0 8px rgba(245, 208, 97, 0.35);
 }
 
 .price-ours {
@@ -1071,10 +1104,30 @@ section {
 
 .price-ours strong {
   font-family: var(--font-heading);
-  font-size: 1.28rem;
+  font-size: 1.32rem;
   color: var(--letino-gold-light);
   margin-left: 4px;
-  text-shadow: 0 0 12px rgba(245, 208, 97, 0.25);
+  text-shadow: 0 0 16px rgba(245, 208, 97, 0.4);
+}
+
+/* Indeks dolny waluty Euro */
+.currency-sub,
+.price-ours sub,
+.price-amz sub,
+.price-savings sub {
+  font-size: 0.72em;
+  vertical-align: -0.25em;
+  line-height: 1;
+  margin-left: 2px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.price-ours strong sub {
+  font-size: 0.65em;
+  vertical-align: -0.22em;
+  color: var(--letino-gold-light);
+  text-shadow: 0 0 12px rgba(245, 208, 97, 0.45);
 }
 
 .card-cta {
@@ -1084,7 +1137,7 @@ section {
   padding: 11px 14px;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   font-size: 0.84rem;
   font-weight: 600;
   color: #fff;
@@ -1098,13 +1151,15 @@ section {
 }
 
 .product-card:hover .card-cta {
-  background: linear-gradient(135deg, #0064D2 0%, #004fb3 100%);
-  border-color: transparent;
-  box-shadow: 0 4px 16px rgba(0, 100, 210, 0.4);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(245, 208, 97, 0.15) 100%);
+  border-color: rgba(245, 208, 97, 0.65);
+  color: #FFF0A0;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.25);
 }
 
 .product-card:hover .card-cta svg {
   transform: translateX(3px);
+  stroke: #FFF0A0;
 }
 
 /* ==========================================================================
@@ -1134,22 +1189,23 @@ section {
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-gold-subtle);
+  border-color: rgba(245, 208, 97, 0.55);
   background: var(--bg-card-hover);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 16px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
 .feature-icon-box {
   width: 54px;
   height: 54px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(225, 29, 142, 0.12) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(245, 208, 97, 0.1) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--letino-gold-light);
+  color: #FFF0A0;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.22);
 }
 
 .feature-title {
@@ -1249,17 +1305,17 @@ section {
 
 .category-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-gold-subtle);
+  border-color: rgba(245, 208, 97, 0.45);
   background: var(--bg-card-hover);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(212, 175, 55, 0.16);
 }
 
 .category-icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(245, 208, 97, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1269,9 +1325,11 @@ section {
 }
 
 .category-card:hover .category-icon {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(225, 29, 142, 0.2));
+  background: linear-gradient(135deg, rgba(245, 208, 97, 0.35) 0%, rgba(212, 175, 55, 0.25) 100%);
+  border-color: rgba(245, 208, 97, 0.75);
   color: #fff;
   transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
 }
 
 .category-name {
@@ -1480,13 +1538,14 @@ section {
 }
 
 .contact-highlight {
-  border-color: rgba(212, 175, 55, 0.35);
-  background: linear-gradient(135deg, rgba(16, 22, 36, 0.8) 0%, rgba(26, 22, 38, 0.8) 100%);
+  border-color: rgba(245, 208, 97, 0.45);
+  background: linear-gradient(135deg, rgba(16, 22, 36, 0.85) 0%, rgba(32, 26, 42, 0.8) 100%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 18px rgba(212, 175, 55, 0.18);
 }
 
 .contact-highlight:hover {
-  border-color: var(--letino-gold);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(212, 175, 55, 0.16);
+  border-color: rgba(245, 208, 97, 0.85);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 28px rgba(212, 175, 55, 0.3);
 }
 
 .contact-icon-wrap {
@@ -1939,7 +1998,7 @@ section {
   height: 44px;
   border-radius: 50%;
   background: rgba(16, 22, 36, 0.85);
-  border: 1px solid var(--border-gold-subtle);
+  border: 1px solid rgba(245, 208, 97, 0.45);
   color: var(--letino-gold-light);
   display: flex;
   align-items: center;
@@ -1951,7 +2010,7 @@ section {
   transform: translateY(10px);
   transition: all 0.25s ease;
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(212, 175, 55, 0.2);
 }
 
 .back-to-top.is-visible {
@@ -1961,10 +2020,10 @@ section {
 }
 
 .back-to-top:hover {
-  background: var(--letino-gold-light);
-  color: #000;
-  border-color: var(--letino-gold-light);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, #F5D061 0%, #D4AF37 100%);
+  color: #070a12;
+  border-color: #F5D061;
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5);
 }
 
 /* ==========================================================================
