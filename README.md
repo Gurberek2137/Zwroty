@@ -10,7 +10,7 @@ Witryna pełni rolę oficjalnej wizytówki oraz showroomu online:
 * Prezentuje profil działalności, zasady weryfikacji sprzętu oraz korzyści dla kupujących.
 * Przedstawia przykładowy asortyment wraz z orientacyjnym poziomem oszczędności względem cen rynkowych.
 * Buduje wiarygodność poprzez potwierdzone statystyki sprzedaży (Social Proof z platformy eBay: 99,3% pozytywnych ocen, 1300+ zamówień).
-* Prowadzi bezpośrednio do głównych kanałów komunikacji i sprzedaży: profilu na **Instagramie** (`@letino.outlet`), profilu **Facebook** oraz oficjalnego **sklepu eBay**.
+* Prowadzi bezpośrednio do głównych kanałów komunikacji i sprzedaży: profilu na **Instagramie** (`@letino.outlet`), oficjalnego **sklepu eBay** oraz kontaktu e-mail (`letino.outlet@gmail.com`).
 * Zawiera wielojęzyczny silnik w czasie rzeczywistym (PL / EN / DE) oraz dedykowaną podstronę pytań i odpowiedzi (`faq.html`).
 
 ---

@@ -62,6 +62,9 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
   
+  /* Własne tło dostarczone przez właścicielkę (opcjonalne, fallback to obecny ambient) */
+  --custom-bg-image: none; /* np. url('assets/custom-bg.jpg') */
+  
   --transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
   --transition-normal: 0.2s ease;
 }
@@ -89,6 +92,20 @@ body {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+}
+
+/* Opcjonalna warstwa własnego tła z filtrem przyciemniającym (gwarancja czytelności) */
+.custom-bg-layer {
+  position: fixed;
+  inset: 0;
+  background-image: var(--custom-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
 }
 
 body::before {
@@ -247,11 +264,11 @@ button {
 }
 
 .logo-icon-img {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 12px rgba(225, 48, 108, 0.25);
+  box-shadow: 0 2px 14px rgba(225, 48, 108, 0.3);
   transition: transform var(--transition-normal), filter var(--transition-normal);
 }
 
@@ -261,9 +278,9 @@ button {
 }
 
 .logo-banner-img {
-  height: 36px;
+  height: 44px;
   width: auto;
-  max-width: 170px;
+  max-width: 205px;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.28));
   transition: filter var(--transition-normal), transform var(--transition-normal);
@@ -2548,13 +2565,13 @@ body.lang-fade-out [data-i18n] {
   }
 
   .logo-icon-img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .logo-banner-img {
-    height: 24px;
-    max-width: 110px;
+    height: 30px;
+    max-width: 135px;
   }
 
   .mobile-menu-toggle {
@@ -3155,7 +3172,533 @@ body.lang-fade-out [data-i18n] {
   margin-top: 28px;
 }
 
+/* ==========================================================================
+   SEKCJA: O LETINO
+   ========================================================================== */
+.about-section {
+  padding: 90px 0 60px;
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-lead strong {
+  color: var(--letino-gold-light);
+}
+
+.about-text {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.about-point-card {
+  background: rgba(16, 22, 36, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.about-point-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--letino-gold-bg);
+  border: 1px solid var(--border-gold-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--letino-gold-light);
+  flex-shrink: 0;
+}
+
+.about-point-info h4 {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.about-point-info p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.about-media-col {
+  display: flex;
+  justify-content: center;
+}
+
+.owner-card-wrap {
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.owner-photo-slot {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 3px solid var(--letino-gold);
+  box-shadow: 0 0 35px var(--letino-gold-glow), 0 8px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 35% 35%, rgba(212, 175, 55, 0.25) 0%, rgba(13, 17, 27, 0.95) 75%);
+}
+
+.owner-photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-placeholder-icon {
+  color: var(--letino-gold-light);
+  opacity: 0.8;
+}
+
+.owner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-gold-subtle);
+  color: var(--letino-gold-light);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.owner-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SEKCJA: ABC WARE (KLASY JAKOŚCI)
+   ========================================================================== */
+.abc-section {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.abc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.abc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.abc-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--letino-gold-glow);
+}
+
+.abc-card-a {
+  border-top: 4px solid var(--letino-gold);
+}
+
+.abc-card-b {
+  border-top: 4px solid var(--blue-accent);
+}
+
+.abc-card-c {
+  border-top: 4px solid var(--amz-orange);
+}
+
+.abc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.abc-badge-a {
+  background: var(--letino-gold-bg);
+  color: var(--letino-gold-light);
+  border: 1px solid var(--border-gold-subtle);
+}
+
+.abc-badge-b {
+  background: var(--blue-bg);
+  color: var(--blue-accent);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.abc-badge-c {
+  background: var(--amz-glow);
+  color: var(--amz-orange-light);
+  border: 1px solid rgba(255, 153, 0, 0.25);
+}
+
+.abc-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.abc-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.abc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.abc-list li {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.abc-list li svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--green-accent);
+}
+
+/* ==========================================================================
+   SEKCJA: PUBLIKACJE Z INSTAGRAMA (LIVE FEED)
+   ========================================================================== */
+.ig-feed-section {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.ig-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.ig-feed-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.ig-feed-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(225, 29, 142, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--ig-glow);
+}
+
+.ig-feed-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #0c101c;
+}
+
+.ig-feed-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.ig-feed-card:hover .ig-feed-media img {
+  transform: scale(1.06);
+}
+
+.ig-feed-type-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ig-feed-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ig-feed-date {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+}
+
+.ig-feed-caption {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ig-feed-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff758c;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ig-feed-footer svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.ig-feed-card:hover .ig-feed-footer svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   SEKCJA: FAQ ACCORDION NA STRONIE GŁÓWNEJ
+   ========================================================================== */
+.main-faq-section {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.main-faq-accordion {
+  max-width: 860px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.main-faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.main-faq-item[open] {
+  border-color: var(--border-gold-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--letino-gold-glow);
+}
+
+.main-faq-item summary {
+  list-style: none;
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.main-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.main-faq-item summary:hover {
+  color: var(--letino-gold-light);
+}
+
+.main-faq-chevron {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-muted);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.main-faq-item[open] summary .main-faq-chevron {
+  transform: rotate(180deg);
+  stroke: var(--letino-gold-light);
+}
+
+.main-faq-answer {
+  padding: 0 22px 20px;
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4px;
+  padding-top: 14px;
+}
+
+.main-faq-more-wrap {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ==========================================================================
+   STYLE KONTAKTU EMAIL & DOT
+   ========================================================================== */
+.email-gradient-bg {
+  background: linear-gradient(135deg, #ea4335 0%, #d93025 50%, #b31412 100%);
+  box-shadow: 0 4px 16px rgba(234, 67, 53, 0.35);
+}
+
+.email-btn-link {
+  background: rgba(234, 67, 53, 0.12);
+  color: #ff7669;
+  border: 1px solid rgba(234, 67, 53, 0.3);
+}
+
+.email-btn-link:hover {
+  background: rgba(234, 67, 53, 0.25);
+  color: #fff;
+  border-color: rgba(234, 67, 53, 0.6);
+  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.35);
+}
+
+.social-mini-dot.email-dot {
+  background: #ea4335;
+  box-shadow: 0 0 8px rgba(234, 67, 53, 0.6);
+}
+
+/* ==========================================================================
+   RESPONSYWNOŚĆ NOWYCH SEKCJI
+   ========================================================================== */
+@media (max-width: 980px) {
+  .abc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ig-feed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about-media-col {
+    order: -1;
+  }
+}
+
 @media (max-width: 640px) {
+  .about-section,
+  .abc-section,
+  .ig-feed-section,
+  .main-faq-section {
+    padding: 50px 0 40px;
+  }
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+  .abc-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .ig-feed-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .main-faq-item summary {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+  .main-faq-answer {
+    padding: 0 16px 16px;
+    font-size: 0.88rem;
+  }
   .faq-hero {
     padding: 30px 0 20px;
   }

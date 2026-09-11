@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Główne kanały i odnośniki Letino Outlet
   const INSTAGRAM_URL = 'https://www.instagram.com/letino.outlet/';
   const EBAY_URL = 'https://www.ebay.de/str/letinooutlet';
-  const FACEBOOK_URL = 'https://www.facebook.com/people/Letino/61554488427516/?mibextid=wwXIfr';
+  const EMAIL_CONTACT = 'letino.outlet@gmail.com';
+
+  // Opcjonalny token Meta Graph API (User Access Token) do automatycznego ładowania postów
+  const INSTAGRAM_ACCESS_TOKEN = '';
 
   // Aktualizacja roku w stopce
   const yearSpan = document.getElementById('year');
@@ -23,10 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
       doc_desc: "Letino Outlet – sprawdzone produkty ze zwrotów konsumenckich i nadwyżek magazynowych w atrakcyjnych cenach.",
       
       // Nawigacja
+      nav_home: "Strona Główna",
+      nav_about: "O Letino",
+      nav_abc: "ABC Ware",
       nav_deals: "Okazje",
       nav_why: "Dlaczego Letino?",
       nav_how: "Jak to działa?",
       nav_categories: "Kategorie",
+      nav_platforms: "Platformy",
+      nav_instagram: "Instagram",
       nav_faq: "FAQ",
       nav_contact: "Kontakt",
 
@@ -38,6 +46,47 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_subtitle: 'Sprawdzone produkty pochodzące ze zwrotów konsumenckich i nadwyżek magazynowych. Znane marki w atrakcyjnych cenach.',
       hero_cta: 'Zobacz aktualne okazje',
       hero_cta_secondary: 'Przeglądaj ofertę',
+
+      // O Letino
+      about_badge: "POZNAJ NAS",
+      about_heading: "O Letino Outlet",
+      about_subtext: "Uczciwy i transparentny outlet sprawdzonych produktów ze zwrotów i nadwyżek magazynowych.",
+      about_lead: "<strong>Letino Outlet</strong> to niezależny outlet oferujący oryginalne, markowe produkty w cenach znacznie niższych od regularnych stawek rynkowych.",
+      about_text_1: "Specjalizujemy się w sprzedaży towarów pochodzących ze zwrotów konsumenckich (m.in. ustawowych zwrotów e-commerce) oraz nadwyżek magazynowych i końcówek partii towarowych z rynku europejskiego.",
+      about_text_2: "Sprzedaż outletowa polega na daniu w pełni wartościowym produktom drugiego życia. Każdy egzemplarz trafiający do Letino Outlet przechodzi staranną weryfikację techniczną oraz kontrolę kompletności. Ponieważ towar pochodzi ze zwrotów i nadwyżek, poszczególne sztuki mogą różnić się stanem wizualnym opakowania i sprzętu – od produktów fabrycznie nowych w otwartym kartonie, przez egzemplarze powystawowe, po sprzęt ze śladami użytkowania.",
+      about_text_3: "Dla pełnej przejrzystości stosujemy czytelny standard klasyfikacji <strong>ABC Ware</strong>, dzięki któremu zawsze dokładnie wiesz, w jakim stanie technicznym i wizualnym kupujesz dany przedmiot.",
+      about_point_1_title: "Weryfikacja każdego egzemplarza",
+      about_point_1_desc: "Sprawdzamy działanie kluczowych funkcji i kompletność fabrycznego wyposażenia.",
+      about_point_2_title: "Transparentne opisy i zdjęcia",
+      about_point_2_desc: "Rzetelnie informujemy o stanie wizualnym i ewentualnych mankamentach opakowania.",
+      about_owner_badge: "Właścicielka Letino Outlet",
+      about_owner_note: "Osobiście dbam o staranną selekcję, rzetelne testy i bezpieczne zakupy dla każdego klienta.",
+
+      // ABC Ware
+      abc_badge: "STANDARD JAKOŚCI",
+      abc_heading: "Klasy Jakości ABC Ware",
+      abc_subtext: "Przejrzysty system klasyfikacji towarów outletowych. U nas zawsze wiesz, co kupujesz.",
+      abc_a_badge: "Klasa A / A+",
+      abc_a_title: "Stan idealny / Nowy",
+      abc_a_desc: "Sprzęt w 100% sprawny technicznie, w stanie niemal fabrycznym lub nowym. Towary z otwartych kartonów w celu weryfikacji lub z delikatnie naruszonymi w transporcie opakowaniami zewnętrznymi.",
+      abc_a_f1: "100% sprawności technicznej",
+      abc_a_f2: "Brak widocznych śladów użytkowania",
+      abc_a_f3: "Kompletny zestaw akcesoriów",
+      abc_a_f4: "Oryginalne pudełko (może być otwarte)",
+      abc_b_badge: "Klasa B",
+      abc_b_title: "Stan bardzo dobry / Powystawowy",
+      abc_b_desc: "Sprzęt w 100% sprawny i przetestowany. Egzemplarze powystawowe lub z krótkich zwrotów konsumenckich. Mogą posiadać drobne ślady kosmetyczne (np. mikro-ryski na obudowie) lub zastępcze opakowanie.",
+      abc_b_f1: "100% sprawności technicznej",
+      abc_b_f2: "Możliwe drobne ślady wizualne",
+      abc_b_f3: "Główne akcesoria w zestawie",
+      abc_b_f4: "Bardzo atrakcyjna cena",
+      abc_c_badge: "Klasa C",
+      abc_c_title: "Stan z widocznymi śladami / Okazja",
+      abc_c_desc: "Sprzęt sprawny bazowo lub ze wskazaną specyfiką działania, dokładnie opisaną w ofercie. Może posiadać wyraźniejsze ślady eksploatacji, rysy lub brak pojedynczego, niekluczowego akcesorium.",
+      abc_c_f1: "Przetestowane działanie",
+      abc_c_f2: "Wyraźniejsze ślady kosmetyczne",
+      abc_c_f3: "Dokładnie wyszczególniony stan",
+      abc_c_f4: "Maksymalna obniżka ceny",
 
       // Produkty (Przykłady z oferty)
       section_badge: 'PRZYKŁADY Z OFERTY',
@@ -89,7 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
       why_4_title: 'Regularnie nowe okazje',
       why_4_desc: 'Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.',
 
-      // Social Proof z eBay
+      // Największe platformy sprzedażowe
+      platforms_badge: 'ZWERYFIKOWANY PROFIL',
+      platforms_title: 'Największe platformy sprzedażowe',
+      platforms_subtext: 'Sprawdź nasz oficjalny sklep na platformie eBay oraz rzeczywiste opinie i zadowolenie kupujących.',
       ebay_proof_badge: 'ZWERYFIKOWANY PROFIL',
       ebay_proof_title: 'Sprawdź nas również na eBay',
       ebay_proof_subtext: 'Rzeczywiste opinie i zadowolenie kupujących w naszym oficjalnym sklepie.',
@@ -125,10 +177,22 @@ document.addEventListener('DOMContentLoaded', () => {
       cat_agd_desc: 'Bezprzewodowe odkurzacze pionowe, ekspresy do kawy, roboty sprzątające i małe AGD.',
       cat_acc_title: 'Akcesoria',
       cat_acc_desc: 'Szybkie ładowarki, stacje dokujące, powerbanki, etui ochronne i okablowanie.',
+      cat_baby_title: 'Dziecko',
+      cat_baby_desc: 'Artykuły dziecięce, akcesoria niemowlęce, bezpieczne zabawki i wózki ze zwrotów konsumenckich.',
+      cat_pets_title: 'Zwierzęta',
+      cat_pets_desc: 'Akcesoria dla psów i kotów, legowiska, automatyczne podajniki karmy i zabawki w okazyjnych cenach.',
       cat_other_title: 'Inne',
       cat_other_desc: 'Różnorodne wyselekcjonowane okazje z nadwyżek magazynowych i wyprzedaży zapasów.',
 
-      // Instagram Banner
+      // Instagram Live Feed & Banner
+      ig_feed_heading: 'Najnowsze Publikacje z Instagrama',
+      ig_feed_subtext: 'Codzienne promocje, nowe dostawy i unboxingi. Kliknij dowolny post lub reel, aby przejść bezpośrednio na Instagram.',
+      ig_post_tag: 'NOWA DOSTAWA',
+      ig_view_post: 'Zobacz post',
+      ig_post_1_cap: 'Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!',
+      ig_post_2_cap: 'Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.',
+      ig_post_3_cap: 'Testujemy odkurzacze pionowe i roboty sprzątające przed wystawieniem. Pełna sprawność gwarantowana.',
+      ig_post_4_cap: 'Głośniki Bluetooth i akcesoria mobilne w oryginalnych zestawach fabrycznych. Napisz do nas DM!',
       ig_banner_title: 'Najnowsze okazje znajdziesz na Instagramie',
       ig_banner_desc: 'Nasza oferta regularnie się zmienia. Obserwuj nas, aby nie przegapić nowych produktów.',
       ig_banner_btn: 'Przejdź do profilu',
@@ -146,21 +210,21 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_q4: 'Gdzie można zobaczyć aktualną ofertę?',
       faq_a4: 'Aktualną ofertę i bieżące pojedyncze okazje publikujemy na naszym profilu Instagram (@letino.outlet). Wybrane przedmioty mogą być również wystawiane na naszym profilu eBay.',
       faq_q5: 'Jak skontaktować się w sprawie produktu?',
-      faq_a5: 'Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet.',
+      faq_a5: 'Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet lub e-mail: letino.outlet@gmail.com.',
 
       // Kontakt
       contact_badge: 'KONTAKT',
       contact_heading: 'Skontaktuj się z nami',
-      contact_subtext: 'Odpowiadamy najszybciej na Instagramie i platformach sprzedażowych.',
+      contact_subtext: 'Odpowiadamy najszybciej na Instagramie, platformie eBay oraz drogą mailową.',
       contact_ig_title: 'Instagram (Rekomendowany)',
       contact_ig_desc: 'Napisz do nas w wiadomości prywatnej (DM). Odpowiadamy na pytania o stan, dostępność i rezerwacje.',
       contact_ig_btn: 'Napisz na Instagramie &rarr;',
-      contact_fb_title: 'Facebook',
-      contact_fb_desc: 'Profil Letino na Facebooku. Możliwość kontaktu poprzez wiadomość Messenger.',
-      contact_fb_btn: 'Przejdź do profilu Facebook &rarr;',
       contact_ebay_title: 'Sklep eBay.de',
-      contact_ebay_desc: 'Profil sprzedażowy Letino Outlet na platformie eBay.',
+      contact_ebay_desc: 'Profil sprzedażowy Letino Outlet na platformie eBay z pełną ochroną kupującego.',
       contact_ebay_btn: 'Odwiedź sklep na eBay &rarr;',
+      contact_email_title: 'E-mail',
+      contact_email_desc: 'Napisz do nas bezpośrednio na oficjalny adres e-mail w sprawach zapytań i realizacji zamówień.',
+      contact_email_btn: 'Napisz: letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Informacja formalna:</strong> Letino Outlet prowadzi sprzedaż zweryfikowanych towarów outletowych. Wszelkie zapytania handlowe oraz pytania o asortyment prosimy kierować przez wyżej wymienione kanały kontaktu.',
 
       // Stopka
@@ -170,15 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
       socials_title: 'Znajdź nas & Napisz do nas',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
-      social_fb_title: 'Facebook',
-      social_fb_desc: 'Profil Letino',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Sklep Letino Outlet',
       legal_notice: '<strong>Nota prawna:</strong> Serwis <strong>Letino Outlet</strong> jest niezależnym sprzedawcą produktów ze zwrotów konsumenckich oraz nadwyżek magazynowych. Serwis nie jest powiązany, prowadzony ani sponsorowany przez żadną zewnętrzną korporację ani producentów prezentowanych marek. Wszelkie znaki towarowe należą do ich prawnych właścicieli i zostały użyte wyłącznie w celach informacyjnych.',
       footer_privacy: 'Polityka Prywatności',
       footer_terms: 'Regulamin Serwisu',
       copyright_text: 'Letino Outlet. Wszelkie prawa zastrzeżone.',
-      nav_home: "Strona Główna",
       faq_more_btn: "Zobacz pełne centrum pytań i odpowiedzi (FAQ) &rarr;",
       crumb_home: "Strona Główna",
       crumb_faq: "FAQ",
@@ -219,11 +280,11 @@ document.addEventListener('DOMContentLoaded', () => {
       fa_s3: "Każda przesyłka jest pakowana z dużą starannością przy użyciu grubych kartonów oraz folii bąbelkowej i wypełniaczy, co gwarantuje pełne bezpieczeństwo delikatnej elektroniki podczas transportu.",
       cat_title_safety: "Bezpieczeństwo i kontakt",
       fq_c1: "Jakie są kanały kontaktu z Letino Outlet?",
-      fa_c1: "Głównym i najszybszym kanałem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet. Możesz także skontaktować się z nami poprzez profil na Facebooku lub system wiadomości w serwisie eBay.",
+      fa_c1: "Głównym i najszybszym kanałem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet. Możesz także skontaktować się z nami mailowo na letino.outlet@gmail.com lub poprzez system wiadomości w serwisie eBay.",
       fq_c2: "Czy Letino Outlet jest powiązane z producentami sprzedawanych marek?",
       fa_c2: "Nie. Serwis Letino Outlet jest niezależnym sprzedawcą produktów outletowych i nie jest powiązany ani sponsorowany przez żadną zewnętrzną korporację ani producentów prezentowanych marek. Wszelkie nazwy i znaki handlowe zostały użyte wyłącznie w celach informacyjnych.",
       fq_c3: "Co zrobić, jeśli mam inne pytanie, którego nie ma na liście?",
-      fa_c3: "Napisz do nas bezpośrednio na Instagramie @letino.outlet. Chętnie odpowiemy na każde dodatkowe pytanie i rozwiejemy wszelkie wątpliwości!",
+      fa_c3: "Napisz do nas bezpośrednio na Instagramie @letino.outlet lub na adres letino.outlet@gmail.com. Chętnie odpowiemy na każde dodatkowe pytanie!",
       faq_cta_title: "Masz dodatkowe pytania?",
       faq_cta_desc: "Napisz do nas w wiadomości prywatnej (DM) na Instagramie @letino.outlet. Chętnie doradzimy i odpowiemy na wszelkie pytania o sprzęt!",
       faq_cta_btn: "Napisz na Instagramie &rarr;",
@@ -237,10 +298,15 @@ document.addEventListener('DOMContentLoaded', () => {
       doc_desc: "Letino Outlet – verified goods from customer returns and overstock at attractive prices.",
       
       // Navigation
+      nav_home: "Home",
+      nav_about: "About Letino",
+      nav_abc: "ABC Ware",
       nav_deals: "Deals",
       nav_why: "Why Letino?",
       nav_how: "How It Works",
       nav_categories: "Categories",
+      nav_platforms: "Platforms",
+      nav_instagram: "Instagram",
       nav_faq: "FAQ",
       nav_contact: "Contact",
 
@@ -252,6 +318,47 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_subtitle: 'Verified products from customer returns and overstock. Well-known brands at attractive prices.',
       hero_cta: 'View Latest Deals',
       hero_cta_secondary: 'Browse Offers',
+
+      // About Letino
+      about_badge: "ABOUT US",
+      about_heading: "About Letino Outlet",
+      about_subtext: "An honest and transparent outlet for verified products from customer returns and overstock.",
+      about_lead: "<strong>Letino Outlet</strong> is an independent outlet providing authentic branded items at prices substantially below standard retail rates.",
+      about_text_1: "We specialize in the sale of merchandise sourced from customer returns (including standard European e-commerce statutory returns) as well as warehouse overstock and closeout lots.",
+      about_text_2: "Outlet sales give valuable products a second life. Every unit that arrives at Letino Outlet undergoes meticulous technical inspection and completeness checks. Because items originate from returns and overstock, individual pieces may vary in visual condition and packaging – ranging from factory-new in open box, to demo/display units, to items with light cosmetic wear.",
+      about_text_3: "For complete transparency, we adhere to the clear <strong>ABC Ware</strong> grading standard, ensuring you always know the exact technical and visual state of the item you are buying.",
+      about_point_1_title: "Inspection of every unit",
+      about_point_1_desc: "We verify vital hardware functions and completeness of factory equipment.",
+      about_point_2_title: "Transparent descriptions & photos",
+      about_point_2_desc: "We honestly disclose visual condition and any packaging imperfections.",
+      about_owner_badge: "Letino Outlet Owner",
+      about_owner_note: "I personally oversee careful product selection, thorough testing, and a smooth shopping experience for every customer.",
+
+      // ABC Ware
+      abc_badge: "QUALITY STANDARD",
+      abc_heading: "ABC Ware Quality Grades",
+      abc_subtext: "Clear grading standard for outlet goods. You always know exactly what you purchase.",
+      abc_a_badge: "Grade A / A+",
+      abc_a_title: "Pristine / Like New",
+      abc_a_desc: "100% functional equipment in near-factory or brand new condition. Items with opened boxes for inspection or slight outer packaging distress from transit.",
+      abc_a_f1: "100% technical functionality",
+      abc_a_f2: "No noticeable signs of wear",
+      abc_a_f3: "Complete accessory package",
+      abc_a_f4: "Original box (may be open)",
+      abc_b_badge: "Grade B",
+      abc_b_title: "Very Good / Demo Unit",
+      abc_b_desc: "100% functional and tested gear. Display units or brief customer returns. May exhibit minor cosmetic marks (e.g. fine micro-scratches on casing) or replacement packaging.",
+      abc_b_f1: "100% technical functionality",
+      abc_b_f2: "Minor visual marks possible",
+      abc_b_f3: "Key accessories included",
+      abc_b_f4: "Exceptional price discount",
+      abc_c_badge: "Grade C",
+      abc_c_title: "Pre-owned / Bargain",
+      abc_c_desc: "Tested, baseline functional hardware or items with specific characteristics transparently noted in the listing. May show noticeable wear or lack a non-essential accessory.",
+      abc_c_f1: "Tested baseline functionality",
+      abc_c_f2: "Visible cosmetic wear",
+      abc_c_f3: "Detailed condition report",
+      abc_c_f4: "Maximum price reduction",
 
       // Products (Sample Offers)
       section_badge: 'SAMPLE OFFERS',
@@ -303,7 +410,10 @@ document.addEventListener('DOMContentLoaded', () => {
       why_4_title: 'Regular New Drops',
       why_4_desc: 'Frequently updated stock and unique single items at competitive prices.',
 
-      // eBay Social Proof
+      // Major Sales Platforms
+      platforms_badge: 'VERIFIED STORE',
+      platforms_title: 'Major Sales Platforms',
+      platforms_subtext: 'Check our verified official eBay store and real buyer feedback.',
       ebay_proof_badge: 'VERIFIED STORE',
       ebay_proof_title: 'Find us on eBay as well',
       ebay_proof_subtext: 'Real customer feedback and verified buyer satisfaction on our official store.',
@@ -339,10 +449,22 @@ document.addEventListener('DOMContentLoaded', () => {
       cat_agd_desc: 'Cordless stick vacuums, coffee machines, robot vacuums and small home tech.',
       cat_acc_title: 'Accessories',
       cat_acc_desc: 'Fast chargers, docks, powerbanks, protective cases and cables.',
+      cat_baby_title: 'Baby & Kids',
+      cat_baby_desc: 'Infant accessories, safe toys, baby care and strollers from verified returns.',
+      cat_pets_title: 'Pets',
+      cat_pets_desc: 'Dog & cat accessories, pet beds, automatic food dispensers and toys at bargain prices.',
       cat_other_title: 'Other Deals',
       cat_other_desc: 'Carefully selected overstock opportunities across diverse categories.',
 
-      // Instagram Banner
+      // Instagram Live Feed & Banner
+      ig_feed_heading: 'Latest Instagram Posts',
+      ig_feed_subtext: 'Daily promotions, unboxings and stock updates. Click any post or reel to view on Instagram.',
+      ig_post_tag: 'NEW ARRIVAL',
+      ig_view_post: 'View post',
+      ig_post_1_cap: 'Check out the newest ANC wireless headphones in Grade A+. See details in our stories!',
+      ig_post_2_cap: 'Smartwatches and wearables from top brands – e-commerce returns from Germany at great prices.',
+      ig_post_3_cap: 'We test cordless vacuums and robot cleaners before listing. Complete function guaranteed.',
+      ig_post_4_cap: 'Bluetooth speakers and mobile accessories in original factory kits. Send us a DM!',
       ig_banner_title: 'Find the latest drops on Instagram',
       ig_banner_desc: 'Our stock rotates quickly. Follow our profile so you do not miss new arrivals.',
       ig_banner_btn: 'Visit profile',
@@ -360,21 +482,21 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_q4: 'Where can I see current inventory?',
       faq_a4: 'Current offers and single-unit deals are posted on Instagram (@letino.outlet). Selected items may also be listed on our eBay profile.',
       faq_q5: 'How do I contact you regarding an item?',
-      faq_a5: 'The quickest way is sending a Direct Message (DM) on Instagram @letino.outlet.',
+      faq_a5: 'The quickest way is sending a Direct Message (DM) on Instagram @letino.outlet or via email at letino.outlet@gmail.com.',
 
       // Contact
       contact_badge: 'CONTACT',
       contact_heading: 'Get In Touch',
-      contact_subtext: 'We reply fastest via Instagram DM and marketplace messaging.',
+      contact_subtext: 'We reply fastest via Instagram DM, eBay marketplace, and official email.',
       contact_ig_title: 'Instagram (Recommended)',
       contact_ig_desc: 'Send us a Direct Message (DM). We answer questions about condition, availability and reserve requests.',
       contact_ig_btn: 'Message on Instagram &rarr;',
-      contact_fb_title: 'Facebook',
-      contact_fb_desc: 'Letino Facebook page. Contact via Messenger available.',
-      contact_fb_btn: 'Open Facebook Page &rarr;',
       contact_ebay_title: 'eBay.de Store',
-      contact_ebay_desc: 'Letino Outlet seller profile on eBay platform.',
+      contact_ebay_desc: 'Letino Outlet seller profile on eBay platform with full buyer protection.',
       contact_ebay_btn: 'Visit eBay Store &rarr;',
+      contact_email_title: 'E-mail',
+      contact_email_desc: 'Write to our official email address regarding inquiries and orders.',
+      contact_email_btn: 'Email: letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Formal Notice:</strong> Letino Outlet is a reseller of verified outlet merchandise. Please direct all commercial inquiries and stock questions through the contact channels listed above.',
 
       // Footer
@@ -384,15 +506,12 @@ document.addEventListener('DOMContentLoaded', () => {
       socials_title: 'Find Us & Message Us',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
-      social_fb_title: 'Facebook',
-      social_fb_desc: 'Letino Profile',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Letino Outlet Store',
       legal_notice: '<strong>Legal Notice:</strong> <strong>Letino Outlet</strong> is an independent reseller of customer returns and overstock merchandise. The site is not affiliated with, operated by, or sponsored by any external corporation or product manufacturers. All trademarks belong to their respective owners.',
       footer_privacy: 'Privacy Policy',
       footer_terms: 'Terms of Service',
       copyright_text: 'Letino Outlet. All rights reserved.',
-      nav_home: "Home",
       faq_more_btn: "View Full FAQ & Help Center &rarr;",
       crumb_home: "Home",
       crumb_faq: "FAQ",
@@ -433,28 +552,26 @@ document.addEventListener('DOMContentLoaded', () => {
       fa_s3: "Every shipment is carefully packed with heavy-duty cardboard boxes, bubble wrap, and shock-absorbing fillers to ensure electronics arrive in flawless condition.",
       cat_title_safety: "Safety & Contact",
       fq_c1: "What are the contact channels for Letino Outlet?",
-      fa_c1: "The primary and fastest channel is sending a Direct Message (DM) on Instagram @letino.outlet. You may also contact us via Facebook Messenger or eBay messaging.",
+      fa_c1: "The primary and fastest channel is sending a Direct Message (DM) on Instagram @letino.outlet. You may also contact us via email at letino.outlet@gmail.com or eBay messaging.",
       fq_c2: "Is Letino Outlet affiliated with the product manufacturers?",
       fa_c2: "No. Letino Outlet is an independent reseller and is not affiliated with, sponsored by, or endorsed by brand manufacturers. All trademarks belong to their lawful owners and are used purely for identification.",
       fq_c3: "What if I have another question not listed here?",
-      fa_c3: "Message us directly on Instagram @letino.outlet. We are always glad to assist and provide any additional information!",
-      faq_cta_title: "Have more questions?",
-      faq_cta_desc: "Send us a Direct Message (DM) on Instagram @letino.outlet. We are happy to help and answer any questions!",
-      faq_cta_btn: "Message on Instagram &rarr;",
-      faq_cta_home: "Return to Homepage",
-      faq_doc_title: "FAQ – Questions & Answers | Letino Outlet",
-      faq_doc_desc: "Answers to questions regarding item provenance, technical condition verification, purchasing, and shipping at Letino Outlet.",
+      fa_c3: "Message us directly on Instagram @letino.outlet or email letino.outlet@gmail.com – we will happily provide detailed answers and advice."
     },
-
     de: {
       doc_title: "Letino Outlet | Retouren & Markenschnäppchen",
       doc_desc: "Letino Outlet – geprüfte Ware aus Kundenretouren und Restposten zu Spitzenpreisen.",
       
       // Navigation
+      nav_home: "Startseite",
+      nav_about: "Über Letino",
+      nav_abc: "ABC Ware",
       nav_deals: "Angebote",
       nav_why: "Warum Letino?",
       nav_how: "So funktioniert's",
       nav_categories: "Kategorien",
+      nav_platforms: "Plattformen",
+      nav_instagram: "Instagram",
       nav_faq: "FAQ",
       nav_contact: "Kontakt",
 
@@ -466,6 +583,47 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_subtitle: 'Geprüfte Produkte aus Kundenretouren und Überbeständen. Bekannte Marken zu attraktiven Preisen.',
       hero_cta: 'Aktuelle Angebote ansehen',
       hero_cta_secondary: 'Sortiment erkunden',
+
+      // Über Letino
+      about_badge: "ÜBER UNS",
+      about_heading: "Über Letino Outlet",
+      about_subtext: "Ehrlicher und transparenter Outlet-Shop für geprüfte Waren aus Retouren und Restposten.",
+      about_lead: "<strong>Letino Outlet</strong> ist ein unabhängiger Outlet-Anbieter für originale Markenware zu deutlich reduzierten Preisen.",
+      about_text_1: "Wir haben uns auf den Vertrieb von Waren aus Kundenretouren (u. a. reguläre E-Commerce-Rücksendungen) sowie Lagerüberhängen und Restposten aus dem europäischen Markt spezialisiert.",
+      about_text_2: "Outlet-Verkauf bedeutet, funktionstüchtigen Produkten eine zweite Chance zu geben. Jedes Exemplar wird vor dem Verkauf sorgfältig auf Funktion und Vollständigkeit überprüft. Da die Artikel aus Retouren stammen, können Zustand von Verpackung und Gerät variieren – von fabrikneu in geöffneter OVP über Vorführgeräte bis hin zu Artikeln mit leichten Gebrauchsspuren.",
+      about_text_3: "Für maximale Transparenz nutzen wir das verlässliche <strong>ABC Ware</strong>-Klassifizierungssystem, damit Sie vor dem Kauf stets genau wissen, in welchem Zustand sich Ihr Wunschartikel befindet.",
+      about_point_1_title: "Prüfung jedes Artikels",
+      about_point_1_desc: "Wir überprüfen Hauptfunktionen und die Vollständigkeit des Werkszubehörs.",
+      about_point_2_title: "Transparente Angaben & Fotos",
+      about_point_2_desc: "Wir deklarieren den optischen Zustand und etwaige Verpackungsmängel stets ehrlich.",
+      about_owner_badge: "Inhaberin Letino Outlet",
+      about_owner_note: "Ich kümmere mich persönlich um sorgfältige Produktauswahl, ehrliche Tests und einen sicheren Einkauf für jeden Kunden.",
+
+      // ABC Ware
+      abc_badge: "QUALITÄTSSTANDARD",
+      abc_heading: "ABC Ware Qualitätsklassen",
+      abc_subtext: "Transparentes Bewertungssystem für Outlet-Ware. Bei uns wissen Sie immer, was Sie kaufen.",
+      abc_a_badge: "Klasse A / A+",
+      abc_a_title: "Neuwertig / Wie neu",
+      abc_a_desc: "Technisch zu 100% einwandfreie Ware in nahezu fabrikneuem Zustand. Artikel aus zu Prüfzwecken geöffneter OVP oder mit leichten Transportschäden am Umkarton.",
+      abc_a_f1: "100% technische Funktion",
+      abc_a_f2: "Keine nennenswerten Gebrauchsspuren",
+      abc_a_f3: "Vollständiges Werkszubehör",
+      abc_a_f4: "Originalverpackung (evtl. geöffnet)",
+      abc_b_badge: "Klasse B",
+      abc_b_title: "Sehr gut / Vorführgerät",
+      abc_b_desc: "Zu 100% funktionsfähige und geprüfte Ware. Vorführgeräte oder Artikel aus kurzen Retouren. Kann minimale optische Spuren (z. B. feine Mikro-Kratzer) oder neutrale Verpackung aufweisen.",
+      abc_b_f1: "100% technische Funktion",
+      abc_b_f2: "Minimale optische Spuren möglich",
+      abc_b_f3: "Wichtiges Zubehör enthalten",
+      abc_b_f4: "Sehr attraktiver Preisnachlass",
+      abc_c_badge: "Klasse C",
+      abc_c_title: "Gebraucht / Schnäppchen",
+      abc_c_desc: "Funktionsfähige Basisware oder Artikel mit spezifischen Eigenschaften, die im Angebot genau beschrieben sind. Kann sichtbare Spuren aufweisen oder ein unkritisches Zubehörteil fehlen.",
+      abc_c_f1: "Geprüfte Basisfunktion",
+      abc_c_f2: "Sichtbare optische Gebrauchsspuren",
+      abc_c_f3: "Detaillierte Zustandsbeschreibung",
+      abc_c_f4: "Maximaler Preisvorteil",
 
       // Produkte (Beispiele aus dem Sortiment)
       section_badge: 'BEISPIELANGEBOTE',
@@ -517,7 +675,10 @@ document.addEventListener('DOMContentLoaded', () => {
       why_4_title: 'Regelmäßig neue Drops',
       why_4_desc: 'Regelmäßig wechselndes Sortiment und seltene Einzelstücke zu attraktiven Preisen.',
 
-      // eBay Social Proof
+      // Große Verkaufsplattformen
+      platforms_badge: 'VERIFIZIERTES PROFIL',
+      platforms_title: 'Große Verkaufsplattformen',
+      platforms_subtext: 'Besuchen Sie unseren offiziellen eBay-Shop und überzeugen Sie sich von echter Kundenzufriedenheit.',
       ebay_proof_badge: 'VERIFIZIERTES VERKÄUFERPROFIL',
       ebay_proof_title: 'Besuchen Sie uns auch auf eBay',
       ebay_proof_subtext: 'Transparente Bewertungen und verifizierte Kundenzufriedenheit in unserem offiziellen Shop.',
@@ -553,10 +714,22 @@ document.addEventListener('DOMContentLoaded', () => {
       cat_agd_desc: 'Kabellose Akkustaubsauger, Kaffeemaschinen und moderne Haushaltshelfer.',
       cat_acc_title: 'Zubehör',
       cat_acc_desc: 'Schnellladegeräte, Dockingstationen, Powerbanks und hochwertige Kabel.',
+      cat_baby_title: 'Kind & Baby',
+      cat_baby_desc: 'Babyartikel, Zubehör, sicheres Spielzeug und Kinderwagen aus geprüften Retouren.',
+      cat_pets_title: 'Haustiere',
+      cat_pets_desc: 'Zubehör für Hunde und Katzen, Tierbetten, Futterautomaten und Spielzeug zu Spitzenpreisen.',
       cat_other_title: 'Sonstiges',
       cat_other_desc: 'Ausgewählte Schnäppchen aus Restposten und Lagerabverkäufen.',
 
-      // Instagram Banner
+      // Instagram Live Feed & Banner
+      ig_feed_heading: 'Neueste Beiträge auf Instagram',
+      ig_feed_subtext: 'Tägliche Rabatte, Unboxings und neue Lieferungen. Klicken Sie auf einen Beitrag, um direkt zu Instagram zu gelangen.',
+      ig_post_tag: 'NEUER EINGANG',
+      ig_view_post: 'Beitrag ansehen',
+      ig_post_1_cap: 'Entdecken Sie die neuesten ANC Wireless Kopfhörer in Klasse A+. Details in unserer Story!',
+      ig_post_2_cap: 'Smartwatches führender Marken – E-Commerce-Retouren aus Deutschland zu Top-Preisen.',
+      ig_post_3_cap: 'Wir testen kabellose Staubsauger und Saugroboter vor dem Einstellen. Funktion garantiert.',
+      ig_post_4_cap: 'Bluetooth-Lautsprecher und mobiles Zubehör in Originalverpackung. Schreiben Sie uns eine DM!',
       ig_banner_title: 'Die neuesten Schnäppchen auf Instagram',
       ig_banner_desc: 'Unser Sortiment wechselt schnell. Folgen Sie uns, um keine Deals zu verpassen.',
       ig_banner_btn: 'Zum Profil',
@@ -574,21 +747,21 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_q4: 'Wo finde ich das aktuelle Sortiment?',
       faq_a4: 'Tagesaktuelle Neuzugänge und Highlights posten wir auf Instagram (@letino.outlet). Ausgewählte Artikel können auch auf eBay angeboten werden.',
       faq_q5: 'Wie kann ich ein Produkt anfragen?',
-      faq_a5: 'Am schnellsten per Direktnachricht (DM) auf Instagram (@letino.outlet).',
+      faq_a5: 'Am schnellsten per Direktnachricht (DM) auf Instagram (@letino.outlet) oder per E-Mail an letino.outlet@gmail.com.',
 
       // Kontakt
       contact_badge: 'KONTAKT',
       contact_heading: 'Kontaktieren Sie uns',
-      contact_subtext: 'Wir antworten am schnellsten per Instagram DM und Marktplatz.',
+      contact_subtext: 'Wir antworten am schnellsten per Instagram DM, eBay-Shop oder E-Mail.',
       contact_ig_title: 'Instagram (Empfohlen)',
       contact_ig_desc: 'Schreiben Sie uns eine Direktnachricht (DM) für Fragen zum Zustand, Preis und Reservierung.',
       contact_ig_btn: 'Auf Instagram schreiben &rarr;',
-      contact_fb_title: 'Facebook',
-      contact_fb_desc: 'Facebook-Seite von Letino mit Messenger-Kontakt.',
-      contact_fb_btn: 'Facebook-Seite öffnen &rarr;',
       contact_ebay_title: 'eBay.de Shop',
-      contact_ebay_desc: 'Letino Outlet Verkäuferprofil auf eBay.',
+      contact_ebay_desc: 'Letino Outlet Verkäuferprofil auf eBay mit vollem Käuferschutz.',
       contact_ebay_btn: 'eBay-Shop besuchen &rarr;',
+      contact_email_title: 'E-Mail',
+      contact_email_desc: 'Schreiben Sie direkt an unsere offizielle E-Mail-Adresse für Anfragen und Bestellungen.',
+      contact_email_btn: 'E-Mail: letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Rechtlicher Hinweis:</strong> Letino Outlet vertreibt geprüfte Outlet-Waren. Bitte richten Sie alle kaufmännischen Anfragen an die oben genannten Kontaktkanäle.',
 
       // Footer
@@ -598,15 +771,12 @@ document.addEventListener('DOMContentLoaded', () => {
       socials_title: 'Finde uns & Schreib uns',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
-      social_fb_title: 'Facebook',
-      social_fb_desc: 'Letino Facebook-Seite',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Letino Outlet eBay-Shop',
       legal_notice: '<strong>Rechtlicher Hinweis:</strong> <strong>Letino Outlet</strong> ist ein unabhängiger Wiederverkäufer von Kundenretouren und Restposten und steht in keiner geschäftlichen Verbindung zu externen Konzernen oder Markenherstellern. Alle Marken gehören ihren jeweiligen Eigentümern.',
       footer_privacy: 'Datenschutzerklärung',
       footer_terms: 'Nutzungsbedingungen',
       copyright_text: 'Letino Outlet. Alle Rechte vorbehalten.',
-      nav_home: "Startseite",
       faq_more_btn: "Vollständiges FAQ & Hilfe-Center ansehen &rarr;",
       crumb_home: "Startseite",
       crumb_faq: "FAQ",
@@ -647,17 +817,17 @@ document.addEventListener('DOMContentLoaded', () => {
       fa_s3: "Jede Sendung wird sorgfältig mit stabilen Kartonagen, Luftpolsterfolie und Dämmmaterial verpackt, damit empfindliche Elektronik unbeschadet bei Ihnen ankommt.",
       cat_title_safety: "Sicherheit & Kontakt",
       fq_c1: "Welche Kontaktkanäle gibt es bei Letino Outlet?",
-      fa_c1: "Der schnellste Weg ist eine Direktnachricht (DM) auf Instagram @letino.outlet. Alternativ erreichen Sie uns über Facebook Messenger oder eBay-Nachrichten.",
+      fa_c1: "Der schnellste Weg ist eine Direktnachricht (DM) auf Instagram @letino.outlet. Alternativ erreichen Sie uns per E-Mail unter letino.outlet@gmail.com oder über eBay-Nachrichten.",
       fq_c2: "Ist Letino Outlet mit den Herstellern der Marken verbunden?",
       fa_c2: "Nein. Letino Outlet ist ein unabhängiger Händler und steht in keiner Verbindung zu externen Konzernen oder Markenherstellern. Alle Markennamen dienen ausschließlich Beschreibungszwecken.",
       fq_c3: "Was tun, wenn meine Frage hier nicht beantwortet wurde?",
-      fa_c3: "Schreiben Sie uns direkt per DM auf Instagram @letino.outlet. Wir helfen Ihnen gerne weiter!",
+      fa_c3: "Schreiben Sie uns direkt per DM auf Instagram @letino.outlet oder per E-Mail an letino.outlet@gmail.com. Wir helfen Ihnen gerne weiter!",
       faq_cta_title: "Haben Sie weitere Fragen?",
       faq_cta_desc: "Schreiben Sie uns per Direktnachricht (DM) auf Instagram @letino.outlet. Wir beraten Sie gerne persönlich!",
       faq_cta_btn: "Auf Instagram schreiben &rarr;",
       faq_cta_home: "Zur Startseite zurückkehren",
       faq_doc_title: "FAQ – Fragen & Antworten | Letino Outlet",
-      faq_doc_desc: "Antworten auf Fragen zu Produktherkunft, Zustandsprüfung, Bestellung und Versand bei Letino Outlet.",
+      faq_doc_desc: "Antworten auf Fragen zu Produktherkunft, Zustandsprüfung, Bestellung und Versand bei Letino Outlet."
     }
   };
 
@@ -919,7 +1089,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p><strong>1. Informacje ogólne:</strong> Serwis Letino Outlet szanuje prywatność użytkowników odwiedzających witrynę.</p>
         <p><strong>2. Pamięć przeglądarki:</strong> Serwis wykorzystuje pamięć lokalną (localStorage) wyłącznie do zapamiętania preferencji językowych (PL / EN / DE).</p>
-        <p><strong>3. Przekierowania do serwisów zewnętrznych:</strong> Klikając linki do profilu Instagram, Facebook lub sklepu eBay, użytkownik przechodzi na strony podmiotów trzecich posiadające odrębne zasady prywatności.</p>
+        <p><strong>3. Przekierowania do serwisów zewnętrznych:</strong> Klikając linki do profilu Instagram lub sklepu eBay, użytkownik przechodzi na strony podmiotów trzecich posiadające odrębne zasady prywatności.</p>
         <p><strong>4. Dane kontaktowe:</strong> Wszelka korespondencja prowadzona za pośrednictwem Instagram Direct lub platform handlowych podlega zasadom tych platform.</p>
       `;
     } else {
@@ -979,6 +1149,63 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
     link.href = INSTAGRAM_URL;
   });
+
+  // =========================================================================
+  // AUTOMATYCZNA INTEGRACJA Z INSTAGRAM FEED (META GRAPH API)
+  // =========================================================================
+  async function initInstagramFeed() {
+    const feedGrid = document.getElementById('instagramFeedGrid');
+    if (!feedGrid || !INSTAGRAM_ACCESS_TOKEN || INSTAGRAM_ACCESS_TOKEN.trim() === '') {
+      return; // Brak tokenu - zachowaj responsywny szablon startowy z prawidłowymi linkami
+    }
+
+    try {
+      const endpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&access_token=${encodeURIComponent(INSTAGRAM_ACCESS_TOKEN.trim())}&limit=4`;
+      const response = await fetch(endpoint);
+      if (!response.ok) return;
+
+      const data = await response.json();
+      if (!data || !Array.isArray(data.data) || data.data.length === 0) return;
+
+      feedGrid.innerHTML = '';
+      data.data.slice(0, 4).forEach(item => {
+        const card = document.createElement('a');
+        card.className = 'ig-feed-card';
+        card.href = item.permalink || INSTAGRAM_URL;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+
+        const imgUrl = (item.media_type === 'VIDEO' && item.thumbnail_url) ? item.thumbnail_url : (item.media_url || '');
+        const dateFormatted = item.timestamp ? new Date(item.timestamp).toLocaleDateString() : 'INSTAGRAM';
+        const caption = item.caption ? item.caption.substring(0, 110) + (item.caption.length > 110 ? '...' : '') : 'Nowy post na profilu @letino.outlet';
+
+        const isVideo = item.media_type === 'VIDEO';
+        const badgeIcon = isVideo 
+          ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>'
+          : '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>';
+
+        card.innerHTML = `
+          <div class="ig-feed-media">
+            <img src="${imgUrl}" alt="Post z Instagrama Letino Outlet" loading="lazy">
+            <div class="ig-feed-type-badge">${badgeIcon}</div>
+          </div>
+          <div class="ig-feed-body">
+            <span class="ig-feed-date">${dateFormatted}</span>
+            <p class="ig-feed-caption">${caption}</p>
+            <div class="ig-feed-footer">
+              <span>Zobacz post</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+        `;
+        feedGrid.appendChild(card);
+      });
+    } catch (err) {
+      console.warn('Instagram live feed fetch failed, keeping fallback feed cards:', err);
+    }
+  }
+
+  initInstagramFeed();
   // =========================================================================
   // FILTR KATEGORII NA PODSTRONIE FAQ (faq.html)
   // =========================================================================
@@ -1058,15 +1285,23 @@ document.addEventListener('DOMContentLoaded', () => {
         let isMatch = false;
 
         if (key === 'faq') {
-          isMatch = href.includes('faq.html') && !href.includes('#kontakt');
+          isMatch = href.endsWith('#faq') || (href.includes('faq.html') && !href.includes('#kontakt'));
         } else if (key === 'kontakt') {
           isMatch = href.endsWith('#kontakt');
+        } else if (key === 'o-letino') {
+          isMatch = href.endsWith('#o-letino');
+        } else if (key === 'abc-ware') {
+          isMatch = href.endsWith('#abc-ware');
         } else if (key === 'produkty') {
           isMatch = href.endsWith('#produkty');
-        } else if (key === 'dlaczego-letino') {
-          isMatch = href.endsWith('#dlaczego-letino');
         } else if (key === 'kategorie') {
           isMatch = href.endsWith('#kategorie');
+        } else if (key === 'platformy') {
+          isMatch = href.endsWith('#platformy');
+        } else if (key === 'instagram-feed') {
+          isMatch = href.endsWith('#instagram-feed');
+        } else if (key === 'dlaczego-letino') {
+          isMatch = href.endsWith('#dlaczego-letino');
         }
 
         link.classList.toggle('active', isMatch);
@@ -1176,7 +1411,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       const currentHash = window.location.hash.replace('#', '');
-      if (['produkty', 'dlaczego-letino', 'kategorie', 'kontakt'].includes(currentHash)) {
+      if (['o-letino', 'abc-ware', 'produkty', 'kategorie', 'platformy', 'instagram-feed', 'faq', 'kontakt'].includes(currentHash)) {
         setActiveKey(currentHash);
       } else if (glideIndicator) {
         glideIndicator.style.opacity = '0';
@@ -1185,9 +1420,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactSection = document.getElementById('kontakt');
     const trackedSections = [
+      { id: 'o-letino', key: 'o-letino' },
+      { id: 'abc-ware', key: 'abc-ware' },
       { id: 'produkty', key: 'produkty' },
-      { id: 'dlaczego-letino', key: 'dlaczego-letino' },
       { id: 'kategorie', key: 'kategorie' },
+      { id: 'platformy', key: 'platformy' },
+      { id: 'instagram-feed', key: 'instagram-feed' },
+      { id: 'faq', key: 'faq' },
       { id: 'kontakt', key: 'kontakt' }
     ];
 
