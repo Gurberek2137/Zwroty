@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Oficjalne odnośniki Letino Outlet
+  // Główne kanały i odnośniki Letino Outlet
   const INSTAGRAM_URL = 'https://www.instagram.com/letino.outlet/';
   const EBAY_URL = 'https://www.ebay.de/str/letinooutlet';
   const FACEBOOK_URL = 'https://www.facebook.com/people/Letino/61554488427516/?mibextid=wwXIfr';
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // BAZA TŁUMACZEŃ (PL / EN / DE)
+  // BAZA TŁUMACZEŃ (PL / EN / DE) - RZETELNE I POTWIERDZONE INFORMACJE
   // =========================================================================
   const translations = {
     pl: {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_contact: "Kontakt",
 
       // Hero
-      hero_live_badge: '<span class="pulse-dot"></span> DOSTAWA Z AMAZON',
+      hero_live_badge: '<span class="pulse-dot"></span> ZWROTY & OKAZJE',
       hero_brand_sub: '@letino.outlet &bull; Zamówienia i kontakt przez DM',
       hero_brand_arrow: 'Napisz DM &rarr;',
       hero_title: 'Markowe produkty. <br><span class="gradient-text">Ceny, które robią różnicę.</span>',
@@ -39,41 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_cta: 'Zobacz aktualne okazje',
       hero_cta_secondary: 'Przeglądaj ofertę',
 
-      // Produkty
-      section_badge: 'OSTATNIA DOSTAWA PALET',
-      section_heading: 'Aktualne Okazje',
-      section_subtext: 'Pojedyncze sztuki zweryfikowane pod kątem sprawności i kompletności.',
+      // Produkty (Przykłady z oferty)
+      section_badge: 'PRZYKŁADY Z OFERTY',
+      section_heading: 'Przykładowe Okazje',
+      section_subtext: 'Poniższe produkty i ceny mają charakter poglądowy. Aktualnie dostępne pojedyncze sztuki prezentujemy na bieżąco na naszym Instagramie.',
+      badge_sample: 'Wzór poglądowy',
       p1_cond: 'Stan: Nowy / Otwarty karton',
       p1_comp: 'Kompletność: Zestaw fabryczny',
       p1_title: 'Sony WH-1000XM5 Słuchawki ANC',
-      p1_amz: 'Cena Amazon: 1 499 zł',
+      p1_amz: 'Cena regularna: ok. 1 499 zł',
       p1_savings: 'Oszczędzasz 650 zł',
-      p1_ours: 'Nasza cena: <strong>849 zł</strong>',
-      p1_cta: 'Kup teraz na eBay',
+      p1_ours: 'Cena w Letino: <strong>849 zł</strong>',
+      p1_cta: 'Zapytaj o dostępność na Instagramie',
 
       p2_cond: 'Stan: Klasa A+ (stan idealny)',
       p2_comp: 'Kompletność: Zestaw z ładowarką',
       p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Cena Amazon: 2 199 zł',
+      p2_amz: 'Cena regularna: ok. 2 199 zł',
       p2_savings: 'Oszczędzasz 909 zł',
-      p2_ours: 'Nasza cena: <strong>1 290 zł</strong>',
-      p2_cta: 'Kup teraz na eBay',
+      p2_ours: 'Cena w Letino: <strong>1 290 zł</strong>',
+      p2_cta: 'Zapytaj o dostępność na Instagramie',
 
       p3_cond: 'Stan: Sprawdzony / Klasa A',
       p3_comp: 'Kompletność: Zestaw akcesoriów',
       p3_title: 'Dyson V11 Odkurzacz Bezprzewodowy',
-      p3_amz: 'Cena Amazon: 2 699 zł',
+      p3_amz: 'Cena regularna: ok. 2 699 zł',
       p3_savings: 'Oszczędzasz 1 249 zł',
-      p3_ours: 'Nasza cena: <strong>1 450 zł</strong>',
-      p3_cta: 'Kup teraz na eBay',
+      p3_ours: 'Cena w Letino: <strong>1 450 zł</strong>',
+      p3_cta: 'Zapytaj o dostępność na Instagramie',
 
       p4_cond: 'Stan: Otwarty karton / jak nowy',
       p4_comp: 'Kompletność: Zestaw fabryczny',
       p4_title: 'JBL Charge 5 Głośnik Bluetooth',
-      p4_amz: 'Cena Amazon: 699 zł',
+      p4_amz: 'Cena regularna: ok. 699 zł',
       p4_savings: 'Oszczędzasz 339 zł',
-      p4_ours: 'Nasza cena: <strong>360 zł</strong>',
-      p4_cta: 'Kup teraz na eBay',
+      p4_ours: 'Cena w Letino: <strong>360 zł</strong>',
+      p4_cta: 'Zapytaj o dostępność na Instagramie',
 
       // Dlaczego Letino?
       why_badge: 'NASZE ATUTY',
@@ -86,14 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
       why_3_title: 'Znane marki',
       why_3_desc: 'Oryginalny sprzęt czołowych producentów elektroniki, urządzeń domowych i akcesoriów.',
       why_4_title: 'Regularnie nowe okazje',
-      why_4_desc: 'Częste dostawy paletowe i unikalne pojedyncze egzemplarze w limitowanej dostępności.',
+      why_4_desc: 'Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.',
 
       // Jak to działa?
       how_badge: 'PROSTY PROCES',
       how_heading: 'Jak to działa?',
-      how_subtext: 'Od dostawy paletowej po bezpieczny zakup w 4 prostych krokach.',
+      how_subtext: 'Od pozyskania produktu po zakup w 4 prostych krokach.',
       how_1_title: 'Pozyskujemy produkty',
-      how_1_desc: 'Produkty pochodzące ze zwrotów konsumenckich i nadwyżek magazynowych renomowanych platform e-commerce.',
+      how_1_desc: 'Produkty pochodzące ze zwrotów konsumenckich oraz nadwyżek magazynowych.',
       how_2_title: 'Weryfikujemy',
       how_2_desc: 'Produkty są sprawdzane przed sprzedażą pod kątem stanu technicznego, działania i kompletności.',
       how_3_title: 'Publikujemy okazje',
@@ -126,15 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_heading: 'Najczęściej zadawane pytania',
       faq_subtext: 'Praktyczne informacje o pochodzeniu sprzętu i realizacji zakupów.',
       faq_q1: 'Czy produkty są nowe?',
-      faq_a1: 'W ofercie Letino Outlet znajdują się towary ze zwrotów konsumenckich oraz nadwyżek magazynowych. Część produktów to egzemplarze fabrycznie nowe w otwartych lub uszkodzonych kartonach, a część to urządzenia powystawowe. Dokładny stan wizualny i klasa każdego produktu są zawsze rzetelnie podane w opisie danej oferty.',
+      faq_a1: 'W ofercie Letino Outlet znajdują się towary ze zwrotów konsumenckich oraz nadwyżek magazynowych. Część produktów to egzemplarze w otwartych lub uszkodzonych opakowaniach, a część to urządzenia powystawowe lub ze zwrotów. Dokładny stan wizualny każdego oferowanego przedmiotu jest zawsze rzetelnie podany w opisie.',
       faq_q2: 'Czy produkty są sprawdzane?',
-      faq_a2: 'Tak. Każdy egzemplarz przed wystawieniem do oferty jest weryfikowany pod kątem sprawności technicznej, działania głównych funkcji oraz kompletności dołączonych akcesoriów.',
+      faq_a2: 'Tak. Każdy egzemplarz przed wystawieniem do oferty jest sprawdzany pod kątem działania i kompletności dołączonych akcesoriów.',
       faq_q3: 'Skąd pochodzą produkty?',
-      faq_a3: 'Oferowane produkty pochodzą ze zwrotów konsumenckich (np. zwrotów 14-dniowych), wyprzedaży zapasów oraz nadwyżek magazynowych z oficjalnych kanałów dystrybucji i platform handlowych (m.in. Amazon).',
+      faq_a3: 'Oferowane produkty pochodzą ze zwrotów konsumenckich (np. zwrotów ustawowych) oraz nadwyżek magazynowych z rynku europejskiego.',
       faq_q4: 'Gdzie można zobaczyć aktualną ofertę?',
-      faq_a4: 'Bieżące dostawy, relacje oraz pojedyncze okazje publikujemy na naszym profilu Instagram (@letino.outlet). Część asortymentu wystawiamy również w naszym oficjalnym sklepie na platformie eBay.',
+      faq_a4: 'Aktualną ofertę i bieżące pojedyncze okazje publikujemy na naszym profilu Instagram (@letino.outlet). Wybrane przedmioty mogą być również wystawiane na naszym profilu eBay.',
       faq_q5: 'Jak skontaktować się w sprawie produktu?',
-      faq_a5: 'Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet lub bezpośredni kontakt poprzez wiadomość na platformie eBay / Facebook.',
+      faq_a5: 'Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet.',
 
       // Kontakt
       contact_badge: 'KONTAKT',
@@ -147,14 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_fb_desc: 'Profil Letino na Facebooku. Możliwość kontaktu poprzez wiadomość Messenger.',
       contact_fb_btn: 'Przejdź do profilu Facebook &rarr;',
       contact_ebay_title: 'Sklep eBay.de',
-      contact_ebay_desc: 'Bezpośredni zakup z ochroną kupującego oraz opcja kontaktu ze sprzedającym na eBay.',
+      contact_ebay_desc: 'Profil sprzedażowy Letino Outlet na platformie eBay.',
       contact_ebay_btn: 'Odwiedź sklep na eBay &rarr;',
-      contact_registry_text: '<strong>Informacja formalna:</strong> Letino Outlet prowadzi sprzedaż zweryfikowanych towarów outletowych. Wszelkie zapytania handlowe oraz pytania o asortyment prosimy kierować przez wyżej wymienione oficjalne kanały.',
+      contact_registry_text: '<strong>Informacja formalna:</strong> Letino Outlet prowadzi sprzedaż zweryfikowanych towarów outletowych. Wszelkie zapytania handlowe oraz pytania o asortyment prosimy kierować przez wyżej wymienione kanały kontaktu.',
 
       // Stopka
       footer_brand_desc: 'Sprawdzone produkty ze zwrotów konsumenckich i nadwyżek magazynowych. Znane marki w atrakcyjnych cenach.',
       footer_links_title: 'Nawigacja',
-      footer_social_title: 'Oficjalne Kanały',
+      footer_social_title: 'Nasze Kanały',
       socials_title: 'Znajdź nas & Napisz do nas',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
@@ -162,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       social_fb_desc: 'Profil Letino',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Sklep Letino Outlet',
-      legal_notice: '<strong>Nota prawna:</strong> Serwis <strong>Letino Outlet</strong> jest niezależnym sprzedawcą zweryfikowanych towarów ze zwrotów konsumenckich oraz nadwyżek magazynowych i nie jest powiązany, prowadzony ani sponsorowany przez markę Amazon (Amazon.com, Inc. lub Amazon EU S.à r.l.). Wszelkie znaki towarowe i nazwy marek należą do ich prawnych właścicieli i zostały użyte wyłącznie w celach informacyjnych do określenia właściwości i przeznaczenia oferowanych produktów.',
+      legal_notice: '<strong>Nota prawna:</strong> Serwis <strong>Letino Outlet</strong> jest niezależnym sprzedawcą produktów ze zwrotów konsumenckich oraz nadwyżek magazynowych. Serwis nie jest powiązany, prowadzony ani sponsorowany przez żadną zewnętrzną korporację ani producentów prezentowanych marek. Wszelkie znaki towarowe należą do ich prawnych właścicieli i zostały użyte wyłącznie w celach informacyjnych.',
       footer_privacy: 'Polityka Prywatności',
       footer_terms: 'Regulamin Serwisu',
       copyright_text: 'Letino Outlet. Wszelkie prawa zastrzeżone.'
@@ -181,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_contact: "Contact",
 
       // Hero
-      hero_live_badge: '<span class="pulse-dot"></span> DIRECT FROM AMAZON',
+      hero_live_badge: '<span class="pulse-dot"></span> RETURNS & OVERSTOCK',
       hero_brand_sub: '@letino.outlet &bull; Inquiries & orders via DM',
       hero_brand_arrow: 'Send DM &rarr;',
       hero_title: 'Brand-name products. <br><span class="gradient-text">Prices that make a difference.</span>',
@@ -189,41 +190,42 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_cta: 'View Latest Deals',
       hero_cta_secondary: 'Browse Offers',
 
-      // Products
-      section_badge: 'LATEST PALLET ARRIVAL',
-      section_heading: 'Featured Deals',
-      section_subtext: 'Single units tested and verified for condition and accessories.',
+      // Products (Sample Offers)
+      section_badge: 'SAMPLE OFFERS',
+      section_heading: 'Sample Deals',
+      section_subtext: 'The products and prices below are for illustration purposes only. Currently available items are posted on our Instagram.',
+      badge_sample: 'Sample Offer',
       p1_cond: 'Condition: New / Open Box',
       p1_comp: 'Completeness: Factory Kit',
       p1_title: 'Sony WH-1000XM5 ANC Headphones',
-      p1_amz: 'Amazon Price: 1 499 PLN',
+      p1_amz: 'Regular price: ~1 499 PLN',
       p1_savings: 'Save 650 PLN',
-      p1_ours: 'Our price: <strong>849 PLN</strong>',
-      p1_cta: 'Buy now on eBay',
+      p1_ours: 'Letino price: <strong>849 PLN</strong>',
+      p1_cta: 'Inquire on Instagram',
 
       p2_cond: 'Condition: Grade A+ (Pristine)',
       p2_comp: 'Completeness: Includes Charger',
       p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Amazon Price: 2 199 PLN',
+      p2_amz: 'Regular price: ~2 199 PLN',
       p2_savings: 'Save 909 PLN',
-      p2_ours: 'Our price: <strong>1 290 PLN</strong>',
-      p2_cta: 'Buy now on eBay',
+      p2_ours: 'Letino price: <strong>1 290 PLN</strong>',
+      p2_cta: 'Inquire on Instagram',
 
       p3_cond: 'Condition: Tested / Grade A',
       p3_comp: 'Completeness: Tool Kit Included',
       p3_title: 'Dyson V11 Cordless Vacuum',
-      p3_amz: 'Amazon Price: 2 699 PLN',
+      p3_amz: 'Regular price: ~2 699 PLN',
       p3_savings: 'Save 1 249 PLN',
-      p3_ours: 'Our price: <strong>1 450 PLN</strong>',
-      p3_cta: 'Buy now on eBay',
+      p3_ours: 'Letino price: <strong>1 450 PLN</strong>',
+      p3_cta: 'Inquire on Instagram',
 
       p4_cond: 'Condition: Open Box / Like New',
       p4_comp: 'Completeness: Factory Kit',
       p4_title: 'JBL Charge 5 Bluetooth Speaker',
-      p4_amz: 'Amazon Price: 699 PLN',
+      p4_amz: 'Regular price: ~699 PLN',
       p4_savings: 'Save 339 PLN',
-      p4_ours: 'Our price: <strong>360 PLN</strong>',
-      p4_cta: 'Buy now on eBay',
+      p4_ours: 'Letino price: <strong>360 PLN</strong>',
+      p4_cta: 'Inquire on Instagram',
 
       // Why Letino?
       why_badge: 'WHY CHOOSE US',
@@ -236,14 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
       why_3_title: 'Known Brands',
       why_3_desc: 'Authentic merchandise from world-leading consumer electronics and home appliance makers.',
       why_4_title: 'Regular New Drops',
-      why_4_desc: 'Frequent pallet arrivals and unique, single-unit opportunities in limited quantities.',
+      why_4_desc: 'Frequently updated stock and unique single items at competitive prices.',
 
       // How It Works
       how_badge: 'SIMPLE PROCESS',
       how_heading: 'How It Works',
-      how_subtext: 'From pallet acquisition to safe purchase in 4 straightforward steps.',
+      how_subtext: 'From product sourcing to your purchase in 4 simple steps.',
       how_1_title: 'We Source Goods',
-      how_1_desc: 'Products sourced from overstock and customer returns of major e-commerce platforms.',
+      how_1_desc: 'Products sourced from customer returns and warehouse overstock.',
       how_2_title: 'We Verify',
       how_2_desc: 'Products are rigorously inspected for functionality, visual condition and accessory kit.',
       how_3_title: 'We Post Deals',
@@ -276,15 +278,15 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_heading: 'Frequently Asked Questions',
       faq_subtext: 'Practical answers about stock origin and buying process.',
       faq_q1: 'Are the products brand new?',
-      faq_a1: 'Letino Outlet offers goods from customer returns and warehouse overstocks. Some items are factory new in opened or slightly distressed boxes, while others are demo/display units. Exact cosmetic grade is always stated transparently.',
+      faq_a1: 'Letino Outlet offers goods from customer returns and warehouse overstocks. Some items are in opened or distressed boxes, while others are demo/display units. Exact cosmetic grade is always stated transparently.',
       faq_q2: 'Are items tested before dispatch?',
-      faq_a2: 'Yes. Each piece undergoes functional verification, testing of primary features and check of included accessories before listing.',
+      faq_a2: 'Yes. Each piece undergoes functional verification and check of included accessories before listing.',
       faq_q3: 'Where do the items come from?',
-      faq_a3: 'Our inventory originates from customer returns (e.g. 14-day statutory returns), inventory clearances and warehouse overstock from official retail channels (including Amazon).',
+      faq_a3: 'Our inventory originates from customer returns and warehouse overstock from the European market.',
       faq_q4: 'Where can I see current inventory?',
-      faq_a4: 'Daily deliveries, unboxing stories and single-unit deals are posted on Instagram (@letino.outlet). Selected items are also listed on our official eBay store.',
+      faq_a4: 'Current offers and single-unit deals are posted on Instagram (@letino.outlet). Selected items may also be listed on our eBay profile.',
       faq_q5: 'How do I contact you regarding an item?',
-      faq_a5: 'The quickest way is sending a Direct Message (DM) on Instagram @letino.outlet or messaging us via eBay / Facebook.',
+      faq_a5: 'The quickest way is sending a Direct Message (DM) on Instagram @letino.outlet.',
 
       // Contact
       contact_badge: 'CONTACT',
@@ -294,17 +296,17 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_ig_desc: 'Send us a Direct Message (DM). We answer questions about condition, availability and reserve requests.',
       contact_ig_btn: 'Message on Instagram &rarr;',
       contact_fb_title: 'Facebook',
-      contact_fb_desc: 'Letino official Facebook page. Contact via Messenger available.',
+      contact_fb_desc: 'Letino Facebook page. Contact via Messenger available.',
       contact_fb_btn: 'Open Facebook Page &rarr;',
       contact_ebay_title: 'eBay.de Store',
-      contact_ebay_desc: 'Direct purchase with buyer protection and seller messaging on eBay.',
+      contact_ebay_desc: 'Letino Outlet seller profile on eBay platform.',
       contact_ebay_btn: 'Visit eBay Store &rarr;',
-      contact_registry_text: '<strong>Formal Notice:</strong> Letino Outlet is a reseller of verified outlet merchandise. Please direct all commercial inquiries and stock questions through the official channels listed above.',
+      contact_registry_text: '<strong>Formal Notice:</strong> Letino Outlet is a reseller of verified outlet merchandise. Please direct all commercial inquiries and stock questions through the contact channels listed above.',
 
       // Footer
       footer_brand_desc: 'Verified products from customer returns and overstock. Famous brands at affordable prices.',
       footer_links_title: 'Navigation',
-      footer_social_title: 'Official Channels',
+      footer_social_title: 'Our Channels',
       socials_title: 'Find Us & Message Us',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
@@ -312,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
       social_fb_desc: 'Letino Profile',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Letino Outlet Store',
-      legal_notice: '<strong>Legal Notice:</strong> <strong>Letino Outlet</strong> is an independent reseller of customer returns and overstock merchandise and is not affiliated with, operated by, or sponsored by Amazon (Amazon.com, Inc. or Amazon EU S.à r.l.). All trademarks and brand names belong to their respective owners and are used purely for descriptive identification.',
+      legal_notice: '<strong>Legal Notice:</strong> <strong>Letino Outlet</strong> is an independent reseller of customer returns and overstock merchandise. The site is not affiliated with, operated by, or sponsored by any external corporation or product manufacturers. All trademarks belong to their respective owners.',
       footer_privacy: 'Privacy Policy',
       footer_terms: 'Terms of Service',
       copyright_text: 'Letino Outlet. All rights reserved.'
@@ -331,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_contact: "Kontakt",
 
       // Hero
-      hero_live_badge: '<span class="pulse-dot"></span> DIREKT AUS AMAZON-RETOUREN',
+      hero_live_badge: '<span class="pulse-dot"></span> RETOUREN & ANGEBOTE',
       hero_brand_sub: '@letino.outlet &bull; Bestellungen & Kontakt per DM',
       hero_brand_arrow: 'DM schreiben &rarr;',
       hero_title: 'Markenprodukte. <br><span class="gradient-text">Preise, die den Unterschied machen.</span>',
@@ -339,41 +341,42 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_cta: 'Aktuelle Angebote ansehen',
       hero_cta_secondary: 'Sortiment erkunden',
 
-      // Produkte
-      section_badge: 'NEUESTE PALETTENLIEFERUNG',
-      section_heading: 'Aktuelle Schnäppchen',
-      section_subtext: 'Geprüfte Einzelstücke – voll funktionsfähig und transparent bewertet.',
+      // Produkte (Beispiele aus dem Sortiment)
+      section_badge: 'BEISPIELANGEBOTE',
+      section_heading: 'Beispielhafte Angebote',
+      section_subtext: 'Die nachfolgenden Produkte und Preise dienen lediglich als Beispiele. Aktuell verfügbare Artikel posten wir auf Instagram.',
+      badge_sample: 'Beispielangebot',
       p1_cond: 'Zustand: Neu / Geöffnete OVP',
       p1_comp: 'Vollständigkeit: Komplettes Set',
       p1_title: 'Sony WH-1000XM5 ANC Kopfhörer',
-      p1_amz: 'Amazon UVP: 1 499 PLN',
+      p1_amz: 'Regulärer Preis: ca. 1 499 PLN',
       p1_savings: 'Sie sparen 650 PLN',
-      p1_ours: 'Unser Preis: <strong>849 PLN</strong>',
-      p1_cta: 'Jetzt auf eBay kaufen',
+      p1_ours: 'Letino Preis: <strong>849 PLN</strong>',
+      p1_cta: 'Auf Instagram anfragen',
 
       p2_cond: 'Zustand: Klasse A+ (Neuwertig)',
       p2_comp: 'Vollständigkeit: Inkl. Ladekabel',
       p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Amazon UVP: 2 199 PLN',
+      p2_amz: 'Regulärer Preis: ca. 2 199 PLN',
       p2_savings: 'Sie sparen 909 PLN',
-      p2_ours: 'Unser Preis: <strong>1 290 PLN</strong>',
-      p2_cta: 'Jetzt auf eBay kaufen',
+      p2_ours: 'Letino Preis: <strong>1 290 PLN</strong>',
+      p2_cta: 'Auf Instagram anfragen',
 
       p3_cond: 'Zustand: Geprüft / Klasse A',
       p3_comp: 'Vollständigkeit: Mit Zubehör',
       p3_title: 'Dyson V11 Akku-Staubsauger',
-      p3_amz: 'Amazon UVP: 2 699 PLN',
+      p3_amz: 'Regulärer Preis: ca. 2 699 PLN',
       p3_savings: 'Sie sparen 1 249 PLN',
-      p3_ours: 'Unser Preis: <strong>1 450 PLN</strong>',
-      p3_cta: 'Jetzt auf eBay kaufen',
+      p3_ours: 'Letino Preis: <strong>1 450 PLN</strong>',
+      p3_cta: 'Auf Instagram anfragen',
 
       p4_cond: 'Zustand: Geöffnete OVP / Wie neu',
       p4_comp: 'Vollständigkeit: Komplettes Set',
       p4_title: 'JBL Charge 5 Bluetooth-Lautsprecher',
-      p4_amz: 'Amazon UVP: 699 PLN',
+      p4_amz: 'Regulärer Preis: ca. 699 PLN',
       p4_savings: 'Sie sparen 339 PLN',
-      p4_ours: 'Unser Preis: <strong>360 PLN</strong>',
-      p4_cta: 'Jetzt auf eBay kaufen',
+      p4_ours: 'Letino Preis: <strong>360 PLN</strong>',
+      p4_cta: 'Auf Instagram anfragen',
 
       // Warum Letino?
       why_badge: 'UNSERE VORTEILE',
@@ -386,14 +389,14 @@ document.addEventListener('DOMContentLoaded', () => {
       why_3_title: 'Bekannte Marken',
       why_3_desc: 'Originalware renommierter Hersteller von Elektronik und Haushaltsgeräten.',
       why_4_title: 'Regelmäßig neue Drops',
-      why_4_desc: 'Laufend neue Palettenlieferungen und seltene Einzelstücke mit begrenzter Verfügbarkeit.',
+      why_4_desc: 'Regelmäßig wechselndes Sortiment und seltene Einzelstücke zu attraktiven Preisen.',
 
       // Wie funktioniert es?
       how_badge: 'EINFACHER ABLAUF',
       how_heading: 'Wie funktioniert es?',
-      how_subtext: 'Von der Palettenware zum sicheren Kauf in 4 klaren Schritten.',
+      how_subtext: 'Von der Warenbeschaffung bis zum Kauf in 4 einfachen Schritten.',
       how_1_title: 'Wir beziehen Ware',
-      how_1_desc: 'Produkte aus Kundenretouren und Lagerüberhängen führender Handelsplattformen.',
+      how_1_desc: 'Waren aus Kundenretouren und Lagerüberbeständen.',
       how_2_title: 'Wir prüfen',
       how_2_desc: 'Alle Artikel werden auf Funktion, Zustand und Vollständigkeit sorgfältig getestet.',
       how_3_title: 'Wir veröffentlichen',
@@ -426,15 +429,15 @@ document.addEventListener('DOMContentLoaded', () => {
       faq_heading: 'Häufig gestellte Fragen',
       faq_subtext: 'Wissenswertes über Herkunft und Kaufabwicklung bei Letino Outlet.',
       faq_q1: 'Sind die Produkte neu?',
-      faq_a1: 'Bei Letino Outlet finden Sie Waren aus Kundenretouren und Restposten. Manche Produkte sind unbenutzt in geöffneter Verpackung, andere Vorführgeräte. Der genaue Zustand wird stets transparent deklariert.',
+      faq_a1: 'Bei Letino Outlet finden Sie Waren aus Kundenretouren und Restposten. Manche Produkte sind in geöffneter Verpackung, andere Vorführgeräte. Der genaue Zustand wird stets transparent deklariert.',
       faq_q2: 'Werden die Artikel geprüft?',
       faq_a2: 'Ja. Jedes Exemplar wird vor dem Verkauf auf Funktion, Betriebsbereitschaft und Zubehör getestet.',
       faq_q3: 'Woher stammt die Ware?',
-      faq_a3: 'Die Produkte stammen aus gesetzlichen Rücksendungen (14-Tage-Retouren) und Lagerüberbeständen europäischer Marktplätze (u. a. Amazon).',
+      faq_a3: 'Die angebotenen Produkte stammen aus Kundenretouren und Restposten aus dem europäischen Markt.',
       faq_q4: 'Wo finde ich das aktuelle Sortiment?',
-      faq_a4: 'Tagesaktuelle Neuzugänge und Highlights posten wir auf Instagram (@letino.outlet). Zudem finden Sie Angebote in unserem offiziellen eBay-Shop.',
+      faq_a4: 'Tagesaktuelle Neuzugänge und Highlights posten wir auf Instagram (@letino.outlet). Ausgewählte Artikel können auch auf eBay angeboten werden.',
       faq_q5: 'Wie kann ich ein Produkt anfragen?',
-      faq_a5: 'Am schnellsten per Direktnachricht (DM) auf Instagram (@letino.outlet) oder über das Nachrichtensystem bei eBay / Facebook.',
+      faq_a5: 'Am schnellsten per Direktnachricht (DM) auf Instagram (@letino.outlet).',
 
       // Kontakt
       contact_badge: 'KONTAKT',
@@ -444,17 +447,17 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_ig_desc: 'Schreiben Sie uns eine Direktnachricht (DM) für Fragen zum Zustand, Preis und Reservierung.',
       contact_ig_btn: 'Auf Instagram schreiben &rarr;',
       contact_fb_title: 'Facebook',
-      contact_fb_desc: 'Offizielle Facebook-Seite von Letino mit Messenger-Kontakt.',
+      contact_fb_desc: 'Facebook-Seite von Letino mit Messenger-Kontakt.',
       contact_fb_btn: 'Facebook-Seite öffnen &rarr;',
       contact_ebay_title: 'eBay.de Shop',
-      contact_ebay_desc: 'Direkter Kauf mit Käuferschutz und Verkäuferkontakt auf eBay.',
+      contact_ebay_desc: 'Letino Outlet Verkäuferprofil auf eBay.',
       contact_ebay_btn: 'eBay-Shop besuchen &rarr;',
-      contact_registry_text: '<strong>Rechtlicher Hinweis:</strong> Letino Outlet vertreibt geprüfte Outlet-Waren. Bitte richten Sie alle kaufmännischen Anfragen an die oben genannten offiziellen Kanäle.',
+      contact_registry_text: '<strong>Rechtlicher Hinweis:</strong> Letino Outlet vertreibt geprüfte Outlet-Waren. Bitte richten Sie alle kaufmännischen Anfragen an die oben genannten Kontaktkanäle.',
 
       // Footer
       footer_brand_desc: 'Geprüfte Ware aus Kundenretouren und Restposten bekannter Marken zu Spitzenpreisen.',
       footer_links_title: 'Navigation',
-      footer_social_title: 'Offizielle Kanäle',
+      footer_social_title: 'Unsere Kanäle',
       socials_title: 'Finde uns & Schreib uns',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
@@ -462,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
       social_fb_desc: 'Letino Facebook-Seite',
       social_ebay_title: 'eBay.de',
       social_ebay_desc: 'Letino Outlet eBay-Shop',
-      legal_notice: '<strong>Rechtlicher Hinweis:</strong> <strong>Letino Outlet</strong> ist ein unabhängiger Wiederverkäufer von Kundenretouren und steht in keiner geschäftlichen Verbindung zu Amazon (Amazon.com, Inc. oder Amazon EU S.à r.l.). Alle genannten Markennamen dienen rein beschreibenden Zwecken.',
+      legal_notice: '<strong>Rechtlicher Hinweis:</strong> <strong>Letino Outlet</strong> ist ein unabhängiger Wiederverkäufer von Kundenretouren und Restposten und steht in keiner geschäftlichen Verbindung zu externen Konzernen oder Markenherstellern. Alle Marken gehören ihren jeweiligen Eigentümern.',
       footer_privacy: 'Datenschutzerklärung',
       footer_terms: 'Nutzungsbedingungen',
       copyright_text: 'Letino Outlet. Alle Rechte vorbehalten.'
@@ -654,23 +657,23 @@ document.addEventListener('DOMContentLoaded', () => {
       modalTitle.textContent = 'Polityka Prywatności Letino Outlet';
       modalBody.innerHTML = `
         <div class="legal-placeholder-alert">
-          <strong>Wskazówka:</strong> Poniższa treść stanowi transparentną informację o ochronie prywatności. Właściwe dane rejestrowe administratora zostaną uzupełnione przez właściciela firmy.
+          <strong>Wskazówka:</strong> Poniższa treść stanowi informację o ochronie prywatności. Właściwe dane rejestrowe administratora zostaną uzupełnione przez właściciela serwisu.
         </div>
-        <p><strong>1. Informacje ogólne:</strong> Serwis Letino Outlet dba o poszanowanie prywatności użytkowników odwiedzających witrynę.</p>
-        <p><strong>2. Pliki cookies i pamięć lokalna:</strong> Serwis wykorzystuje pamięć przeglądarki (localStorage) wyłącznie do zapamiętania preferencji językowych (PL / EN / DE). Nie stosujemy uciążliwych skryptów śledzących zachowanie użytkownika.</p>
-        <p><strong>3. Przekierowania do serwisów zewnętrznych:</strong> Klikając linki do profili Instagram, Facebook lub sklepu eBay, użytkownik przechodzi na strony podmiotów trzecich, które posiadają własne, niezależne polityki prywatności.</p>
-        <p><strong>4. Dane kontaktowe:</strong> Wszelka korespondencja prowadzona za pośrednictwem Instagram Direct, Facebook Messenger lub platformy eBay podlega zasadom bezpieczeństwa tych platform.</p>
+        <p><strong>1. Informacje ogólne:</strong> Serwis Letino Outlet szanuje prywatność użytkowników odwiedzających witrynę.</p>
+        <p><strong>2. Pamięć przeglądarki:</strong> Serwis wykorzystuje pamięć lokalną (localStorage) wyłącznie do zapamiętania preferencji językowych (PL / EN / DE).</p>
+        <p><strong>3. Przekierowania do serwisów zewnętrznych:</strong> Klikając linki do profilu Instagram, Facebook lub sklepu eBay, użytkownik przechodzi na strony podmiotów trzecich posiadające odrębne zasady prywatności.</p>
+        <p><strong>4. Dane kontaktowe:</strong> Wszelka korespondencja prowadzona za pośrednictwem Instagram Direct lub platform handlowych podlega zasadom tych platform.</p>
       `;
     } else {
       modalTitle.textContent = 'Regulamin Serwisu Letino Outlet';
       modalBody.innerHTML = `
         <div class="legal-placeholder-alert">
-          <strong>Wskazówka:</strong> Poniższa treść określa charakter informacyjno-katalogowy witryny.
+          <strong>Wskazówka:</strong> Poniższa treść określa informacyjny charakter witryny.
         </div>
-        <p><strong>1. Charakter witryny:</strong> Niniejszy serwis internetowy pełni funkcję katalogowo-informacyjną prezentującą wybrane produkty z oferty outletowej marki Letino Outlet.</p>
-        <p><strong>2. Pochodzenie produktów:</strong> Oferowane produkty pochodzą ze zwrotów konsumenckich, nadwyżek magazynowych lub wyprzedaży zapasów. Każdy produkt posiada określony stan wizualny oraz techniczny w opisie oferty.</p>
-        <p><strong>3. Zakup i finalizacja transakcji:</strong> Transakcje kupna-sprzedaży są zawierane za pośrednictwem dedykowanych platform handlowych (np. eBay.de) lub ustalane indywidualnie drogą bezpośrednią (Instagram DM). Zasady płatności, wysyłki oraz ewentualnych zwrotów są wiążąco określane na platformie sprzedażowej dla danego zakupu.</p>
-        <p><strong>4. Niezależność:</strong> Letino Outlet jest niezależnym podmiotem gospodarczym i nie jest powiązany z marką Amazon ani producentami prezentowanych sprzętów.</p>
+        <p><strong>1. Charakter witryny:</strong> Niniejszy serwis pełni funkcję prezentacyjno-informacyjną dla oferty outletowej marki Letino Outlet.</p>
+        <p><strong>2. Produkty:</strong> Oferowane towary pochodzą ze zwrotów konsumenckich oraz nadwyżek magazynowych. Każdy egzemplarz ma określony stan wizualny oraz techniczny w opisie.</p>
+        <p><strong>3. Zakup i kontakt:</strong> Pytania o dostępność oraz ustalenia transakcyjne odbywają się drogą bezpośrednią (Instagram DM) lub przez dedykowane platformy sprzedaży.</p>
+        <p><strong>4. Niezależność:</strong> Letino Outlet jest niezależnym podmiotem i nie jest powiązany z zewnętrznymi korporacjami ani producentami prezentowanych marek.</p>
       `;
     }
 
@@ -709,10 +712,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // SYNCHRONIZACJA LINKÓW EBAY & INSTAGRAM
+  // SYNCHRONIZACJA LINKÓW
   // =========================================================================
   document.querySelectorAll('.card-link').forEach(link => {
-    link.href = EBAY_URL;
+    link.href = INSTAGRAM_URL;
   });
 
   document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {

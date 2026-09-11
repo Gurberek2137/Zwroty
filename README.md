@@ -10,14 +10,13 @@ Nowoczesna, lekka i w pełni responsywna strona internetowa dla marki **Letino O
    - Mocny nagłówek: *„Markowe produkty. Ceny, które robią różnicę.”*
    - Rzetelny opis pochodzenia towaru.
    - Główne Call to Action: *„Zobacz aktualne okazje”* (bezpośrednie przekierowanie do profilu na Instagramie).
-2. **Aktualne Okazje (Karty Produktów)**:
-   - Wybrane egzemplarze (Sony WH-1000XM5, Apple Watch Series 9, Dyson V11, JBL Charge 5).
-   - Weryfikacja stanu technicznego i wizualnego (*Nowy / Otwarty karton*, *Klasa A+*).
-   - Informacja o kompletności zestawu akcesoriów.
-   - Porównanie cen regularnych z ofertą Letino Outlet oraz kalkulacja oszczędności.
-   - Bezpośredni zakup na eBay oraz zapytanie na Instagramie.
+2. **Przykładowe Okazje (Karty Poglądowe)**:
+   - Poglądowe egzemplarze (Sony WH-1000XM5, Apple Watch Series 9, Dyson V11, JBL Charge 5) z oznaczeniem „Wzór poglądowy”.
+   - Informacje o stanie technicznym, wizualnym oraz kompletności zestawu.
+   - Poglądowe porównanie cen rynkowych z przykładowymi cenami w Letino Outlet.
+   - Bezpośrednie zapytanie o dostępność przez Instagram DM.
 3. **Dlaczego Letino?**:
-   - 4 konkretne atuty biznesowe: *Atrakcyjne ceny*, *Sprawdzone produkty*, *Znane marki*, *Regularnie nowe okazje*.
+   - 4 konkretne atuty: *Atrakcyjne ceny*, *Sprawdzone produkty*, *Znane marki*, *Regularnie nowe okazje*.
 4. **Jak to działa?**:
    - 4-krokowy transparentny proces:
      - `01 — Pozyskujemy produkty`
@@ -31,10 +30,10 @@ Nowoczesna, lekka i w pełni responsywna strona internetowa dla marki **Letino O
 7. **FAQ (Akordeon)**:
    - Najczęściej zadawane pytania dotyczące stanu urządzeń, testowania, pochodzenia i zakupu.
 8. **Kontakt**:
-   - Oficjalne kanały: Instagram Direct (@letino.outlet), Facebook oraz oficjalny sklep eBay.de.
+   - Kanały kontaktu: Instagram Direct (@letino.outlet), Facebook oraz sklep eBay.de.
 9. **Stopka & Nota Prawna**:
-   - Szybka nawigacja i kanały społecznościowe.
-   - Nota prawna o niezależności od marki Amazon.
+   - Szybka nawigacja i profile społecznościowe.
+   - Nota prawna o pełnej niezależności od podmiotów trzecich i właścicieli znaków towarowych.
    - Okno modalne z wzorem Polityki Prywatności i Regulaminu Serwisu.
    - Przycisk powrotu na górę strony.
 

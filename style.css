@@ -917,6 +917,19 @@ section {
   margin-bottom: 12px;
 }
 
+.badge-sample {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--letino-gold-light);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  align-self: flex-start;
+}
+
 .card-condition {
   font-size: 0.74rem;
   font-weight: 600;
