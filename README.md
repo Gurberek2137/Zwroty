@@ -1,6 +1,6 @@
 # Zwroty
 
-A website developed for © Letino Outlet.
+A website developed for Letino Outlet.
 
 ## Author
 
@@ -18,7 +18,9 @@ Active development.
 
 ## Copyright
 
-Dawid Cudak / © Letino Outlet
+© 2026 Letino Outlet
+
+This project was designed and developed by Dawid Cudak.
 
 The source code and original materials in this repository are protected by copyright.
 
