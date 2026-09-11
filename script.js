@@ -195,42 +195,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Aktualizacja stanu 3 kafelków
+      // Aktualizacja stanu kafelków językowych
       document.querySelectorAll('.lang-tile').forEach(tile => {
         const isActive = tile.getAttribute('data-lang') === selectedLang;
         tile.classList.toggle('active', isActive);
+        tile.setAttribute('aria-checked', isActive ? 'true' : 'false');
         tile.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        tile.tabIndex = isActive ? 0 : -1;
       });
 
       // Zapis wyboru w pamięci przeglądarki
       try {
         localStorage.setItem('letino_lang', selectedLang);
       } catch (e) {
-        // obsługa trybu incognito bez localStorage
+        // obsługa trybu prywatnego / braku localStorage
       }
 
       document.body.classList.remove('lang-fade-out');
     }, 120);
   }
 
-  // Obsługa kliknięć w 3 kafelki
-  document.querySelectorAll('.lang-tile').forEach(tile => {
+  // Obsługa kliknięć w kafelki
+  const langTiles = Array.from(document.querySelectorAll('.lang-tile'));
+  langTiles.forEach((tile, index) => {
     tile.addEventListener('click', (e) => {
       e.preventDefault();
       const lang = tile.getAttribute('data-lang');
       setLanguage(lang);
+      tile.focus();
+    });
+
+    // Nawigacja klawiaturą (strzałki lewo / prawo)
+    tile.addEventListener('keydown', (e) => {
+      let nextIndex = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        nextIndex = (index + 1) % langTiles.length;
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        nextIndex = (index - 1 + langTiles.length) % langTiles.length;
+      }
+
+      if (nextIndex !== null) {
+        const nextTile = langTiles[nextIndex];
+        const nextLang = nextTile.getAttribute('data-lang');
+        setLanguage(nextLang);
+        nextTile.focus();
+      }
     });
   });
 
-  // Inicjalizacja języka (zapisany w localStorage lub domyślny PL)
-  let savedLang = 'pl';
+  // Inicjalizacja języka: zapisany w localStorage -> wykryty z przeglądarki -> domyślny PL
+  let initialLang = 'pl';
   try {
-    savedLang = localStorage.getItem('letino_lang') || 'pl';
+    const saved = localStorage.getItem('letino_lang');
+    if (saved && translations[saved]) {
+      initialLang = saved;
+    } else {
+      const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (browserLang.startsWith('de')) {
+        initialLang = 'de';
+      } else if (browserLang.startsWith('en')) {
+        initialLang = 'en';
+      }
+    }
   } catch (e) {
-    savedLang = 'pl';
+    initialLang = 'pl';
   }
 
-  if (savedLang !== 'pl') {
-    setLanguage(savedLang);
+  if (initialLang !== 'pl') {
+    setLanguage(initialLang);
+  } else {
+    // Ustawienie początkowych indeksów tabIndex
+    langTiles.forEach(tile => {
+      const isPl = tile.getAttribute('data-lang') === 'pl';
+      tile.tabIndex = isPl ? 0 : -1;
+    });
   }
 });
