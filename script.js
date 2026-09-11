@@ -166,7 +166,59 @@ document.addEventListener('DOMContentLoaded', () => {
       legal_notice: '<strong>Nota prawna:</strong> Serwis <strong>Letino Outlet</strong> jest niezależnym sprzedawcą produktów ze zwrotów konsumenckich oraz nadwyżek magazynowych. Serwis nie jest powiązany, prowadzony ani sponsorowany przez żadną zewnętrzną korporację ani producentów prezentowanych marek. Wszelkie znaki towarowe należą do ich prawnych właścicieli i zostały użyte wyłącznie w celach informacyjnych.',
       footer_privacy: 'Polityka Prywatności',
       footer_terms: 'Regulamin Serwisu',
-      copyright_text: 'Letino Outlet. Wszelkie prawa zastrzeżone.'
+      copyright_text: 'Letino Outlet. Wszelkie prawa zastrzeżone.',
+      nav_home: "Strona Główna",
+      faq_more_btn: "Zobacz pełne centrum pytań i odpowiedzi (FAQ) &rarr;",
+      crumb_home: "Strona Główna",
+      crumb_faq: "FAQ",
+      faq_page_badge: "CENTRUM POMOCY & FAQ",
+      faq_page_title: "Najczęściej Zadawane <br><span class=\"gradient-text\">Pytania i Odpowiedzi</span>",
+      faq_page_subtitle: "Wszystko, co warto wiedzieć o produktach, weryfikacji stanu technicznego, rezerwacjach oraz realizacji zamówień w Letino Outlet.",
+      faq_tab_all: "Wszystkie",
+      faq_tab_products: "Produkty i stan",
+      faq_tab_orders: "Zakup i rezerwacje",
+      faq_tab_shipping: "Wysyłka i odbiór",
+      faq_tab_safety: "Bezpieczeństwo i kontakt",
+      cat_title_products: "Produkty i stan techniczny",
+      fq_p1: "Czy produkty w ofercie Letino Outlet są nowe czy używane?",
+      fa_p1: "W ofercie Letino Outlet znajdują się towary pochodzące ze zwrotów konsumenckich oraz nadwyżek magazynowych. Część produktów to egzemplarze fabrycznie nowe w otwartych lub uszkodzonych kartonach, a część to urządzenia powystawowe lub ze zwrotów. Dokładny stan wizualny i klasa każdego produktu są zawsze rzetelnie podane w opisie oferty.",
+      fq_p2: "W jaki sposób sprzęt jest weryfikowany przed sprzedażą?",
+      fa_p2: "Każdy egzemplarz przed wystawieniem do oferty przechodzi weryfikację. Sprawdzamy kluczowe funkcje techniczne (np. włączanie, ładowanie, moduły łączności, działanie przycisków i sensorów) oraz kompletność dołączonych akcesoriów fabrycznych.",
+      fq_p3: "Co oznaczają stany „Otwarty karton” oraz „Klasa A+”?",
+      fa_p3: "„Nowy / Otwarty karton” oznacza sprzęt w stanie idealnym, którego oryginalne opakowanie zostało otwarte w celu weryfikacji lub uległo uszkodzeniu podczas transportu. „Klasa A+” to urządzenia sprawdzone, w stanie niemal fabrycznym, bez widocznych śladów użytkowania.",
+      fq_p4: "Skąd pochodzą oferowane towary?",
+      fa_p4: "Oferowane produkty pochodzą ze zwrotów konsumenckich (np. zwrotów ustawowych) oraz nadwyżek magazynowych z rynku europejskiego.",
+      fq_p5: "Czy w zestawie znajdują się oryginalne akcesoria?",
+      fa_p5: "Informacja o kompletności zestawu jest zawsze wyraźnie podana w opisie danej oferty. Zdecydowana większość egzemplarzy zawiera kompletny fabryczny zestaw akcesoriów (przewody, zasilacze, końcówki).",
+      cat_title_orders: "Zakup i rezerwacje",
+      fq_o1: "Gdzie można zobaczyć aktualnie dostępne okazje?",
+      fa_o1: "Bieżące nowości, relacje z unboxingu oraz pojedyncze okazje publikujemy w pierwszej kolejności na naszym profilu Instagram (@letino.outlet). Część asortymentu wystawiamy również w naszym sklepie na platformie eBay.",
+      fq_o2: "Dlaczego produkty na stronie głównej są oznaczone jako „Wzór poglądowy”?",
+      fa_o2: "Ze względu na specyfikę outletu asortyment rotuje bardzo szybko, a poszczególne modele trafiają się w pojedynczych egzemplarzach. Przykłady na stronie głównej obrazują typowy asortyment oraz poziom cen, a aktualnie wolne sztuki prezentujemy w postach i relacjach na Instagramie.",
+      fq_o3: "Jak zapytać o dostępność lub zarezerwować produkt?",
+      fa_o3: "Wystarczy wysłać do nas wiadomość prywatną (Direct Message) na profilu Instagram @letino.outlet. Odpowiadamy sprawnie, przesyłamy dodatkowe zdjęcia egzemplarza i ustalamy szczegóły rezerwacji.",
+      fq_o4: "Dlaczego ceny w Letino Outlet są tak atrakcyjne?",
+      fa_o4: "Znaczne oszczędności wynikają z faktu, że towar pochodzi z nadwyżek lub zwrotów (często z naruszonym kartonem). Dzięki temu możesz kupić w 100% sprawny, markowy sprzęt za ułamek ceny rynkowej.",
+      cat_title_shipping: "Wysyłka i realizacja",
+      fq_s1: "W jaki sposób realizowana jest wysyłka zamówienia?",
+      fa_s1: "Wysyłka realizowana jest za pośrednictwem sprawdzonych firm kurierskich oraz do paczkomatów. Sposób i koszt dostawy ustalany jest podczas bezpośredniego kontaktu na Instagramie lub zgodnie z cennikiem danej oferty w sklepie eBay.",
+      fq_s2: "Jak przebiega zakup przez platformę eBay?",
+      fa_s2: "Dla przedmiotów wystawionych w sklepie eBay.de zakup przebiega według oficjalnych zasad serwisu eBay, z pełną ochroną kupującego eBay Buyer Protection oraz automatycznym generowaniem numeru śledzenia paczki.",
+      fq_s3: "W jaki sposób sprzęt jest pakowany i zabezpieczany do transportu?",
+      fa_s3: "Każda przesyłka jest pakowana z dużą starannością przy użyciu grubych kartonów oraz folii bąbelkowej i wypełniaczy, co gwarantuje pełne bezpieczeństwo delikatnej elektroniki podczas transportu.",
+      cat_title_safety: "Bezpieczeństwo i kontakt",
+      fq_c1: "Jakie są kanały kontaktu z Letino Outlet?",
+      fa_c1: "Głównym i najszybszym kanałem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet. Możesz także skontaktować się z nami poprzez profil na Facebooku lub system wiadomości w serwisie eBay.",
+      fq_c2: "Czy Letino Outlet jest powiązane z producentami sprzedawanych marek?",
+      fa_c2: "Nie. Serwis Letino Outlet jest niezależnym sprzedawcą produktów outletowych i nie jest powiązany ani sponsorowany przez żadną zewnętrzną korporację ani producentów prezentowanych marek. Wszelkie nazwy i znaki handlowe zostały użyte wyłącznie w celach informacyjnych.",
+      fq_c3: "Co zrobić, jeśli mam inne pytanie, którego nie ma na liście?",
+      fa_c3: "Napisz do nas bezpośrednio na Instagramie @letino.outlet. Chętnie odpowiemy na każde dodatkowe pytanie i rozwiejemy wszelkie wątpliwości!",
+      faq_cta_title: "Masz dodatkowe pytania?",
+      faq_cta_desc: "Napisz do nas w wiadomości prywatnej (DM) na Instagramie @letino.outlet. Chętnie doradzimy i odpowiemy na wszelkie pytania o sprzęt!",
+      faq_cta_btn: "Napisz na Instagramie &rarr;",
+      faq_cta_home: "Wróć do strony głównej",
+      faq_doc_title: "FAQ – Najczęściej Zadawane Pytania | Letino Outlet",
+      faq_doc_desc: "Odpowiedzi na pytania dotyczące pochodzenia sprzętu, weryfikacji stanu technicznego, zakupu oraz wysyłki w Letino Outlet.",
     },
 
     en: {
@@ -317,7 +369,59 @@ document.addEventListener('DOMContentLoaded', () => {
       legal_notice: '<strong>Legal Notice:</strong> <strong>Letino Outlet</strong> is an independent reseller of customer returns and overstock merchandise. The site is not affiliated with, operated by, or sponsored by any external corporation or product manufacturers. All trademarks belong to their respective owners.',
       footer_privacy: 'Privacy Policy',
       footer_terms: 'Terms of Service',
-      copyright_text: 'Letino Outlet. All rights reserved.'
+      copyright_text: 'Letino Outlet. All rights reserved.',
+      nav_home: "Home",
+      faq_more_btn: "View Full FAQ & Help Center &rarr;",
+      crumb_home: "Home",
+      crumb_faq: "FAQ",
+      faq_page_badge: "HELP CENTER & FAQ",
+      faq_page_title: "Frequently Asked <br><span class=\"gradient-text\">Questions & Answers</span>",
+      faq_page_subtitle: "Everything you need to know about products, condition checks, reservations, and order fulfillment at Letino Outlet.",
+      faq_tab_all: "All",
+      faq_tab_products: "Products & Condition",
+      faq_tab_orders: "Purchasing & Reserve",
+      faq_tab_shipping: "Shipping & Delivery",
+      faq_tab_safety: "Safety & Contact",
+      cat_title_products: "Products & Technical Condition",
+      fq_p1: "Are the products in Letino Outlet new or used?",
+      fa_p1: "Letino Outlet offers products from customer returns and warehouse overstock. Some items are brand new in open or damaged boxes, while others are demo or returned units. The exact condition and grading of each product are always described honestly in each listing.",
+      fq_p2: "How is merchandise inspected prior to sale?",
+      fa_p2: "Every unit undergoes technical verification before listing. We test primary features (powering on, charging, connectivity, controls, sensors) and inspect included factory accessories.",
+      fq_p3: "What do product conditions like 'Open Box' or 'Grade A+' mean?",
+      fa_p3: "'New / Open Box' indicates an item in pristine condition where the original outer box was opened for inspection or slightly distressed in transport. 'Grade A+' designates verified gear in near-factory shape with no noticeable signs of wear.",
+      fq_p4: "Where do the products come from?",
+      fa_p4: "Our inventory originates from customer returns and warehouse overstock from the European market.",
+      fq_p5: "Are original accessories included?",
+      fa_p5: "Package completeness is explicitly specified in every item description. The vast majority of our units include complete factory accessories (cables, adapters, attachments).",
+      cat_title_orders: "Purchasing & Reservations",
+      fq_o1: "Where can I see currently available deals?",
+      fa_o1: "New stock arrivals, unboxings, and individual deals are posted first on our Instagram account (@letino.outlet). Selected items are also available in our eBay store.",
+      fq_o2: "Why are items on the homepage marked as 'Sample Offer'?",
+      fa_o2: "Due to rapid inventory turnover in the outlet sector, many items arrive in single quantities. Homepage products represent typical stock and pricing, while currently available units are published live on Instagram.",
+      fq_o3: "How do I inquire about availability or reserve an item?",
+      fa_o3: "Simply send us a Direct Message (DM) on Instagram @letino.outlet. We reply promptly, share extra detailed photos, and arrange order details.",
+      fq_o4: "Why are Letino Outlet prices so affordable?",
+      fa_o4: "Savings stem from sourcing overstock and customer returns (often with open boxes). This allows you to acquire fully tested, premium brand gear at a fraction of retail price.",
+      cat_title_shipping: "Shipping & Fulfillment",
+      fq_s1: "How is order shipping handled?",
+      fa_s1: "Orders are shipped via dependable courier services or parcel lockers. Shipping methods and costs are confirmed during DM conversation on Instagram or as listed on eBay.",
+      fq_s2: "How does purchasing via eBay work?",
+      fa_s2: "For items listed on our eBay.de store, transactions follow standard eBay checkout, covered by eBay Buyer Protection with automated parcel tracking.",
+      fq_s3: "How is equipment secured for transit?",
+      fa_s3: "Every shipment is carefully packed with heavy-duty cardboard boxes, bubble wrap, and shock-absorbing fillers to ensure electronics arrive in flawless condition.",
+      cat_title_safety: "Safety & Contact",
+      fq_c1: "What are the contact channels for Letino Outlet?",
+      fa_c1: "The primary and fastest channel is sending a Direct Message (DM) on Instagram @letino.outlet. You may also contact us via Facebook Messenger or eBay messaging.",
+      fq_c2: "Is Letino Outlet affiliated with the product manufacturers?",
+      fa_c2: "No. Letino Outlet is an independent reseller and is not affiliated with, sponsored by, or endorsed by brand manufacturers. All trademarks belong to their lawful owners and are used purely for identification.",
+      fq_c3: "What if I have another question not listed here?",
+      fa_c3: "Message us directly on Instagram @letino.outlet. We are always glad to assist and provide any additional information!",
+      faq_cta_title: "Have more questions?",
+      faq_cta_desc: "Send us a Direct Message (DM) on Instagram @letino.outlet. We are happy to help and answer any questions!",
+      faq_cta_btn: "Message on Instagram &rarr;",
+      faq_cta_home: "Return to Homepage",
+      faq_doc_title: "FAQ – Frequently Asked Questions | Letino Outlet",
+      faq_doc_desc: "Answers to questions regarding item provenance, technical condition verification, purchasing, and shipping at Letino Outlet.",
     },
 
     de: {
@@ -468,7 +572,59 @@ document.addEventListener('DOMContentLoaded', () => {
       legal_notice: '<strong>Rechtlicher Hinweis:</strong> <strong>Letino Outlet</strong> ist ein unabhängiger Wiederverkäufer von Kundenretouren und Restposten und steht in keiner geschäftlichen Verbindung zu externen Konzernen oder Markenherstellern. Alle Marken gehören ihren jeweiligen Eigentümern.',
       footer_privacy: 'Datenschutzerklärung',
       footer_terms: 'Nutzungsbedingungen',
-      copyright_text: 'Letino Outlet. Alle Rechte vorbehalten.'
+      copyright_text: 'Letino Outlet. Alle Rechte vorbehalten.',
+      nav_home: "Startseite",
+      faq_more_btn: "Vollständiges FAQ & Hilfe-Center ansehen &rarr;",
+      crumb_home: "Startseite",
+      crumb_faq: "FAQ",
+      faq_page_badge: "HILFE-CENTER & FAQ",
+      faq_page_title: "Häufig gestellte <br><span class=\"gradient-text\">Fragen & Antworten</span>",
+      faq_page_subtitle: "Alles Wissenswerte über Produkte, Zustandsprüfung, Reservierungen und Bestellabwicklung bei Letino Outlet.",
+      faq_tab_all: "Alle",
+      faq_tab_products: "Produkte & Zustand",
+      faq_tab_orders: "Kauf & Reservierung",
+      faq_tab_shipping: "Versand & Lieferung",
+      faq_tab_safety: "Sicherheit & Kontakt",
+      cat_title_products: "Produkte & Technischer Zustand",
+      fq_p1: "Sind die Produkte bei Letino Outlet neu oder gebraucht?",
+      fa_p1: "Letino Outlet führt Waren aus Kundenretouren und Überbeständen. Einige Artikel sind fabrikneu in geöffneter oder beschädigter Verpackung, andere sind Ausstellungs- oder Retourenstücke. Der genaue Zustand wird in jeder Artikelbeschreibung transparent angegeben.",
+      fq_p2: "Wie werden die Geräte vor dem Verkauf geprüft?",
+      fa_p2: "Jedes Exemplar wird vor dem Einstellen technisch geprüft. Wir testen Hauptfunktionen (Einschalten, Laden, Konnektivität, Bedienelemente) und überprüfen die Vollständigkeit des Originalzubehörs.",
+      fq_p3: "Was bedeuten Zustände wie 'Geöffnete OVP' oder 'Klasse A+'?",
+      fa_p3: "'Neu / Geöffnete OVP' bedeutet ein einwandfreies Gerät, dessen Verpackung zur Prüfung geöffnet wurde oder leichte Transportschäden aufweist. 'Klasse A+' bezeichnet geprüfte Ware in nahezu neuwertigem Zustand ohne nennenswerte Gebrauchsspuren.",
+      fq_p4: "Woher stammt die angebotene Ware?",
+      fa_p4: "Unsere Produkte stammen aus Kundenretouren und Restposten aus dem europäischen Markt.",
+      fq_p5: "Ist das Originalzubehör im Lieferumfang enthalten?",
+      fa_p5: "Die Vollständigkeit des Sets ist bei jedem Angebot detailliert angegeben. Die überwiegende Mehrheit der Artikel enthält das komplette Werkszubehör (Kabel, Netzteile, Zubehör).",
+      cat_title_orders: "Kauf & Reservierung",
+      fq_o1: "Wo finde ich die aktuell verfügbaren Angebote?",
+      fa_o1: "Neuzugänge, Unboxings und Einzelangebote veröffentlichen wir zuerst auf unserem Instagram-Profil (@letino.outlet). Ausgewählte Artikel sind auch in unserem eBay-Shop gelistet.",
+      fq_o2: "Warum sind Produkte auf der Startseite als 'Beispielangebot' gekennzeichnet?",
+      fa_o2: "Wegen des schnellen Sortimentswechsels im Outlet sind viele Artikel Einzelstücke. Die Produkte auf der Startseite veranschaulichen typische Angebote und Preise, während aktuelle Einzelstücke auf Instagram gezeigt werden.",
+      fq_o3: "Wie frage ich nach Verfügbarkeit oder reserviere einen Artikel?",
+      fa_o3: "Schreiben Sie uns einfach eine Direktnachricht (DM) auf Instagram @letino.outlet. Wir antworten zügig, senden Ihnen Detailfotos und vereinbaren den Kauf.",
+      fq_o4: "Warum sind die Preise bei Letino Outlet so günstig?",
+      fa_o4: "Die Ersparnis entsteht durch den Bezug von Retouren und Überbeständen (oft mit geöffneter Verpackung). So erhalten Sie einwandfreie Markenware mit erheblichem Preisnachlass.",
+      cat_title_shipping: "Versand & Lieferung",
+      fq_s1: "Wie erfolgt der Versand der Bestellungen?",
+      fa_s1: "Der Versand erfolgt über zuverlässige Paketdienste. Die Versandart wird im direkten Kontakt auf Instagram oder gemäß dem eBay-Angebot abgestimmt.",
+      fq_s2: "Wie läuft der Kauf über eBay ab?",
+      fa_s2: "Für Artikel in unserem eBay.de-Shop gilt der reguläre eBay-Kaufprozess mit vollem eBay-Käuferschutz und automatischer Sendungsverfolgung.",
+      fq_s3: "Wie wird die Ware für den Transport geschützt?",
+      fa_s3: "Jede Sendung wird sorgfältig mit stabilen Kartonagen, Luftpolsterfolie und Dämmmaterial verpackt, damit empfindliche Elektronik unbeschadet bei Ihnen ankommt.",
+      cat_title_safety: "Sicherheit & Kontakt",
+      fq_c1: "Welche Kontaktkanäle gibt es bei Letino Outlet?",
+      fa_c1: "Der schnellste Weg ist eine Direktnachricht (DM) auf Instagram @letino.outlet. Alternativ erreichen Sie uns über Facebook Messenger oder eBay-Nachrichten.",
+      fq_c2: "Ist Letino Outlet mit den Herstellern der Marken verbunden?",
+      fa_c2: "Nein. Letino Outlet ist ein unabhängiger Händler und steht in keiner Verbindung zu externen Konzernen oder Markenherstellern. Alle Markennamen dienen ausschließlich Beschreibungszwecken.",
+      fq_c3: "Was tun, wenn meine Frage hier nicht beantwortet wurde?",
+      fa_c3: "Schreiben Sie uns direkt per DM auf Instagram @letino.outlet. Wir helfen Ihnen gerne weiter!",
+      faq_cta_title: "Haben Sie weitere Fragen?",
+      faq_cta_desc: "Schreiben Sie uns per Direktnachricht (DM) auf Instagram @letino.outlet. Wir beraten Sie gerne persönlich!",
+      faq_cta_btn: "Auf Instagram schreiben &rarr;",
+      faq_cta_home: "Zur Startseite zurückkehren",
+      faq_doc_title: "FAQ – Häufig gestellte Fragen | Letino Outlet",
+      faq_doc_desc: "Antworten auf Fragen zu Produktherkunft, Zustandsprüfung, Bestellung und Versand bei Letino Outlet.",
     }
   };
 
@@ -483,12 +639,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       document.documentElement.lang = selectedLang;
-      if (dict.doc_title) {
+      const isFaq = document.body.getAttribute('data-page') === 'faq';
+      if (isFaq && dict.faq_doc_title) {
+        document.title = dict.faq_doc_title;
+      } else if (dict.doc_title) {
         document.title = dict.doc_title;
       }
       const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc && dict.doc_desc) {
-        metaDesc.setAttribute('content', dict.doc_desc);
+      if (metaDesc) {
+        if (isFaq && dict.faq_doc_desc) {
+          metaDesc.setAttribute('content', dict.faq_doc_desc);
+        } else if (dict.doc_desc) {
+          metaDesc.setAttribute('content', dict.doc_desc);
+        }
       }
 
       // Aktualizacja wszystkich elementów z data-i18n
@@ -721,4 +884,32 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href*="instagram.com"]').forEach(link => {
     link.href = INSTAGRAM_URL;
   });
+  // =========================================================================
+  // FILTR KATEGORII NA PODSTRONIE FAQ (faq.html)
+  // =========================================================================
+  const faqTabs = document.querySelectorAll('.faq-tab');
+  const faqBlocks = document.querySelectorAll('.faq-category-block');
+
+  if (faqTabs.length > 0 && faqBlocks.length > 0) {
+    faqTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+
+        faqTabs.forEach(t => {
+          const isActive = t === tab;
+          t.classList.toggle('active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        faqBlocks.forEach(block => {
+          const category = block.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            block.classList.remove('is-hidden');
+          } else {
+            block.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
 });

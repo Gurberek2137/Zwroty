@@ -21,8 +21,10 @@ Nowoczesna, lekka i w pełni responsywna strona internetowa dla marki **Letino O
    - Audio, Elektronika, AGD, Akcesoria, Inne.
 5. **Instagram CTA**:
    - Dedykowana sekcja wspierająca główny kanał sprzedaży i prezentacji nowości (@letino.outlet).
-6. **FAQ (Akordeon)**:
-   - Najczęściej zadawane pytania dotyczące stanu urządzeń, testowania, pochodzenia i zakupu.
+6. **FAQ (Akordeon & Dedykowana Podstrona `faq.html`)**:
+   - Szybkie pytania na stronie głównej z bezpośrednim odesłaniem do dedykowanej podstrony FAQ.
+   - Rozbudowana podstrona `faq.html` z podziałem na 4 kategorie: *Produkty i stan*, *Zakup i rezerwacje*, *Wysyłka i realizacja*, *Bezpieczeństwo i kontakt*.
+   - Dynamiczne filtrowanie kategorii pytań (tabs) oraz Schema.org `FAQPage` JSON-LD.
 7. **Kontakt**:
    - Kanały kontaktu: Instagram Direct (@letino.outlet), Facebook oraz sklep eBay.de.
 8. **Stopka & Nota Prawna**:

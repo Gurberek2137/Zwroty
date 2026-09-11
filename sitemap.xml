@@ -10,4 +10,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://letino-outlet.pl/?lang=en" />
     <xhtml:link rel="alternate" hreflang="de" href="https://letino-outlet.pl/?lang=de" />
   </url>
+  <url>
+    <loc>https://letino-outlet.pl/faq.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://letino-outlet.pl/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://letino-outlet.pl/faq.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://letino-outlet.pl/faq.html?lang=de" />
+  </url>
 </urlset>
