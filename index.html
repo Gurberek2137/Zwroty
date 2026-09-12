@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji przeciw pamięci podręcznej (cache) -->
-  <link rel="stylesheet" href="style.css?v=3.8">
+  <link rel="stylesheet" href="style.css?v=3.9">
 
   <!-- Google Analytics 4 (Właścicielka: wpisz swój identyfikator pomiaru G-XXXXXXXXXX) -->
   <script>
@@ -98,13 +98,12 @@
       <!-- Główna nawigacja desktopowa -->
       <nav class="desktop-nav" aria-label="Główna nawigacja">
         <ul class="nav-links">
-          <li><a href="#instagram-feed" class="nav-link" data-i18n="nav_instagram">Instagram</a></li>
+          <li><a href="#produkty" class="nav-link" data-i18n="nav_deals">Okazje</a></li>
+          <li><a href="#platformy" class="nav-link" data-i18n="nav_platforms">Platformy</a></li>
           <li><a href="#o-letino" class="nav-link" data-i18n="nav_about">O Letino</a></li>
           <li><a href="#kategorie" class="nav-link" data-i18n="nav_categories">Kategorie</a></li>
           <li><a href="#dlaczego-letino" class="nav-link" data-i18n="nav_why">Dlaczego Letino?</a></li>
-          <li><a href="#produkty" class="nav-link" data-i18n="nav_deals">Okazje</a></li>
           <li><a href="#abc-ware" class="nav-link" data-i18n="nav_abc">ABC Ware</a></li>
-          <li><a href="#platformy" class="nav-link" data-i18n="nav_platforms">Platformy</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
           <li><a href="#kontakt" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
         </ul>
@@ -193,13 +192,12 @@
 
       <nav class="mobile-nav-links">
         <a href="#top" class="mobile-nav-link" data-i18n="nav_home">Strona Główna</a>
-        <a href="#instagram-feed" class="mobile-nav-link" data-i18n="nav_instagram">Instagram</a>
+        <a href="#produkty" class="mobile-nav-link" data-i18n="nav_deals">Okazje</a>
+        <a href="#platformy" class="mobile-nav-link" data-i18n="nav_platforms">Platformy</a>
         <a href="#o-letino" class="mobile-nav-link" data-i18n="nav_about">O Letino</a>
         <a href="#kategorie" class="mobile-nav-link" data-i18n="nav_categories">Kategorie</a>
         <a href="#dlaczego-letino" class="mobile-nav-link" data-i18n="nav_why">Dlaczego Letino?</a>
-        <a href="#produkty" class="mobile-nav-link" data-i18n="nav_deals">Okazje</a>
         <a href="#abc-ware" class="mobile-nav-link" data-i18n="nav_abc">ABC Ware</a>
-        <a href="#platformy" class="mobile-nav-link" data-i18n="nav_platforms">Platformy</a>
         <a href="#faq" class="mobile-nav-link" data-i18n="nav_faq">FAQ</a>
         <a href="#kontakt" class="mobile-nav-link" data-i18n="nav_contact">Kontakt</a>
       </nav>
@@ -277,111 +275,143 @@
       </div>
     </section>
 
-    <!-- SEKCJA: PUBLIKACJE Z INSTAGRAMA (LIVE FEED) -->
-    <section class="ig-feed-section" id="instagram-feed">
+    <!-- SEKCJA PRODUKTÓW (AKTUALNE OKAZJE) -->
+    <section class="products-section" id="produkty">
       <div class="container">
         <div class="section-title-wrap">
-          <div class="ig-badge-pill" style="margin: 0 auto 14px; width: fit-content;">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>@letino.outlet</span>
+          <span class="section-badge" data-i18n="section_badge">OFERTA &amp; OKAZJE</span>
+          <h2 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h2>
+          <p class="section-subtext" data-i18n="section_subtext">Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.</p>
+        </div>
+
+        <!-- Estetyczny placeholder przygotowany pod przyszły automatyczny feed z Instagrama -->
+        <div class="deals-placeholder-wrap" id="dealsPlaceholderWrap">
+          <div class="deals-placeholder-inner">
+            <div class="deals-placeholder-icon">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <p class="deals-placeholder-text" data-i18n="deals_placeholder_desc">
+              Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.
+            </p>
+            <div class="deals-placeholder-actions">
+              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+                <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span data-i18n="deals_btn_ig">Zobacz aktualne okazje na Instagramie</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
           </div>
-          <h2 class="section-heading" data-i18n="ig_feed_heading">Najnowsze Publikacje z Instagrama</h2>
-          <p class="section-subtext" data-i18n="ig_feed_subtext">
-            Przykładowy podgląd publikacji. Aktualne posty, relacje z nowych dostaw i okazje dnia publikujemy na bieżąco na naszym profilu Instagram @letino.outlet.
-          </p>
+
+          <!-- Siatka slotów pod przyszły automatyczny feed -->
+          <div class="deals-placeholder-slots" id="instagramDealsFeed" aria-label="Sloty na feed Instagrama">
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="ig-feed-grid" id="instagramFeedGrid" data-feed-status="preview">
-          <!-- Karta 1 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" alt="Audio z nowej dostawy" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+    <!-- SEKCJA: NAJWIĘKSZE PLATFORMY SPRZEDAŻOWE -->
+    <section class="ebay-proof-section" id="platformy" aria-label="Największe platformy sprzedażowe">
+      <div class="container">
+        <div class="ebay-proof-card">
+          <div class="ebay-proof-grid">
+            
+            <!-- Lewa kolumna: Tytuł i odznaka -->
+            <div class="ebay-proof-info">
+              <div class="ebay-badge-pill">
+                <span class="ebay-color-logo" aria-hidden="true">
+                  <span class="eb-e">e</span><span class="eb-b">b</span><span class="eb-a">a</span><span class="eb-y">y</span>
+                </span>
+                <span class="ebay-badge-text" data-i18n="platforms_badge">ZWERYFIKOWANY PROFIL</span>
               </div>
+              <h2 class="ebay-proof-title" data-i18n="platforms_title">Największe platformy sprzedażowe</h2>
+              <p class="ebay-proof-subtext" data-i18n="platforms_subtext">
+                Sprawdź nasz oficjalny sklep na platformie eBay oraz rzeczywiste opinie i zadowolenie kupujących.
+              </p>
             </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_1_cap">Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
 
-          <!-- Karta 2 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smartwatche i elektronika" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <!-- Środkowa kolumna: Statystyki -->
+            <div class="ebay-stats-group">
+              <!-- Stat 1: Oceny -->
+              <div class="ebay-stat-box">
+                <div class="ebay-stat-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="ebay-stat-data">
+                  <div class="ebay-stat-val" data-i18n="ebay_stat_score">99,3%</div>
+                  <div class="ebay-stat-label" data-i18n="ebay_stat_score_label">pozytywnych ocen</div>
+                </div>
               </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_2_cap">Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
 
-          <!-- Karta 3 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80" alt="AGD i drobny sprzęt domowy" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-            </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_3_cap">Testujemy odkurzacze pionowe i roboty sprzątające przed wystawieniem. Pełna sprawność gwarantowana.</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
+              <div class="ebay-stats-divider" aria-hidden="true"></div>
 
-          <!-- Karta 4 -->
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
-            <div class="ig-feed-media">
-              <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" alt="Głośniki i akcesoria" loading="lazy">
-              <div class="ig-feed-type-badge">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <!-- Stat 2: Sprzedaż -->
+              <div class="ebay-stat-box">
+                <div class="ebay-stat-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <div class="ebay-stat-data">
+                  <div class="ebay-stat-val" data-i18n="ebay_stat_sales">1300+</div>
+                  <div class="ebay-stat-label" data-i18n="ebay_stat_sales_label">sprzedanych produktów</div>
+                </div>
               </div>
             </div>
-            <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
-              <p class="ig-feed-caption" data-i18n="ig_post_4_cap">Głośniki Bluetooth i akcesoria mobilne w oryginalnych zestawach fabrycznych. Napisz do nas DM!</p>
-              <div class="ig-feed-footer">
-                <span data-i18n="ig_view_post">Zobacz post</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-          </a>
-        </div>
 
-        <div class="ig-feed-header-action" style="margin-top: 32px; text-align: center;">
-          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span data-i18n="ig_banner_btn">Obserwuj profil @letino.outlet</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+            <!-- Prawa kolumna: CTA i uwaga -->
+            <div class="ebay-proof-action-col">
+              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="btn btn-ebay-action">
+                <span data-i18n="ebay_proof_btn">Zobacz sklep na eBay &rarr;</span>
+              </a>
+              <span class="ebay-proof-disclaimer" data-i18n="ebay_proof_disclaimer">
+                * Dane ze sklepu eBay mogą ulegać bieżącym zmianom.
+              </span>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -392,7 +422,6 @@
         <div class="section-title-wrap">
           <span class="section-badge" data-i18n="about_badge">POZNAJ NAS</span>
           <h2 class="section-heading" data-i18n="about_heading">Czym jest Letino Outlet?</h2>
-          <p class="section-subtext" data-i18n="about_subtext">Dajemy produktom drugą szansę, a Tobie szansę kupić je w naprawdę dobrej cenie!</p>
         </div>
 
         <div class="about-grid">
@@ -634,78 +663,6 @@
       </div>
     </section>
 
-    <!-- SEKCJA PRODUKTÓW (AKTUALNE OKAZJE) -->
-    <section class="products-section" id="produkty">
-      <div class="container">
-        <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="section_badge">OFERTA &amp; OKAZJE</span>
-          <h2 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h2>
-          <p class="section-subtext" data-i18n="section_subtext">Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.</p>
-        </div>
-
-        <!-- Estetyczny placeholder przygotowany pod przyszły automatyczny feed z Instagrama -->
-        <div class="deals-placeholder-wrap" id="dealsPlaceholderWrap">
-          <div class="deals-placeholder-inner">
-            <div class="deals-placeholder-icon">
-              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </div>
-            <p class="deals-placeholder-text" data-i18n="deals_placeholder_desc">
-              Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.
-            </p>
-            <div class="deals-placeholder-actions">
-              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-                <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span data-i18n="deals_btn_ig">Zobacz aktualne okazje na Instagramie</span>
-                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Siatka slotów pod przyszły automatyczny feed -->
-          <div class="deals-placeholder-slots" id="instagramDealsFeed" aria-label="Sloty na feed Instagrama">
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- SEKCJA: ABC WARE (KLASY JAKOŚCI) -->
     <section class="abc-section" id="abc-ware">
@@ -752,73 +709,6 @@
       </div>
     </section>
 
-    <!-- SEKCJA: NAJWIĘKSZE PLATFORMY SPRZEDAŻOWE -->
-    <section class="ebay-proof-section" id="platformy" aria-label="Największe platformy sprzedażowe">
-      <div class="container">
-        <div class="ebay-proof-card">
-          <div class="ebay-proof-grid">
-            
-            <!-- Lewa kolumna: Tytuł i odznaka -->
-            <div class="ebay-proof-info">
-              <div class="ebay-badge-pill">
-                <span class="ebay-color-logo" aria-hidden="true">
-                  <span class="eb-e">e</span><span class="eb-b">b</span><span class="eb-a">a</span><span class="eb-y">y</span>
-                </span>
-                <span class="ebay-badge-text" data-i18n="platforms_badge">ZWERYFIKOWANY PROFIL</span>
-              </div>
-              <h2 class="ebay-proof-title" data-i18n="platforms_title">Największe platformy sprzedażowe</h2>
-              <p class="ebay-proof-subtext" data-i18n="platforms_subtext">
-                Sprawdź nasz oficjalny sklep na platformie eBay oraz rzeczywiste opinie i zadowolenie kupujących.
-              </p>
-            </div>
-
-            <!-- Środkowa kolumna: Statystyki -->
-            <div class="ebay-stats-group">
-              <!-- Stat 1: Oceny -->
-              <div class="ebay-stat-box">
-                <div class="ebay-stat-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                  </svg>
-                </div>
-                <div class="ebay-stat-data">
-                  <div class="ebay-stat-val" data-i18n="ebay_stat_score">99,3%</div>
-                  <div class="ebay-stat-label" data-i18n="ebay_stat_score_label">pozytywnych ocen</div>
-                </div>
-              </div>
-
-              <div class="ebay-stats-divider" aria-hidden="true"></div>
-
-              <!-- Stat 2: Sprzedaż -->
-              <div class="ebay-stat-box">
-                <div class="ebay-stat-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                  </svg>
-                </div>
-                <div class="ebay-stat-data">
-                  <div class="ebay-stat-val" data-i18n="ebay_stat_sales">1300+</div>
-                  <div class="ebay-stat-label" data-i18n="ebay_stat_sales_label">sprzedanych produktów</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Prawa kolumna: CTA i uwaga -->
-            <div class="ebay-proof-action-col">
-              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="btn btn-ebay-action">
-                <span data-i18n="ebay_proof_btn">Zobacz sklep na eBay &rarr;</span>
-              </a>
-              <span class="ebay-proof-disclaimer" data-i18n="ebay_proof_disclaimer">
-                * Dane ze sklepu eBay mogą ulegać bieżącym zmianom.
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- SEKCJA: FAQ (ACCORDION) -->
     <section class="main-faq-section" id="faq">
@@ -948,7 +838,7 @@
 
           <!-- Kanał 3: E-mail -->
           <div class="contact-card contact-highlight">
-            <div class="contact-icon-wrap email-gradient-bg">
+            <div class="contact-icon-wrap">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -956,8 +846,8 @@
             </div>
             <h3 class="contact-title" data-i18n="contact_email_title">E-mail</h3>
             <p class="contact-desc" data-i18n="contact_email_desc">Napisz do nas bezpośrednio na oficjalny adres e-mail w sprawach zapytań i realizacji zamówień.</p>
-            <a href="mailto:letino.outlet@gmail.com" class="contact-btn email-btn-link" data-i18n="contact_email_btn">
-              Napisz: letino.outlet@gmail.com &rarr;
+            <a href="mailto:letino.outlet@gmail.com" class="contact-btn" data-i18n="contact_email_btn">
+              letino.outlet@gmail.com &rarr;
             </a>
           </div>
         </div>
@@ -984,12 +874,12 @@
           <h4 class="footer-col-title" data-i18n="footer_links_title">Nawigacja</h4>
           <ul class="footer-nav-list">
             <li><a href="index.html" data-i18n="nav_home">Strona Główna</a></li>
-            <li><a href="#o-letino" data-i18n="nav_about">O Letino</a></li>
-            <li><a href="#abc-ware" data-i18n="nav_abc">ABC Ware</a></li>
             <li><a href="#produkty" data-i18n="nav_deals">Aktualne Okazje</a></li>
-            <li><a href="#kategorie" data-i18n="nav_categories">Kategorie</a></li>
             <li><a href="#platformy" data-i18n="nav_platforms">Platformy</a></li>
-            <li><a href="#instagram-feed" data-i18n="nav_instagram">Instagram</a></li>
+            <li><a href="#o-letino" data-i18n="nav_about">O Letino</a></li>
+            <li><a href="#kategorie" data-i18n="nav_categories">Kategorie</a></li>
+            <li><a href="#dlaczego-letino" data-i18n="nav_why">Dlaczego Letino?</a></li>
+            <li><a href="#abc-ware" data-i18n="nav_abc">ABC Ware</a></li>
             <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             <li><a href="#kontakt" data-i18n="nav_contact">Kontakt</a></li>
           </ul>
@@ -1072,6 +962,6 @@
     </svg>
   </button>
 
-  <script src="script.js?v=3.0"></script>
+  <script src="script.js?v=3.9"></script>
 </body>
 </html>

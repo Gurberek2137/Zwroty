@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_ebay_btn: 'Odwiedź sklep na eBay &rarr;',
       contact_email_title: 'E-mail',
       contact_email_desc: 'Napisz do nas bezpośrednio na oficjalny adres e-mail w sprawach zapytań i realizacji zamówień.',
-      contact_email_btn: 'Napisz: letino.outlet@gmail.com &rarr;',
+      contact_email_btn: 'letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Informacja formalna:</strong> Letino Outlet prowadzi sprzedaż zweryfikowanych towarów outletowych. Wszelkie zapytania handlowe oraz pytania o asortyment prosimy kierować przez wyżej wymienione kanały kontaktu.',
 
       // Stopka
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_ebay_btn: 'Visit eBay Store &rarr;',
       contact_email_title: 'E-mail',
       contact_email_desc: 'Write to our official email address regarding inquiries and orders.',
-      contact_email_btn: 'Email: letino.outlet@gmail.com &rarr;',
+      contact_email_btn: 'letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Formal Notice:</strong> Letino Outlet is a reseller of verified outlet merchandise. Please direct all commercial inquiries and stock questions through the contact channels listed above.',
 
       // Footer
@@ -644,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_ebay_btn: 'eBay-Shop besuchen &rarr;',
       contact_email_title: 'E-Mail',
       contact_email_desc: 'Schreiben Sie direkt an unsere offizielle E-Mail-Adresse für Anfragen und Bestellungen.',
-      contact_email_btn: 'E-Mail: letino.outlet@gmail.com &rarr;',
+      contact_email_btn: 'letino.outlet@gmail.com &rarr;',
       contact_registry_text: '<strong>Rechtlicher Hinweis:</strong> Letino Outlet vertreibt geprüfte Outlet-Waren. Bitte richten Sie alle kaufmännischen Anfragen an die oben genannten Kontaktkanäle.',
 
       // Footer
@@ -1179,8 +1179,6 @@ document.addEventListener('DOMContentLoaded', () => {
           isMatch = href.endsWith('#kategorie');
         } else if (key === 'platformy') {
           isMatch = href.endsWith('#platformy');
-        } else if (key === 'instagram-feed') {
-          isMatch = href.endsWith('#instagram-feed');
         } else if (key === 'dlaczego-letino') {
           isMatch = href.endsWith('#dlaczego-letino');
         }
@@ -1292,7 +1290,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       const currentHash = window.location.hash.replace('#', '');
-      if (['o-letino', 'abc-ware', 'produkty', 'kategorie', 'platformy', 'instagram-feed', 'faq', 'kontakt'].includes(currentHash)) {
+      if (['produkty', 'platformy', 'o-letino', 'kategorie', 'dlaczego-letino', 'abc-ware', 'faq', 'kontakt'].includes(currentHash)) {
         setActiveKey(currentHash);
       } else if (glideIndicator) {
         glideIndicator.style.opacity = '0';
@@ -1301,13 +1299,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactSection = document.getElementById('kontakt');
     const trackedSections = [
-      { id: 'instagram-feed', key: 'instagram-feed' },
+      { id: 'produkty', key: 'produkty' },
+      { id: 'platformy', key: 'platformy' },
       { id: 'o-letino', key: 'o-letino' },
       { id: 'kategorie', key: 'kategorie' },
       { id: 'dlaczego-letino', key: 'dlaczego-letino' },
-      { id: 'produkty', key: 'produkty' },
       { id: 'abc-ware', key: 'abc-ware' },
-      { id: 'platformy', key: 'platformy' },
       { id: 'faq', key: 'faq' },
       { id: 'kontakt', key: 'kontakt' }
     ];

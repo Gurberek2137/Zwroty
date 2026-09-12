@@ -2336,6 +2336,7 @@ section {
 .ig-dot { background: #E11D8E; }
 .fb-dot { background: #1877F2; }
 .ebay-dot { background: #0064D2; }
+.email-dot { background: var(--letino-gold); }
 
 /* Kafelki Social w stopce */
 .socials-wrapper {
@@ -3906,21 +3907,16 @@ body.lang-fade-out [data-i18n] {
    STYLE KONTAKTU EMAIL & DOT
    ========================================================================== */
 .email-gradient-bg {
-  background: linear-gradient(135deg, #ea4335 0%, #d93025 50%, #b31412 100%);
-  box-shadow: 0 4px 16px rgba(234, 67, 53, 0.35);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(225, 29, 142, 0.25) 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .email-btn-link {
-  background: rgba(234, 67, 53, 0.12);
-  color: #ff7669;
-  border: 1px solid rgba(234, 67, 53, 0.3);
+  color: var(--letino-gold-light);
 }
 
 .email-btn-link:hover {
-  background: rgba(234, 67, 53, 0.25);
   color: #fff;
-  border-color: rgba(234, 67, 53, 0.6);
-  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.35);
 }
 
 /* ==========================================================================
