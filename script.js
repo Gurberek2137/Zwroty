@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // ABC Ware
       abc_badge: "STANDARD JAKOŚCI",
-      abc_heading: "Klasy Jakości ABC Ware",
-      abc_subtext: "Przejrzysty system klasyfikacji towarów outletowych. U nas zawsze wiesz, co kupujesz.",
+      abc_heading: "Co oznacza A-, B- i C-Ware?",
+      abc_subtext: "Żebyś dokładnie wiedział, co kupujesz, oznaczamy produkty według ich stanu.",
       abc_a_badge: "Klasa A / A+",
       abc_a_title: "Stan idealny / Nowy",
       abc_a_desc: "Sprzęt w 100% sprawny technicznie, w stanie niemal fabrycznym lub nowym. Towary z otwartych kartonów w celu weryfikacji lub z delikatnie naruszonymi w transporcie opakowaniami zewnętrznymi.",
@@ -94,42 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
       abc_c_f3: "Dokładnie wyszczególniony stan",
       abc_c_f4: "Maksymalna obniżka ceny",
 
-      // Produkty (Przykłady z oferty)
-      section_badge: 'PRZYKŁADY Z OFERTY',
-      section_heading: 'Przykładowe Okazje',
-      section_subtext: 'Poniższe produkty i ceny mają charakter poglądowy. Aktualnie dostępne pojedyncze sztuki prezentujemy na bieżąco na naszym Instagramie.',
-      badge_sample: 'Wzór poglądowy',
-      p1_cond: 'Stan: Nowy / Otwarty karton',
-      p1_comp: 'Kompletność: Zestaw fabryczny',
-      p1_title: 'Sony WH-1000XM5 Słuchawki ANC',
-      p1_amz: 'Cena regularna: ok. 349<sub class="currency-sub">€</sub>',
-      p1_savings: 'Oszczędzasz 150<sub class="currency-sub">€</sub>',
-      p1_ours: 'Cena w Letino: <strong>199<sub class="currency-sub">€</sub></strong>',
-      p1_cta: 'Zapytaj o dostępność na Instagramie',
-
-      p2_cond: 'Stan: Klasa A+ (stan idealny)',
-      p2_comp: 'Kompletność: Zestaw z ładowarką',
-      p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Cena regularna: ok. 499<sub class="currency-sub">€</sub>',
-      p2_savings: 'Oszczędzasz 200<sub class="currency-sub">€</sub>',
-      p2_ours: 'Cena w Letino: <strong>299<sub class="currency-sub">€</sub></strong>',
-      p2_cta: 'Zapytaj o dostępność na Instagramie',
-
-      p3_cond: 'Stan: Sprawdzony / Klasa A',
-      p3_comp: 'Kompletność: Zestaw akcesoriów',
-      p3_title: 'Dyson V11 Odkurzacz Bezprzewodowy',
-      p3_amz: 'Cena regularna: ok. 629<sub class="currency-sub">€</sub>',
-      p3_savings: 'Oszczędzasz 290<sub class="currency-sub">€</sub>',
-      p3_ours: 'Cena w Letino: <strong>339<sub class="currency-sub">€</sub></strong>',
-      p3_cta: 'Zapytaj o dostępność na Instagramie',
-
-      p4_cond: 'Stan: Otwarty karton / jak nowy',
-      p4_comp: 'Kompletność: Zestaw fabryczny',
-      p4_title: 'JBL Charge 5 Głośnik Bluetooth',
-      p4_amz: 'Cena regularna: ok. 169<sub class="currency-sub">€</sub>',
-      p4_savings: 'Oszczędzasz 80<sub class="currency-sub">€</sub>',
-      p4_ours: 'Cena w Letino: <strong>89<sub class="currency-sub">€</sub></strong>',
-      p4_cta: 'Zapytaj o dostępność na Instagramie',
+      // Aktualne Okazje (Instagram Feed Placeholder)
+      section_badge: 'OFERTA & OKAZJE',
+      section_heading: 'Aktualne Okazje',
+      section_subtext: 'Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.',
+      deals_placeholder_desc: 'Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.',
+      deals_btn_ig: 'Zobacz aktualne okazje na Instagramie',
+      deals_slot_live: 'Instagram Live Feed',
 
       // Dlaczego Letino Outlet (Manifest Szczerości)
       why_badge: 'DLACZEGO LETINO OUTLET',
@@ -188,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Instagram Live Feed & Banner
       ig_feed_heading: 'Najnowsze Publikacje z Instagrama',
-      ig_feed_subtext: 'Codzienne promocje, nowe dostawy i unboxingi. Kliknij dowolny post lub reel, aby przejść bezpośrednio na Instagram.',
-      ig_post_tag: 'NOWA DOSTAWA',
+      ig_feed_subtext: 'Przykładowy podgląd publikacji. Aktualne posty, relacje z nowych dostaw i okazje dnia publikujemy na bieżąco na naszym profilu Instagram @letino.outlet.',
+      ig_post_tag: 'Wzór poglądowy',
       ig_view_post: 'Zobacz post',
       ig_post_1_cap: 'Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!',
       ig_post_2_cap: 'Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.',
@@ -344,8 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // ABC Ware
       abc_badge: "QUALITY STANDARD",
-      abc_heading: "ABC Ware Quality Grades",
-      abc_subtext: "Clear grading standard for outlet goods. You always know exactly what you purchase.",
+      abc_heading: "What does A-, B-, and C-Ware mean?",
+      abc_subtext: "To ensure you know exactly what you are purchasing, we categorize items by their condition.",
       abc_a_badge: "Grade A / A+",
       abc_a_title: "Pristine / Like New",
       abc_a_desc: "100% functional equipment in near-factory or brand new condition. Items with opened boxes for inspection or slight outer packaging distress from transit.",
@@ -368,42 +339,13 @@ document.addEventListener('DOMContentLoaded', () => {
       abc_c_f3: "Detailed condition report",
       abc_c_f4: "Maximum price reduction",
 
-      // Products (Sample Offers)
-      section_badge: 'SAMPLE OFFERS',
-      section_heading: 'Sample Deals',
-      section_subtext: 'The products and prices below are for illustration purposes only. Currently available items are posted on our Instagram.',
-      badge_sample: 'Sample Offer',
-      p1_cond: 'Condition: New / Open Box',
-      p1_comp: 'Completeness: Factory Kit',
-      p1_title: 'Sony WH-1000XM5 ANC Headphones',
-      p1_amz: 'Regular price: ~349<sub class="currency-sub">€</sub>',
-      p1_savings: 'Save 150<sub class="currency-sub">€</sub>',
-      p1_ours: 'Letino price: <strong>199<sub class="currency-sub">€</sub></strong>',
-      p1_cta: 'Inquire on Instagram',
-
-      p2_cond: 'Condition: Grade A+ (Pristine)',
-      p2_comp: 'Completeness: Includes Charger',
-      p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Regular price: ~499<sub class="currency-sub">€</sub>',
-      p2_savings: 'Save 200<sub class="currency-sub">€</sub>',
-      p2_ours: 'Letino price: <strong>299<sub class="currency-sub">€</sub></strong>',
-      p2_cta: 'Inquire on Instagram',
-
-      p3_cond: 'Condition: Tested / Grade A',
-      p3_comp: 'Completeness: Tool Kit Included',
-      p3_title: 'Dyson V11 Cordless Vacuum',
-      p3_amz: 'Regular price: ~629<sub class="currency-sub">€</sub>',
-      p3_savings: 'Save 290<sub class="currency-sub">€</sub>',
-      p3_ours: 'Letino price: <strong>339<sub class="currency-sub">€</sub></strong>',
-      p3_cta: 'Inquire on Instagram',
-
-      p4_cond: 'Condition: Open Box / Like New',
-      p4_comp: 'Completeness: Factory Kit',
-      p4_title: 'JBL Charge 5 Bluetooth Speaker',
-      p4_amz: 'Regular price: ~169<sub class="currency-sub">€</sub>',
-      p4_savings: 'Save 80<sub class="currency-sub">€</sub>',
-      p4_ours: 'Letino price: <strong>89<sub class="currency-sub">€</sub></strong>',
-      p4_cta: 'Inquire on Instagram',
+      // Products (Current Deals)
+      section_badge: 'CURRENT DEALS',
+      section_heading: 'Current Deals',
+      section_subtext: 'Current products, promotions, and individual deals are posted live on our Instagram.',
+      deals_placeholder_desc: 'Current products, promotions, and individual deals are posted live on our Instagram.',
+      deals_btn_ig: 'View current deals on Instagram',
+      deals_slot_live: 'Instagram Live Feed',
 
       // Why Letino Outlet (Honesty Manifesto)
       why_badge: 'WHY LETINO OUTLET',
@@ -462,8 +404,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Instagram Live Feed & Banner
       ig_feed_heading: 'Latest Instagram Posts',
-      ig_feed_subtext: 'Daily promotions, unboxings and stock updates. Click any post or reel to view on Instagram.',
-      ig_post_tag: 'NEW ARRIVAL',
+      ig_feed_subtext: 'Sample publication preview. Live posts, delivery updates and deals of the day are published on our Instagram @letino.outlet.',
+      ig_post_tag: 'SAMPLE PREVIEW',
       ig_view_post: 'View post',
       ig_post_1_cap: 'Check out the newest ANC wireless headphones in Grade A+. See details in our stories!',
       ig_post_2_cap: 'Smartwatches and wearables from top brands – e-commerce returns from Germany at great prices.',
@@ -611,8 +553,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // ABC Ware
       abc_badge: "QUALITÄTSSTANDARD",
-      abc_heading: "ABC Ware Qualitätsklassen",
-      abc_subtext: "Transparentes Bewertungssystem für Outlet-Ware. Bei uns wissen Sie immer, was Sie kaufen.",
+      abc_heading: "Was bedeutet A-, B- und C-Ware?",
+      abc_subtext: "Damit Sie genau wissen, was Sie kaufen, kennzeichnen wir Produkte nach ihrem Zustand.",
       abc_a_badge: "Klasse A / A+",
       abc_a_title: "Neuwertig / Wie neu",
       abc_a_desc: "Technisch zu 100% einwandfreie Ware in nahezu fabrikneuem Zustand. Artikel aus zu Prüfzwecken geöffneter OVP oder mit leichten Transportschäden am Umkarton.",
@@ -635,42 +577,13 @@ document.addEventListener('DOMContentLoaded', () => {
       abc_c_f3: "Detaillierte Zustandsbeschreibung",
       abc_c_f4: "Maximaler Preisvorteil",
 
-      // Produkte (Beispiele aus dem Sortiment)
-      section_badge: 'BEISPIELANGEBOTE',
-      section_heading: 'Beispielhafte Angebote',
-      section_subtext: 'Die nachfolgenden Produkte und Preise dienen lediglich als Beispiele. Aktuell verfügbare Artikel posten wir auf Instagram.',
-      badge_sample: 'Beispielangebot',
-      p1_cond: 'Zustand: Neu / Geöffnete OVP',
-      p1_comp: 'Vollständigkeit: Komplettes Set',
-      p1_title: 'Sony WH-1000XM5 ANC Kopfhörer',
-      p1_amz: 'Regulärer Preis: ca. 349<sub class="currency-sub">€</sub>',
-      p1_savings: 'Sie sparen 150<sub class="currency-sub">€</sub>',
-      p1_ours: 'Letino Preis: <strong>199<sub class="currency-sub">€</sub></strong>',
-      p1_cta: 'Auf Instagram anfragen',
-
-      p2_cond: 'Zustand: Klasse A+ (Neuwertig)',
-      p2_comp: 'Vollständigkeit: Inkl. Ladekabel',
-      p2_title: 'Apple Watch Series 9 GPS 45mm',
-      p2_amz: 'Regulärer Preis: ca. 499<sub class="currency-sub">€</sub>',
-      p2_savings: 'Sie sparen 200<sub class="currency-sub">€</sub>',
-      p2_ours: 'Letino Preis: <strong>299<sub class="currency-sub">€</sub></strong>',
-      p2_cta: 'Auf Instagram anfragen',
-
-      p3_cond: 'Zustand: Geprüft / Klasse A',
-      p3_comp: 'Vollständigkeit: Mit Zubehör',
-      p3_title: 'Dyson V11 Akku-Staubsauger',
-      p3_amz: 'Regulärer Preis: ca. 629<sub class="currency-sub">€</sub>',
-      p3_savings: 'Sie sparen 290<sub class="currency-sub">€</sub>',
-      p3_ours: 'Letino Preis: <strong>339<sub class="currency-sub">€</sub></strong>',
-      p3_cta: 'Auf Instagram anfragen',
-
-      p4_cond: 'Zustand: Geöffnete OVP / Wie neu',
-      p4_comp: 'Vollständigkeit: Komplettes Set',
-      p4_title: 'JBL Charge 5 Bluetooth-Lautsprecher',
-      p4_amz: 'Regulärer Preis: ca. 169<sub class="currency-sub">€</sub>',
-      p4_savings: 'Sie sparen 80<sub class="currency-sub">€</sub>',
-      p4_ours: 'Letino Preis: <strong>89<sub class="currency-sub">€</sub></strong>',
-      p4_cta: 'Auf Instagram anfragen',
+      // Produkte (Aktuelle Angebote)
+      section_badge: 'AKTUELLE ANGEBOTE',
+      section_heading: 'Aktuelle Angebote',
+      section_subtext: 'Aktuelle Produkte, Aktionen und Einzelstücke veröffentlichen wir laufend auf unserem Instagram-Profil.',
+      deals_placeholder_desc: 'Aktuelle Produkte, Aktionen und Einzelstücke veröffentlichen wir laufend auf unserem Instagram-Profil.',
+      deals_btn_ig: 'Aktuelle Angebote auf Instagram ansehen',
+      deals_slot_live: 'Instagram Live Feed',
 
       // Warum Letino Outlet (Ehrlichkeits-Manifest)
       why_badge: 'WARUM LETINO OUTLET',
@@ -729,8 +642,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Instagram Live Feed & Banner
       ig_feed_heading: 'Neueste Beiträge auf Instagram',
-      ig_feed_subtext: 'Tägliche Rabatte, Unboxings und neue Lieferungen. Klicken Sie auf einen Beitrag, um direkt zu Instagram zu gelangen.',
-      ig_post_tag: 'NEUER EINGANG',
+      ig_feed_subtext: 'Beispielhafte Beitragsvorschau. Aktuelle Posts, Lieferungs-Storys und Deals des Tages veröffentlichen wir laufend auf Instagram @letino.outlet.',
+      ig_post_tag: 'MUSTER-VORSCHAU',
       ig_view_post: 'Beitrag ansehen',
       ig_post_1_cap: 'Entdecken Sie die neuesten ANC Wireless Kopfhörer in Klasse A+. Details in unserer Story!',
       ig_post_2_cap: 'Smartwatches führender Marken – E-Commerce-Retouren aus Deutschland zu Top-Preisen.',

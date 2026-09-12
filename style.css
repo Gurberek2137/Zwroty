@@ -4323,6 +4323,103 @@ body.lang-fade-out [data-i18n] {
 }
 
 /* ==========================================================================
+   PLACEHOLDER POD AUTOMATYCZNY FEED INSTAGRAMA W SEKCJI OKAZJI
+   ========================================================================== */
+.deals-placeholder-wrap {
+  margin-top: 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 44px 32px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+}
+
+.deals-placeholder-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--letino-gold), transparent);
+  opacity: 0.7;
+}
+
+.deals-placeholder-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.deals-placeholder-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(225, 29, 142, 0.16) 0%, rgba(212, 175, 55, 0.14) 100%);
+  border: 1px solid rgba(225, 29, 142, 0.35);
+  color: #ff60b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px rgba(225, 29, 142, 0.25);
+}
+
+.deals-placeholder-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.deals-placeholder-slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.deals-slot-item {
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: rgba(14, 19, 31, 0.45);
+  border-radius: var(--radius-md);
+  padding: 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 140px;
+  transition: var(--transition);
+}
+
+.deals-slot-item:hover {
+  border-color: rgba(245, 208, 97, 0.35);
+  background: rgba(24, 32, 52, 0.65);
+}
+
+.deals-slot-icon {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.deals-slot-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
    RESPONSYWNOŚĆ NOWYCH SEKCJI
    ========================================================================== */
 @media (max-width: 980px) {
@@ -4335,6 +4432,9 @@ body.lang-fade-out [data-i18n] {
 }
 
 @media (max-width: 860px) {
+  .deals-placeholder-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .what-find-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -4430,6 +4530,12 @@ body.lang-fade-out [data-i18n] {
   .dynamic-banner-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .deals-placeholder-slots {
+    grid-template-columns: 1fr;
+  }
+  .deals-placeholder-wrap {
+    padding: 32px 18px;
   }
   .dynamic-banner-urgency {
     width: 100%;

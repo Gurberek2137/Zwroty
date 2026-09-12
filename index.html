@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji przeciw pamięci podręcznej (cache) -->
-  <link rel="stylesheet" href="style.css?v=3.6">
+  <link rel="stylesheet" href="style.css?v=3.7">
 
   <!-- Google Analytics 4 (Właścicielka: wpisz swój identyfikator pomiaru G-XXXXXXXXXX) -->
   <script>
@@ -291,11 +291,11 @@
           </div>
           <h2 class="section-heading" data-i18n="ig_feed_heading">Najnowsze Publikacje z Instagrama</h2>
           <p class="section-subtext" data-i18n="ig_feed_subtext">
-            Codzienne promocje, nowe dostawy i unboxingi. Kliknij dowolny post lub reel, aby przejść bezpośrednio na Instagram.
+            Przykładowy podgląd publikacji. Aktualne posty, relacje z nowych dostaw i okazje dnia publikujemy na bieżąco na naszym profilu Instagram @letino.outlet.
           </p>
         </div>
 
-        <div class="ig-feed-grid" id="instagramFeedGrid">
+        <div class="ig-feed-grid" id="instagramFeedGrid" data-feed-status="preview">
           <!-- Karta 1 -->
           <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="ig-feed-card">
             <div class="ig-feed-media">
@@ -305,7 +305,7 @@
               </div>
             </div>
             <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWA DOSTAWA</span>
+              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
               <p class="ig-feed-caption" data-i18n="ig_post_1_cap">Sprawdź najnowsze słuchawki bezprzewodowe z aktywacją ANC w klasie A+. Szczegóły w relacji!</p>
               <div class="ig-feed-footer">
                 <span data-i18n="ig_view_post">Zobacz post</span>
@@ -323,7 +323,7 @@
               </div>
             </div>
             <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">OKAZJA DNIA</span>
+              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
               <p class="ig-feed-caption" data-i18n="ig_post_2_cap">Zegarki i smartbandy znanych marek – zwroty e-commerce z rynku niemieckiego w super cenach.</p>
               <div class="ig-feed-footer">
                 <span data-i18n="ig_view_post">Zobacz post</span>
@@ -341,7 +341,7 @@
               </div>
             </div>
             <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">UNBOXING & TEST</span>
+              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
               <p class="ig-feed-caption" data-i18n="ig_post_3_cap">Testujemy odkurzacze pionowe i roboty sprzątające przed wystawieniem. Pełna sprawność gwarantowana.</p>
               <div class="ig-feed-footer">
                 <span data-i18n="ig_view_post">Zobacz post</span>
@@ -359,7 +359,7 @@
               </div>
             </div>
             <div class="ig-feed-body">
-              <span class="ig-feed-date" data-i18n="ig_post_tag">NOWOŚĆ</span>
+              <span class="ig-feed-date" data-i18n="ig_post_tag">Wzór poglądowy</span>
               <p class="ig-feed-caption" data-i18n="ig_post_4_cap">Głośniki Bluetooth i akcesoria mobilne w oryginalnych zestawach fabrycznych. Napisz do nas DM!</p>
               <div class="ig-feed-footer">
                 <span data-i18n="ig_view_post">Zobacz post</span>
@@ -634,145 +634,75 @@
       </div>
     </section>
 
-    <!-- SEKCJA PRODUKTÓW (PRZYKŁADOWE OKAZJE) -->
+    <!-- SEKCJA PRODUKTÓW (AKTUALNE OKAZJE) -->
     <section class="products-section" id="produkty">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="section_badge">PRZYKŁADY Z OFERTY</span>
-          <h2 class="section-heading" data-i18n="section_heading">Przykładowe Okazje</h2>
-          <p class="section-subtext" data-i18n="section_subtext">Poniższe produkty i ceny mają charakter poglądowy. Aktualnie dostępne pojedyncze sztuki prezentujemy na bieżąco na naszym Instagramie.</p>
+          <span class="section-badge" data-i18n="section_badge">OFERTA &amp; OKAZJE</span>
+          <h2 class="section-heading" data-i18n="section_heading">Aktualne Okazje</h2>
+          <p class="section-subtext" data-i18n="section_subtext">Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.</p>
         </div>
 
-        <div class="products-grid">
-          
-          <!-- Produkt 1: Sony WH-1000XM5 -->
-          <article class="product-card">
-            <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Sony WH-1000XM5 na profilu Instagram Letino Outlet">
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80" alt="Sony WH-1000XM5 Słuchawki ANC (zdjęcie poglądowe)" loading="lazy" class="product-img">
-                <span class="badge-discount">-43%</span>
-              </div>
-              <div class="card-content">
-                <div class="card-badges">
-                  <span class="badge-sample" data-i18n="badge_sample">Wzór poglądowy</span>
-                  <span class="card-condition" data-i18n="p1_cond">Stan: Nowy / Otwarty karton</span>
-                  <span class="card-completeness" data-i18n="p1_comp">Kompletność: Zestaw fabryczny</span>
-                </div>
-                <h3 class="card-title" data-i18n="p1_title">Sony WH-1000XM5 Słuchawki ANC</h3>
-                <div class="card-pricing">
-                  <div class="price-row-top">
-                    <span class="price-amz" data-i18n="p1_amz">Cena regularna: ok. 349<sub class="currency-sub">€</sub></span>
-                    <span class="price-savings" data-i18n="p1_savings">Oszczędzasz 150<sub class="currency-sub">€</sub></span>
-                  </div>
-                  <div class="price-ours" data-i18n="p1_ours">Cena w Letino: <strong>199<sub class="currency-sub">€</sub></strong></div>
-                </div>
-                <div class="card-cta">
-                  <span data-i18n="p1_cta">Zapytaj o dostępność na Instagramie</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </article>
+        <!-- Estetyczny placeholder przygotowany pod przyszły automatyczny feed z Instagrama -->
+        <div class="deals-placeholder-wrap" id="dealsPlaceholderWrap">
+          <div class="deals-placeholder-inner">
+            <div class="deals-placeholder-icon">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <p class="deals-placeholder-text" data-i18n="deals_placeholder_desc">
+              Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.
+            </p>
+            <div class="deals-placeholder-actions">
+              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+                <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span data-i18n="deals_btn_ig">Zobacz aktualne okazje na Instagramie</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
 
-          <!-- Produkt 2: Apple Watch Series 9 -->
-          <article class="product-card">
-            <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Apple Watch Series 9 na profilu Instagram Letino Outlet">
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=700&q=80" alt="Apple Watch Series 9 (zdjęcie poglądowe)" loading="lazy" class="product-img">
-                <span class="badge-discount">-41%</span>
-              </div>
-              <div class="card-content">
-                <div class="card-badges">
-                  <span class="badge-sample" data-i18n="badge_sample">Wzór poglądowy</span>
-                  <span class="card-condition" data-i18n="p2_cond">Stan: Klasa A+ (stan idealny)</span>
-                  <span class="card-completeness" data-i18n="p2_comp">Kompletność: Zestaw z ładowarką</span>
-                </div>
-                <h3 class="card-title" data-i18n="p2_title">Apple Watch Series 9 GPS 45mm</h3>
-                <div class="card-pricing">
-                  <div class="price-row-top">
-                    <span class="price-amz" data-i18n="p2_amz">Cena regularna: ok. 499<sub class="currency-sub">€</sub></span>
-                    <span class="price-savings" data-i18n="p2_savings">Oszczędzasz 200<sub class="currency-sub">€</sub></span>
-                  </div>
-                  <div class="price-ours" data-i18n="p2_ours">Cena w Letino: <strong>299<sub class="currency-sub">€</sub></strong></div>
-                </div>
-                <div class="card-cta">
-                  <span data-i18n="p2_cta">Zapytaj o dostępność na Instagramie</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 3: Dyson V11 Absolute -->
-          <article class="product-card">
-            <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o Dyson V11 na profilu Instagram Letino Outlet">
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=700&q=80" alt="Dyson V11 Absolute (zdjęcie poglądowe)" loading="lazy" class="product-img">
-                <span class="badge-discount">-46%</span>
-              </div>
-              <div class="card-content">
-                <div class="card-badges">
-                  <span class="badge-sample" data-i18n="badge_sample">Wzór poglądowy</span>
-                  <span class="card-condition" data-i18n="p3_cond">Stan: Sprawdzony / Klasa A</span>
-                  <span class="card-completeness" data-i18n="p3_comp">Kompletność: Zestaw akcesoriów</span>
-                </div>
-                <h3 class="card-title" data-i18n="p3_title">Dyson V11 Odkurzacz Bezprzewodowy</h3>
-                <div class="card-pricing">
-                  <div class="price-row-top">
-                    <span class="price-amz" data-i18n="p3_amz">Cena regularna: ok. 629<sub class="currency-sub">€</sub></span>
-                    <span class="price-savings" data-i18n="p3_savings">Oszczędzasz 290<sub class="currency-sub">€</sub></span>
-                  </div>
-                  <div class="price-ours" data-i18n="p3_ours">Cena w Letino: <strong>339<sub class="currency-sub">€</sub></strong></div>
-                </div>
-                <div class="card-cta">
-                  <span data-i18n="p3_cta">Zapytaj o dostępność na Instagramie</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Produkt 4: JBL Charge 5 -->
-          <article class="product-card">
-            <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Zapytaj o JBL Charge 5 na profilu Instagram Letino Outlet">
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80" alt="JBL Charge 5 (zdjęcie poglądowe)" loading="lazy" class="product-img">
-                <span class="badge-discount">-48%</span>
-              </div>
-              <div class="card-content">
-                <div class="card-badges">
-                  <span class="badge-sample" data-i18n="badge_sample">Wzór poglądowy</span>
-                  <span class="card-condition" data-i18n="p4_cond">Stan: Otwarty karton / jak nowy</span>
-                  <span class="card-completeness" data-i18n="p4_comp">Kompletność: Zestaw fabryczny</span>
-                </div>
-                <h3 class="card-title" data-i18n="p4_title">JBL Charge 5 Głośnik Bluetooth</h3>
-                <div class="card-pricing">
-                  <div class="price-row-top">
-                    <span class="price-amz" data-i18n="p4_amz">Cena regularna: ok. 169<sub class="currency-sub">€</sub></span>
-                    <span class="price-savings" data-i18n="p4_savings">Oszczędzasz 80<sub class="currency-sub">€</sub></span>
-                  </div>
-                  <div class="price-ours" data-i18n="p4_ours">Cena w Letino: <strong>89<sub class="currency-sub">€</sub></strong></div>
-                </div>
-                <div class="card-cta">
-                  <span data-i18n="p4_cta">Zapytaj o dostępność na Instagramie</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </a>
-          </article>
-
+          <!-- Siatka slotów pod przyszły automatyczny feed -->
+          <div class="deals-placeholder-slots" id="instagramDealsFeed" aria-label="Sloty na feed Instagrama">
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+            <div class="deals-slot-item">
+              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              </svg>
+              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -782,8 +712,8 @@
       <div class="container">
         <div class="section-title-wrap">
           <span class="section-badge" data-i18n="abc_badge">STANDARD JAKOŚCI</span>
-          <h2 class="section-heading" data-i18n="abc_heading">Klasy Jakości ABC Ware</h2>
-          <p class="section-subtext" data-i18n="abc_subtext">Przejrzysty system klasyfikacji towarów outletowych. U nas zawsze wiesz, co kupujesz.</p>
+          <h2 class="section-heading" data-i18n="abc_heading">Co oznacza A-, B- i C-Ware?</h2>
+          <p class="section-subtext" data-i18n="abc_subtext">Żebyś dokładnie wiedział, co kupujesz, oznaczamy produkty według ich stanu.</p>
         </div>
 
         <div class="abc-grid">
