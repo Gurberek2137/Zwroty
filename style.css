@@ -3917,9 +3917,409 @@ body.lang-fade-out [data-i18n] {
   box-shadow: 0 4px 14px rgba(234, 67, 53, 0.35);
 }
 
-.social-mini-dot.email-dot {
-  background: #ea4335;
-  box-shadow: 0 0 8px rgba(234, 67, 53, 0.6);
+/* ==========================================================================
+   SEKCJA: CO ZNAJDZIESZ W LETINO OUTLET (.what-find-*)
+   ========================================================================== */
+.what-find-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.what-find-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.what-find-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--letino-gold), transparent);
+  opacity: 0.6;
+}
+
+.what-find-card:hover {
+  border-color: rgba(245, 208, 97, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(212, 175, 55, 0.12);
+}
+
+.what-find-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.what-find-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--border-gold-subtle);
+  color: var(--letino-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.2);
+}
+
+.what-find-icon-wrap.accent-magenta {
+  background: rgba(225, 29, 142, 0.12);
+  border-color: rgba(225, 29, 142, 0.3);
+  color: #ff60b6;
+  box-shadow: 0 0 16px rgba(225, 29, 142, 0.2);
+}
+
+.what-find-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.what-find-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.what-find-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(14, 19, 31, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.what-find-item:hover {
+  background: rgba(24, 32, 52, 0.85);
+  border-color: rgba(245, 208, 97, 0.4);
+  transform: translateX(4px);
+}
+
+.item-icon-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--letino-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.item-icon-pill.accent-pill {
+  background: rgba(225, 29, 142, 0.1);
+  border-color: rgba(225, 29, 142, 0.25);
+  color: #ff60b6;
+}
+
+.what-find-surprise {
+  margin-top: 16px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, rgba(225, 29, 142, 0.15) 0%, rgba(212, 175, 55, 0.1) 100%);
+  border: 1px solid rgba(225, 29, 142, 0.35);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(225, 29, 142, 0.15);
+}
+
+.surprise-sparkle {
+  font-size: 1.15rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.what-find-dynamic-banner {
+  margin-top: 32px;
+  background: linear-gradient(135deg, rgba(16, 22, 38, 0.85) 0%, rgba(22, 16, 32, 0.85) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 22px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dynamic-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dynamic-banner-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dynamic-banner-text strong {
+  color: var(--letino-gold-light);
+}
+
+.dynamic-banner-urgency {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(225, 29, 142, 0.15);
+  border: 1px solid rgba(225, 29, 142, 0.45);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(225, 29, 142, 0.25);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   SEKCJA: SZCZEROŚĆ I WARTOŚCI (.honesty-*)
+   ========================================================================== */
+.honesty-section {
+  position: relative;
+  padding: 80px 0 70px;
+}
+
+.honesty-lead {
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+
+.honesty-lead strong {
+  color: var(--letino-gold-light);
+}
+
+.honesty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.honesty-card {
+  background: rgba(16, 21, 34, 0.8);
+  border: 1px solid rgba(245, 208, 97, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.honesty-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top center, rgba(245, 208, 97, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.honesty-card:hover {
+  border-color: rgba(245, 208, 97, 0.65);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.honesty-card-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--letino-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.honesty-card:hover .honesty-card-icon-wrap {
+  transform: scale(1.08);
+}
+
+.honesty-card-icon-wrap.accent-gold {
+  background: rgba(255, 193, 7, 0.14);
+  border-color: rgba(255, 193, 7, 0.4);
+  color: #ffc107;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.22);
+}
+
+.honesty-card-icon-wrap.accent-cyan {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.35);
+  color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.honesty-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.honesty-card-condition {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.honesty-card-promise {
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.honesty-card:hover .honesty-card-promise {
+  color: var(--letino-gold-light);
+}
+
+/* Blok Filozofii: Bo outlet to dla nas nie tylko... */
+.honesty-philosophy-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.honesty-philosophy-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: rgba(18, 24, 38, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.honesty-philosophy-intro {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-style: normal;
+}
+
+.honesty-quote-val {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #ff758c;
+  background: rgba(225, 29, 142, 0.12);
+  border: 1px solid rgba(225, 29, 142, 0.35);
+  padding: 6px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 16px rgba(225, 29, 142, 0.2);
+}
+
+/* Główny Baner Podsumowujący */
+.honesty-motto-banner {
+  max-width: 900px;
+  margin: 36px auto 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(26, 20, 36, 0.85) 50%, rgba(225, 29, 142, 0.12) 100%);
+  border: 1.5px solid rgba(245, 208, 97, 0.45);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  text-align: center;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45), 0 0 32px rgba(212, 175, 55, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+}
+
+.honesty-motto-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 208, 97, 0.8), transparent);
+}
+
+.honesty-motto-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.22rem, 2.6vw, 1.7rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+}
+
+.motto-pillar {
+  background: linear-gradient(135deg, #ffffff 0%, var(--letino-gold-light) 65%, #f5b942 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 24px rgba(245, 208, 97, 0.3);
+}
+
+.motto-divider {
+  color: var(--letino-magenta, #e11d8e);
+  font-size: 0.85em;
+  filter: drop-shadow(0 0 8px rgba(225, 29, 142, 0.6));
 }
 
 /* ==========================================================================
@@ -3935,6 +4335,14 @@ body.lang-fade-out [data-i18n] {
 }
 
 @media (max-width: 860px) {
+  .what-find-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .honesty-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -4011,6 +4419,21 @@ body.lang-fade-out [data-i18n] {
   }
   .faq-cta-actions .btn {
     width: 100%;
+  }
+  .honesty-motto-title {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .motto-divider {
+    display: none;
+  }
+  .dynamic-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dynamic-banner-urgency {
+    width: 100%;
+    justify-content: center;
   }
 }
 
