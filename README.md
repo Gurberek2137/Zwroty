@@ -1,4 +1,4 @@
-# Zwroty
+# Letino-Outlet
 
 A website developed for Letino Outlet.
 
