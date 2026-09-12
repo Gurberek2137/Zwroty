@@ -42,8 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_live_badge: '<span class="pulse-dot"></span> ZWROTY & OKAZJE',
       hero_brand_sub: '@letino.outlet &bull; Zamówienia i kontakt przez DM',
       hero_brand_arrow: 'Napisz DM &rarr;',
-      hero_title: 'Markowe produkty. <br><span class="gradient-text">Ceny, które robią różnicę.</span>',
-      hero_subtitle: 'Sprawdzone produkty pochodzące ze zwrotów konsumenckich i nadwyżek magazynowych. Znane marki w atrakcyjnych cenach.',
+      hero_title: 'Witamy w <span class="gradient-text">Letino Outlet!</span>',
+      hero_subtitle: '<h3 class="hero-subheading">Niespodzianki w pakiecie. Okazje – zawsze.</h3>' +
+        '<p class="hero-lead"><strong>Dajemy produktom drugą szansę, a Tobie dajemy szansę kupić je w naprawdę dobrej cenie!</strong></p>' +
+        '<p>Nasz asortyment obejmuje między innymi <strong>zwroty konsumenckie, nadwyżki i końcówki magazynowe, produkty powystawowe oraz nieodebrane przesyłki</strong>.</p>' +
+        '<p>Znajdziesz u nas produkty z wielu różnych kategorii – od elektroniki i artykułów gospodarstwa domowego, przez kosmetykę i pielęgnację, aż po sport, torby i praktyczne rzeczy na co dzień.</p>' +
+        '<h3 class="hero-subheading">A najlepsze?</h3>' +
+        '<p class="hero-highlight"><strong>Nie płacisz klasycznej ceny sklepowej.</strong></p>',
       hero_cta: 'Zobacz aktualne okazje',
       hero_cta_secondary: 'Przeglądaj ofertę',
 
@@ -314,8 +319,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_live_badge: '<span class="pulse-dot"></span> RETURNS & OVERSTOCK',
       hero_brand_sub: '@letino.outlet &bull; Inquiries & orders via DM',
       hero_brand_arrow: 'Send DM &rarr;',
-      hero_title: 'Brand-name products. <br><span class="gradient-text">Prices that make a difference.</span>',
-      hero_subtitle: 'Verified products from customer returns and overstock. Well-known brands at attractive prices.',
+      hero_title: 'Welcome to <span class="gradient-text">Letino Outlet!</span>',
+      hero_subtitle: '<h3 class="hero-subheading">Surprises in the package. Deals – always.</h3>' +
+        '<p class="hero-lead"><strong>We give products a second chance, and give you the chance to buy them at a truly great price!</strong></p>' +
+        '<p>Our assortment includes <strong>customer returns, overstock and surplus goods, display items, and unclaimed parcels</strong>.</p>' +
+        '<p>You will find products from many different categories – from electronics and household goods, to cosmetics and skincare, to sports, bags, and practical everyday items.</p>' +
+        '<h3 class="hero-subheading">And the best part?</h3>' +
+        '<p class="hero-highlight"><strong>You don\'t pay the classic retail store price.</strong></p>',
       hero_cta: 'View Latest Deals',
       hero_cta_secondary: 'Browse Offers',
 
@@ -579,8 +589,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hero_live_badge: '<span class="pulse-dot"></span> RETOUREN & ANGEBOTE',
       hero_brand_sub: '@letino.outlet &bull; Bestellungen & Kontakt per DM',
       hero_brand_arrow: 'DM schreiben &rarr;',
-      hero_title: 'Markenprodukte. <br><span class="gradient-text">Preise, die den Unterschied machen.</span>',
-      hero_subtitle: 'Geprüfte Produkte aus Kundenretouren und Überbeständen. Bekannte Marken zu attraktiven Preisen.',
+      hero_title: 'Willkommen bei <span class="gradient-text">Letino Outlet!</span>',
+      hero_subtitle: '<h3 class="hero-subheading">Überraschungen inklusive. Schnäppchen – immer.</h3>' +
+        '<p class="hero-lead"><strong>Wir geben Produkten eine zweite Chance, und Ihnen die Chance, sie zu einem wirklich guten Preis zu kaufen!</strong></p>' +
+        '<p>Unser Sortiment umfasst unter anderem <strong>Kundenretouren, Überbestände und Restposten, Ausstellungsstücke sowie unzustellbare Pakete</strong>.</p>' +
+        '<p>Bei uns finden Sie Produkte aus vielen verschiedenen Kategorien – von Elektronik und Haushaltswaren über Kosmetik und Pflege bis hin zu Sport, Taschen und praktischen Dingen für den Alltag.</p>' +
+        '<h3 class="hero-subheading">Und das Beste daran?</h3>' +
+        '<p class="hero-highlight"><strong>Sie zahlen nicht den klassischen Ladenpreis.</strong></p>',
       hero_cta: 'Aktuelle Angebote ansehen',
       hero_cta_secondary: 'Sortiment erkunden',
 
