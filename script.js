@@ -160,18 +160,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'PYTANIA I ODPOWIEDZI',
-      faq_heading: 'Pytania i Odpowiedzi (FAQ)',
-      faq_subtext: 'Praktyczne informacje o pochodzeniu sprzętu i realizacji zakupów.',
-      faq_q1: 'Czy produkty są nowe?',
-      faq_a1: 'W ofercie Letino Outlet znajdują się towary ze zwrotów konsumenckich oraz nadwyżek magazynowych. Część produktów to egzemplarze w otwartych lub uszkodzonych opakowaniach, a część to urządzenia powystawowe lub ze zwrotów. Dokładny stan wizualny każdego oferowanego przedmiotu jest zawsze rzetelnie podany w opisie.',
-      faq_q2: 'Czy produkty są sprawdzane?',
-      faq_a2: 'Tak. Każdy egzemplarz przed wystawieniem do oferty jest sprawdzany pod kątem działania i kompletności dołączonych akcesoriów.',
-      faq_q3: 'Skąd pochodzą produkty?',
-      faq_a3: 'Oferowane produkty pochodzą ze zwrotów konsumenckich (np. zwrotów ustawowych) oraz nadwyżek magazynowych z rynku europejskiego.',
-      faq_q4: 'Gdzie można zobaczyć aktualną ofertę?',
-      faq_a4: 'Aktualną ofertę i bieżące pojedyncze okazje publikujemy na naszym profilu Instagram (@letino.outlet). Wybrane przedmioty mogą być również wystawiane na naszym profilu eBay.',
-      faq_q5: 'Jak skontaktować się w sprawie produktu?',
-      faq_a5: 'Najszybszym sposobem kontaktu jest wiadomość prywatna (Direct Message) na profilu Instagram @letino.outlet lub e-mail: letino.outlet@gmail.com.',
+      faq_heading: 'FAQ – Najczęściej zadawane pytania',
+      faq_q1: '1. Co sprzedaje Letino Outlet?',
+      faq_a1: '<p>W naszym sklepie znajdziesz przede wszystkim zwroty konsumenckie, nadwyżki magazynowe, produkty powystawowe oraz nieodebrane przesyłki. Asortyment jest bardzo różnorodny – od elektroniki i małego AGD, przez produkty do domu i beauty, aż po sport, torby i wiele innych ciekawostek.</p>',
+      faq_q2: '2. Czy produkty są nowe?',
+      faq_a2: '<p>Nie zawsze – i właśnie na tym polega urok outletu!</p><p>Część produktów jest nowa, część pochodzi ze zwrotów konsumenckich lub nadwyżek magazynowych i może mieć otwarte albo uszkodzone opakowanie. Każdy produkt opisujemy zgodnie z jego rzeczywistym stanem.</p>',
+      faq_q3: '3. Co oznacza A-Ware, B-Ware i C-Ware?',
+      faq_a3: '<p>To oznaczenie stanu produktu.</p><p>A-Ware – bardzo dobry lub niemal nowy stan.</p><p>B-Ware – możliwe lekkie ślady użytkowania, otwarte opakowanie lub drobne niedoskonałości.</p><p>C-Ware – bardziej widoczne ślady użytkowania lub inne wady, które opisujemy w ofercie.</p><p>Zawsze dokładnie czytaj opis konkretnego produktu – tam znajdziesz najważniejsze informacje dotyczące jego stanu.</p>',
+      faq_q4: '4. Dlaczego produkty w Letino Outlet są tańsze?',
+      faq_a4: '<p>Bo nie sprzedajemy ich po klasycznych cenach sklepowych.</p><p>Kupujemy m.in. zwroty, nadwyżki i produkty pochodzące z różnych źródeł outletowych, dzięki czemu możemy zaoferować je w atrakcyjnych cenach.</p><p>Ty oszczędzasz, produkt dostaje drugą szansę. Win-win!</p>',
+      faq_q5: '5. Czy mogę zwrócić zakupiony produkt?',
+      faq_a5: '<p>Oczywiście – prawa konsumenta obowiązują również przy zakupach outletowych. Szczegółowe informacje dotyczące zwrotów znajdziesz w naszej polityce zwrotów oraz w opisie konkretnej oferty.</p><p>Outlet ≠ „bez zasad”</p><p>Po prostu kupujesz produkt w określonym stanie, dlatego zawsze warto dokładnie zapoznać się z jego opisem przed zakupem.</p>',
+
 
       // Kontakt
       contact_badge: 'KONTAKT',
@@ -394,18 +394,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'QUESTIONS & ANSWERS',
-      faq_heading: 'Questions & Answers (FAQ)',
-      faq_subtext: 'Practical answers about stock origin and buying process.',
-      faq_q1: 'Are the products brand new?',
-      faq_a1: 'Letino Outlet offers goods from customer returns and warehouse overstocks. Some items are in opened or distressed boxes, while others are demo/display units. Exact cosmetic grade is always stated transparently.',
-      faq_q2: 'Are items tested before dispatch?',
-      faq_a2: 'Yes. Each piece undergoes functional verification and check of included accessories before listing.',
-      faq_q3: 'Where do the items come from?',
-      faq_a3: 'Our inventory originates from customer returns and warehouse overstock from the European market.',
-      faq_q4: 'Where can I see current inventory?',
-      faq_a4: 'Current offers and single-unit deals are posted on Instagram (@letino.outlet). Selected items may also be listed on our eBay profile.',
-      faq_q5: 'How do I contact you regarding an item?',
-      faq_a5: 'The quickest way is sending a Direct Message (DM) on Instagram @letino.outlet or via email at letino.outlet@gmail.com.',
+      faq_heading: 'FAQ – Frequently Asked Questions',
+      faq_q1: '1. What does Letino Outlet sell?',
+      faq_a1: '<p>In our store you will find primarily customer returns, warehouse overstocks, ex-display items, and undelivered parcels. The range is very diverse – from electronics and small appliances to home & beauty, sports, bags, and many other interesting finds.</p>',
+      faq_q2: '2. Are the products brand new?',
+      faq_a2: '<p>Not always – and that is exactly the charm of an outlet!</p><p>Some products are brand new, while others come from customer returns or warehouse overstock and may have opened or damaged packaging. Every item is described according to its actual condition.</p>',
+      faq_q3: '3. What do A-Ware, B-Ware, and C-Ware mean?',
+      faq_a3: '<p>This is our product condition rating.</p><p>A-Ware – very good or like-new condition.</p><p>B-Ware – possible slight signs of use, opened box, or minor imperfections.</p><p>C-Ware – more visible signs of use or defects described in the listing.</p><p>Always read the description of the specific product carefully – that is where you will find the most important condition details.</p>',
+      faq_q4: '4. Why are products at Letino Outlet cheaper?',
+      faq_a4: '<p>Because we do not sell them at regular retail store prices.</p><p>We buy returns, surplus stock, and products from various outlet sources, allowing us to offer them at attractive discount prices.</p><p>You save money, and the product gets a second life. Win-win!</p>',
+      faq_q5: '5. Can I return a purchased item?',
+      faq_a5: '<p>Of course – consumer rights also apply to outlet purchases. Detailed return information can be found in our returns policy and in each offer description.</p><p>Outlet ≠ "without rules"</p><p>You simply buy a product in a specific condition, which is why we always recommend reviewing its description before purchase.</p>',
+
 
       // Contact
       contact_badge: 'CONTACT',
@@ -621,18 +621,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // FAQ
       faq_badge: 'FRAGEN & ANTWORTEN',
-      faq_heading: 'Fragen & Antworten (FAQ)',
-      faq_subtext: 'Wissenswertes über Herkunft und Kaufabwicklung bei Letino Outlet.',
-      faq_q1: 'Sind die Produkte neu?',
-      faq_a1: 'Bei Letino Outlet finden Sie Waren aus Kundenretouren und Restposten. Manche Produkte sind in geöffneter Verpackung, andere Vorführgeräte. Der genaue Zustand wird stets transparent deklariert.',
-      faq_q2: 'Werden die Artikel geprüft?',
-      faq_a2: 'Ja. Jedes Exemplar wird vor dem Verkauf auf Funktion, Betriebsbereitschaft und Zubehör getestet.',
-      faq_q3: 'Woher stammt die Ware?',
-      faq_a3: 'Die angebotenen Produkte stammen aus Kundenretouren und Restposten aus dem europäischen Markt.',
-      faq_q4: 'Wo finde ich das aktuelle Sortiment?',
-      faq_a4: 'Tagesaktuelle Neuzugänge und Highlights posten wir auf Instagram (@letino.outlet). Ausgewählte Artikel können auch auf eBay angeboten werden.',
-      faq_q5: 'Wie kann ich ein Produkt anfragen?',
-      faq_a5: 'Am schnellsten per Direktnachricht (DM) auf Instagram (@letino.outlet) oder per E-Mail an letino.outlet@gmail.com.',
+      faq_heading: 'FAQ – Häufig gestellte Fragen',
+      faq_q1: '1. Was verkauft Letino Outlet?',
+      faq_a1: '<p>In unserem Shop finden Sie vor allem Kundenretouren, Lagerüberhänge, Ausstellungsstücke und unzustellbare Pakete. Das Sortiment ist äußerst vielfältig – von Elektronik und Haushaltskleingeräten über Home & Beauty bis hin zu Sport, Taschen und vielen weiteren Highlights.</p>',
+      faq_q2: '2. Sind die Produkte neu?',
+      faq_a2: '<p>Nicht immer – und genau das macht den Reiz eines Outlets aus!</p><p>Ein Teil der Produkte ist neu, ein anderer stammt aus Kundenretouren oder Lagerüberbeständen und kann eine geöffnete oder beschädigte Verpackung haben. Jedes Produkt wird exakt nach seinem tatsächlichen Zustand beschrieben.</p>',
+      faq_q3: '3. Was bedeuten A-Ware, B-Ware und C-Ware?',
+      faq_a3: '<p>Das ist die Kennzeichnung des Produktzustands.</p><p>A-Ware – sehr guter oder neuwertiger Zustand.</p><p>B-Ware – mögliche leichte Gebrauchsspuren, geöffnete Verpackung oder minimale Mängel.</p><p>C-Ware – deutlichere Gebrauchsspuren oder sonstige Mängel, die im Angebot beschrieben sind.</p><p>Lesen Sie immer die Beschreibung des konkreten Produkts aufmerksam durch – dort finden Sie die wichtigsten Zustandsangaben.</p>',
+      faq_q4: '4. Warum sind die Produkte bei Letino Outlet günstiger?',
+      faq_a4: '<p>Weil wir nicht zu klassischen Ladenpreisen verkaufen.</p><p>Wir erwerben u.a. Retouren, Überbestände und Waren aus verschiedenen Outlet-Quellen, wodurch wir sie zu besonders attraktiven Preisen anbieten können.</p><p>Sie sparen bares Geld, das Produkt erhält eine zweite Chance. Win-win!</p>',
+      faq_q5: '5. Kann ich einen gekauften Artikel zurückgeben?',
+      faq_a5: '<p>Selbstverständlich – Verbraucherrechte gelten auch beim Outlet-Kauf. Detaillierte Informationen zu Rücksendungen finden Sie in unseren Rückgaberichtlinien sowie in der jeweiligen Angebotsbeschreibung.</p><p>Outlet ≠ „ohne Regeln“</p><p>Sie kaufen das Produkt einfach in einem deklarierten Zustand, daher lohnt es sich stets, die Beschreibung vor dem Kauf genau zu lesen.</p>',
+
 
       // Kontakt
       contact_badge: 'KONTAKT',

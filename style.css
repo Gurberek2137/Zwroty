@@ -3917,6 +3917,14 @@ body.lang-fade-out [data-i18n] {
   padding-top: 14px;
 }
 
+.main-faq-answer p {
+  margin: 0 0 10px;
+}
+
+.main-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
 .main-faq-more-wrap {
   text-align: center;
   margin-top: 32px;
