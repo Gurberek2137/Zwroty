@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji przeciw pamięci podręcznej (cache) -->
-  <link rel="stylesheet" href="style.css?v=3.9">
+  <link rel="stylesheet" href="style.css?v=4.0">
 
   <!-- Google Analytics 4 (Właścicielka: wpisz swój identyfikator pomiaru G-XXXXXXXXXX) -->
   <script>
@@ -156,8 +156,8 @@
   <header class="header" id="top">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Letino Outlet strona główna">
-        <img src="assets/letino-logo-round.png" alt="Letino Outlet Sygnet" class="logo-icon-img" width="72" height="72">
-        <img src="assets/letino-logo-transparent.png" alt="Letino Outlet Logo" class="logo-banner-img" width="240" height="60">
+        <img src="assets/letino-logo-round.png" alt="Letino Outlet Sygnet" class="logo-icon-img" width="42" height="42">
+        <img src="assets/letino-logo-transparent.png" alt="Letino Outlet Logo" class="logo-banner-img" width="160" height="34">
       </a>
 
       <!-- Główna nawigacja desktopowa -->
@@ -605,50 +605,73 @@
   <footer class="footer">
     <div class="container footer-inner">
       
-      <!-- Górna część stopki: Logo i Nawigacja -->
+      <!-- 4 Kolumny Stopki -->
       <div class="footer-top-grid">
+        <!-- Kolumna 1: O marce Letino Outlet -->
         <div class="footer-brand-col">
           <a href="index.html" class="footer-logo-link" aria-label="Letino Outlet strona główna">
-            <img src="assets/letino-logo-transparent.png" alt="Letino Outlet" class="footer-logo-banner" width="180" height="38">
+            <img src="assets/letino-logo-transparent.png" alt="Letino Outlet" class="footer-logo-banner" width="160" height="34">
           </a>
           <p class="footer-brand-text" data-i18n="footer_brand_desc">
             Sprawdzone produkty ze zwrotów konsumenckich i nadwyżek magazynowych. Znane marki w atrakcyjnych cenach.
           </p>
+          <div class="footer-brand-badges">
+            <span class="footer-pill-tag">
+              <span class="footer-tag-dot" aria-hidden="true"></span>
+              <span>Zwroty &bull; Nadwyżki &bull; Okazje</span>
+            </span>
+          </div>
         </div>
 
+        <!-- Kolumna 2: Nawigacja -->
         <div class="footer-links-col">
           <h4 class="footer-col-title" data-i18n="footer_links_title">Nawigacja</h4>
           <ul class="footer-nav-list">
             <li><a href="index.html" data-i18n="nav_home">Strona Główna</a></li>
             <li><a href="index.html#o-letino" data-i18n="nav_about">O Letino</a></li>
-            <li><a href="index.html#abc-ware" data-i18n="nav_abc">ABC Ware</a></li>
-            <li><a href="index.html#produkty" data-i18n="nav_deals">Aktualne Okazje</a></li>
-            <li><a href="index.html#kategorie" data-i18n="nav_categories">Kategorie</a></li>
-            <li><a href="index.html#platformy" data-i18n="nav_platforms">Platformy</a></li>
+            <li><a href="index.html#dlaczego-letino" data-i18n="nav_why">Dlaczego Letino?</a></li>
             <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
             <li><a href="#kontakt" data-i18n="nav_contact">Kontakt</a></li>
           </ul>
         </div>
 
+        <!-- Kolumna 3: Zakupy & Oferta -->
+        <div class="footer-offer-col">
+          <h4 class="footer-col-title" data-i18n="footer_offer_title">Zakupy &amp; Oferta</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#produkty" data-i18n="nav_deals">Aktualne Okazje</a></li>
+            <li><a href="index.html#kategorie" data-i18n="nav_categories">Kategorie Produktów</a></li>
+            <li><a href="index.html#abc-ware" data-i18n="nav_abc">Standard Jakości (ABC-Ware)</a></li>
+            <li><a href="index.html#platformy" data-i18n="nav_platforms">Platformy Sprzedażowe</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolumna 4: Kontakt & Kanały -->
         <div class="footer-social-col">
-          <h4 class="footer-col-title" data-i18n="footer_social_title">Nasze Kanały</h4>
-          <ul class="footer-social-list">
+          <h4 class="footer-col-title" data-i18n="footer_social_title">Kontakt &amp; Kanały</h4>
+          <ul class="footer-contact-list">
             <li>
-              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer">
-                <span class="social-mini-dot ig-dot"></span>
-                <span>Instagram: @letino.outlet</span>
+              <a href="mailto:letino.outlet@gmail.com" class="footer-contact-item">
+                <span class="footer-icon-circle email-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span>
+                <span class="footer-contact-label">letino.outlet@gmail.com</span>
               </a>
             </li>
             <li>
-              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer">
-                <span class="social-mini-dot ebay-dot"></span>
-                <span>eBay.de: Letino Outlet Store</span>
+              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                <span class="footer-icon-circle ig-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </span>
+                <span class="footer-contact-label">Instagram: @letino.outlet</span>
               </a>
             </li>
             <li>
-              <a href="mailto:letino.outlet@gmail.com">
-                <span class="social-mini-dot email-dot"></span>
-                <span>E-mail: letino.outlet@gmail.com</span>
+              <a href="https://www.ebay.de/str/letinooutlet" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                <span class="footer-icon-circle ebay-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </span>
+                <span class="footer-contact-label">Sklep eBay.de</span>
               </a>
             </li>
           </ul>
@@ -664,14 +687,14 @@
 
       <!-- Linki do informacji prawnych i Copyright -->
       <div class="footer-bottom-bar">
-        <div class="legal-links">
-          <button type="button" class="legal-link-btn" id="privacyBtn" data-i18n="footer_privacy">Polityka Prywatności</button>
-          <span class="legal-sep">&bull;</span>
-          <button type="button" class="legal-link-btn" id="termsBtn" data-i18n="footer_terms">Regulamin Serwisu</button>
-        </div>
-
         <div class="copyright">
           &copy; <span id="year">2026</span> <span data-i18n="copyright_text">Letino Outlet. Wszelkie prawa zastrzeżone.</span>
+        </div>
+
+        <div class="legal-links">
+          <button type="button" class="legal-link-btn" id="privacyBtn" data-i18n="footer_privacy">Polityka Prywatności</button>
+          <span class="legal-sep" aria-hidden="true">&bull;</span>
+          <button type="button" class="legal-link-btn" id="termsBtn" data-i18n="footer_terms">Regulamin Serwisu</button>
         </div>
       </div>
 
@@ -707,6 +730,6 @@
     </svg>
   </button>
 
-  <script src="script.js?v=3.9"></script>
+  <script src="script.js?v=4.0"></script>
 </body>
 </html>

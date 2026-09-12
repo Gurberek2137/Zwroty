@@ -191,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Stopka
       footer_brand_desc: 'Sprawdzone produkty ze zwrotów konsumenckich i nadwyżek magazynowych. Znane marki w atrakcyjnych cenach.',
       footer_links_title: 'Nawigacja',
-      footer_social_title: 'Nasze Kanały',
+      footer_offer_title: 'Zakupy &amp; Oferta',
+      footer_social_title: 'Kontakt &amp; Kanały',
       socials_title: 'Znajdź nas & Napisz do nas',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
@@ -424,7 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Footer
       footer_brand_desc: 'Verified products from customer returns and overstock. Famous brands at affordable prices.',
       footer_links_title: 'Navigation',
-      footer_social_title: 'Our Channels',
+      footer_offer_title: 'Shop &amp; Offers',
+      footer_social_title: 'Contact &amp; Channels',
       socials_title: 'Find Us & Message Us',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
@@ -650,7 +652,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Footer
       footer_brand_desc: 'Geprüfte Ware aus Kundenretouren und Restposten bekannter Marken zu Spitzenpreisen.',
       footer_links_title: 'Navigation',
-      footer_social_title: 'Unsere Kanäle',
+      footer_offer_title: 'Einkaufen &amp; Angebote',
+      footer_social_title: 'Kontakt &amp; Kanäle',
       socials_title: 'Finde uns & Schreib uns',
       social_ig_title: 'Instagram',
       social_ig_desc: '@letino.outlet',
