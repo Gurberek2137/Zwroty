@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji przeciw pamięci podręcznej (cache) -->
-  <link rel="stylesheet" href="style.css?v=4.1">
+  <link rel="stylesheet" href="style.css?v=4.3">
 
   <!-- Google Analytics 4 (Właścicielka: wpisz swój identyfikator pomiaru G-XXXXXXXXXX) -->
   <script>
@@ -282,66 +282,28 @@
           <p class="section-subtext" data-i18n="section_subtext">Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.</p>
         </div>
 
-        <!-- Estetyczny placeholder przygotowany pod przyszły automatyczny feed z Instagrama -->
-        <div class="deals-placeholder-wrap" id="dealsPlaceholderWrap">
-          <div class="deals-placeholder-inner">
-            <div class="deals-placeholder-icon">
-              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </div>
-            <p class="deals-placeholder-text" data-i18n="deals_placeholder_desc">
-              Aktualne produkty, promocje i pojedyncze okazje publikujemy na bieżąco na naszym Instagramie.
-            </p>
-            <div class="deals-placeholder-actions">
-              <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
-                <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span data-i18n="deals_btn_ig">Zobacz aktualne okazje na Instagramie</span>
-                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
+        <!-- Zyff Instagram Feed widget -->
+        <div class="zyff-feed-wrapper">
+          <div class="zyff-instagram"
+               data-zyff-widget="instagram"
+               data-zyff-id="oiv-PpCWmIPbnA"></div>
+        </div>
+        <script src="https://www.zyff.app/w/instagram.js" defer></script>
+        <!-- End Zyff Instagram Feed widget -->
 
-          <!-- Siatka slotów pod przyszły automatyczny feed -->
-          <div class="deals-placeholder-slots" id="instagramDealsFeed" aria-label="Sloty na feed Instagrama">
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-            <div class="deals-slot-item">
-              <svg class="deals-slot-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              </svg>
-              <span class="deals-slot-label" data-i18n="deals_slot_live">Instagram Live Feed</span>
-            </div>
-          </div>
+        <div class="deals-cta-wrap">
+          <a href="https://www.instagram.com/letino.outlet/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-primary">
+            <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span data-i18n="deals_btn_ig">Zobacz wszystkie okazje na Instagramie</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </section>

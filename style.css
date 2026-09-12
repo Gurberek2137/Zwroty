@@ -4352,23 +4352,24 @@ body.lang-fade-out [data-i18n] {
 }
 
 /* ==========================================================================
-   PLACEHOLDER POD AUTOMATYCZNY FEED INSTAGRAMA W SEKCJI OKAZJI
+   ZYFF INSTAGRAM FEED WIDGET
    ========================================================================== */
-.deals-placeholder-wrap {
+.zyff-feed-wrapper {
   margin-top: 36px;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 44px 32px;
-  text-align: center;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  position: relative;
-  overflow: hidden;
+  padding: 20px;
 }
 
-.deals-placeholder-wrap::before {
+.zyff-feed-wrapper::before {
   content: '';
   position: absolute;
   top: 0;
@@ -4379,73 +4380,21 @@ body.lang-fade-out [data-i18n] {
   opacity: 0.7;
 }
 
-.deals-placeholder-inner {
-  max-width: 620px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.deals-placeholder-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, rgba(225, 29, 142, 0.16) 0%, rgba(212, 175, 55, 0.14) 100%);
-  border: 1px solid rgba(225, 29, 142, 0.35);
-  color: #ff60b6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 24px rgba(225, 29, 142, 0.25);
-}
-
-.deals-placeholder-text {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.deals-placeholder-slots {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+.zyff-instagram {
   width: 100%;
-  margin-top: 24px;
+  min-height: 280px;
+  display: block;
 }
 
-.deals-slot-item {
-  border: 1px dashed rgba(255, 255, 255, 0.12);
-  background: rgba(14, 19, 31, 0.45);
-  border-radius: var(--radius-md);
-  padding: 24px 14px;
+.zyff-feed-wrapper [data-zyff-root] {
+  width: 100%;
+  display: block;
+}
+
+.deals-cta-wrap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 140px;
-  transition: var(--transition);
-}
-
-.deals-slot-item:hover {
-  border-color: rgba(245, 208, 97, 0.35);
-  background: rgba(24, 32, 52, 0.65);
-}
-
-.deals-slot-icon {
-  color: var(--text-muted);
-  opacity: 0.6;
-}
-
-.deals-slot-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  margin-top: 28px;
 }
 
 /* ==========================================================================
@@ -4465,9 +4414,6 @@ body.lang-fade-out [data-i18n] {
   .abc-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  .deals-placeholder-slots {
-    grid-template-columns: repeat(2, 1fr);
   }
   .what-find-grid {
     grid-template-columns: 1fr;
@@ -4565,11 +4511,10 @@ body.lang-fade-out [data-i18n] {
     flex-direction: column;
     align-items: flex-start;
   }
-  .deals-placeholder-slots {
-    grid-template-columns: 1fr;
-  }
-  .deals-placeholder-wrap {
-    padding: 32px 18px;
+  .zyff-feed-wrapper {
+    padding: 12px;
+    margin-top: 24px;
+    border-radius: var(--radius-md);
   }
   .dynamic-banner-urgency {
     width: 100%;
