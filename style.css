@@ -1302,61 +1302,189 @@ section {
 }
 
 /* ==========================================================================
-   SEKCJA: DLACZEGO LETINO? (ZALETY)
+   SEKCJA: CO ZNAJDZIESZ W LETINO OUTLET?
    ========================================================================== */
 .features-section {
   padding: 70px 0 80px;
+  position: relative;
 }
 
-.features-grid {
+.what-find-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 32px;
 }
 
-.feature-card {
+.what-find-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1.5px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  transition: var(--transition);
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-.feature-card:hover {
+.what-find-card:hover {
+  border-color: rgba(245, 208, 97, 0.6);
   transform: translateY(-4px);
-  border-color: rgba(245, 208, 97, 0.55);
-  background: var(--bg-card-hover);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55), 0 0 30px rgba(212, 175, 55, 0.2);
 }
 
-.feature-icon-box {
-  width: 54px;
-  height: 54px;
+.what-find-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.what-find-icon-wrap {
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(245, 208, 97, 0.1) 100%);
-  border: 1px solid rgba(245, 208, 97, 0.5);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(245, 208, 97, 0.12) 100%);
+  border: 1px solid rgba(245, 208, 97, 0.6);
+  color: #FFF0A0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  color: #FFF0A0;
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.22);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+  flex-shrink: 0;
 }
 
-.feature-title {
+.what-find-icon-wrap.accent-magenta {
+  background: linear-gradient(135deg, rgba(225, 29, 142, 0.25) 0%, rgba(225, 48, 108, 0.12) 100%);
+  border-color: rgba(225, 48, 108, 0.6);
+  color: #FFD1E8;
+  box-shadow: 0 4px 14px rgba(225, 29, 142, 0.25);
+}
+
+.what-find-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: clamp(1.22rem, 2.2vw, 1.45rem);
   font-weight: 700;
   color: #fff;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-.feature-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+.what-find-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.what-find-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(16, 22, 36, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  transition: var(--transition);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.what-find-item:hover {
+  background: rgba(24, 32, 52, 0.85);
+  border-color: rgba(245, 208, 97, 0.45);
+  transform: translateX(4px);
+}
+
+.item-icon-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.16);
+  border: 1px solid rgba(245, 208, 97, 0.4);
+  color: var(--letino-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.item-icon-pill.accent-pill {
+  background: rgba(225, 29, 142, 0.16);
+  border-color: rgba(225, 48, 108, 0.4);
+  color: #FFAAD2;
+}
+
+.what-find-surprise {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(225, 29, 142, 0.16) 100%);
+  border: 1.5px solid rgba(245, 208, 97, 0.5);
+  border-radius: var(--radius-md);
+  color: #FFF5C0;
+  font-size: 1.02rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15);
+}
+
+.surprise-sparkle {
+  font-size: 1.25rem;
+}
+
+.what-find-dynamic-banner {
+  background: linear-gradient(135deg, rgba(14, 19, 31, 0.85) 0%, rgba(24, 20, 35, 0.85) 100%);
+  border: 1.5px solid rgba(245, 208, 97, 0.5);
+  border-radius: var(--radius-lg);
+  padding: 26px 32px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 28px rgba(212, 175, 55, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.dynamic-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.dynamic-banner-text {
+  font-size: clamp(1.04rem, 2vw, 1.22rem);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.dynamic-banner-text strong {
+  color: var(--letino-gold-light);
+}
+
+.dynamic-banner-urgency {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(245, 208, 97, 0.6);
+  color: #FFF0A0;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.98rem;
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.2);
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -2812,31 +2940,33 @@ body.lang-fade-out [data-i18n] {
     gap: 8px;
   }
 
-  /* Sekcja: Dlaczego Letino? */
-  .features-grid {
+  /* Sekcja: Co znajdziesz w Letino Outlet? */
+  .what-find-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .what-find-card {
+    padding: 22px 18px;
+  }
+
+  .what-find-item {
+    padding: 10px 14px;
+    font-size: 0.94rem;
+  }
+
+  .what-find-dynamic-banner {
+    padding: 20px 18px;
+  }
+
+  .dynamic-banner-inner {
+    flex-direction: column;
+    text-align: center;
     gap: 14px;
   }
 
-  .feature-card {
-    padding: 20px 16px;
-    border-radius: var(--radius-md);
-  }
-
-  .feature-icon-box {
-    width: 46px;
-    height: 46px;
-    margin-bottom: 14px;
-  }
-
-  .feature-title {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-  }
-
-  .feature-desc {
-    font-size: 0.86rem;
-    line-height: 1.55;
+  .dynamic-banner-text {
+    text-align: center;
   }
 
   /* Sekcja: Kategorie */

@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Style CSS z parametrem wersji przeciw pamięci podręcznej (cache) -->
-  <link rel="stylesheet" href="style.css?v=3.4">
+  <link rel="stylesheet" href="style.css?v=3.5">
 
   <!-- Google Analytics 4 (Właścicielka: wpisz swój identyfikator pomiaru G-XXXXXXXXXX) -->
   <script>
@@ -531,69 +531,114 @@
       </div>
     </section>
 
-    <!-- SEKCJA: DLACZEGO LETINO? -->
+    <!-- SEKCJA: CO ZNAJDZIESZ W LETINO OUTLET? -->
     <section class="features-section" id="dlaczego-letino">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge" data-i18n="why_badge">NASZE ATUTY</span>
-          <h2 class="section-heading" data-i18n="why_heading">Dlaczego Letino?</h2>
-          <p class="section-subtext" data-i18n="why_subtext">Uczciwe zasady, rzetelna selekcja i sprawdzone źródła towaru.</p>
+          <span class="section-badge" data-i18n="why_badge">ASORTYMENT & OKAZJE</span>
+          <h2 class="section-heading" data-i18n="why_heading">Co znajdziesz w Letino Outlet?</h2>
+          <p class="section-subtext" data-i18n="why_subtext">Nasz asortyment ciągle się zmienia – dziś znalezione, jutro może już go nie być!</p>
         </div>
 
-        <div class="features-grid">
-          <!-- Cecha 1: Atrakcyjne ceny -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
+        <div class="what-find-grid">
+          <!-- Kolumna 1: Pochodzenie towaru -->
+          <div class="what-find-card">
+            <div class="what-find-card-header">
+              <div class="what-find-icon-wrap">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="what-find-title" data-i18n="why_sources_title">Pochodzenie towaru</h3>
             </div>
-            <h3 class="feature-title" data-i18n="why_1_title">Atrakcyjne ceny</h3>
-            <p class="feature-desc" data-i18n="why_1_desc">
-              Realne oszczędności sięgające od kilkudziesięciu procent w stosunku do standardowych cen sklepowych.
-            </p>
+            <ul class="what-find-list" data-i18n="why_sources_list">
+              <li class="what-find-item">
+                <span class="item-icon-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                </span>
+                <strong>Zwroty konsumenckie</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </span>
+                <strong>Nadwyżki i końcówki magazynowe</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11 12 8"></polygon></svg>
+                </span>
+                <strong>Produkty powystawowe</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </span>
+                <strong>Nieodebrane przesyłki</strong>
+              </li>
+            </ul>
           </div>
 
-          <!-- Cecha 2: Sprawdzone produkty -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
+          <!-- Kolumna 2: A także między innymi -->
+          <div class="what-find-card">
+            <div class="what-find-card-header">
+              <div class="what-find-icon-wrap accent-magenta">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="what-find-title" data-i18n="why_categories_title">A także między innymi:</h3>
             </div>
-            <h3 class="feature-title" data-i18n="why_2_title">Sprawdzone produkty</h3>
-            <p class="feature-desc" data-i18n="why_2_desc">
-              Każdy produkt jest rzetelnie sprawdzany pod kątem działania i stanu wizualnego przed wystawieniem.
-            </p>
+            <ul class="what-find-list" data-i18n="why_categories_list">
+              <li class="what-find-item">
+                <span class="item-icon-pill accent-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </span>
+                <strong>Elektronikę i sprzęt</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill accent-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </span>
+                <strong>Dom i małe AGD</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill accent-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </span>
+                <strong>Beauty i pielęgnację</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill accent-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </span>
+                <strong>Torby i akcesoria</strong>
+              </li>
+              <li class="what-find-item">
+                <span class="item-icon-pill accent-pill">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg>
+                </span>
+                <strong>Sport i rekreację</strong>
+              </li>
+            </ul>
+            <div class="what-find-surprise" data-i18n="why_surprise">
+              <span class="surprise-sparkle">✨</span> <strong>…i mnóstwo innych niespodzianek!</strong>
+            </div>
           </div>
+        </div>
 
-          <!-- Cecha 3: Znane marki -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="feature-title" data-i18n="why_3_title">Znane marki</h3>
-            <p class="feature-desc" data-i18n="why_3_desc">
-              Oryginalny sprzęt czołowych producentów elektroniki, urządzeń domowych i akcesoriów.
+        <!-- Baner: Asortyment ciągle się zmienia -->
+        <div class="what-find-dynamic-banner">
+          <div class="dynamic-banner-inner">
+            <p class="dynamic-banner-text" data-i18n="why_changing_text">
+              Nasz asortyment <strong>ciągle się zmienia</strong> – i właśnie to jest największym urokiem outletu.
             </p>
-          </div>
-
-          <!-- Cecha 4: Regularnie nowe okazje -->
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+            <div class="dynamic-banner-urgency" data-i18n="why_urgency">
+              <span class="pulse-dot"></span>
+              <strong>Dziś znalezione. Jutro może już go nie być.</strong>
             </div>
-            <h3 class="feature-title" data-i18n="why_4_title">Regularnie nowe okazje</h3>
-            <p class="feature-desc" data-i18n="why_4_desc">
-              Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.
-            </p>
           </div>
         </div>
       </div>

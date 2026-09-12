@@ -131,18 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
       p4_ours: 'Cena w Letino: <strong>89<sub class="currency-sub">€</sub></strong>',
       p4_cta: 'Zapytaj o dostępność na Instagramie',
 
-      // Dlaczego Letino?
-      why_badge: 'NASZE ATUTY',
-      why_heading: 'Dlaczego Letino?',
-      why_subtext: 'Uczciwe zasady, rzetelna selekcja i sprawdzone źródła towaru.',
-      why_1_title: 'Atrakcyjne ceny',
-      why_1_desc: 'Realne oszczędności sięgające od kilkudziesięciu procent w stosunku do standardowych cen sklepowych.',
-      why_2_title: 'Sprawdzone produkty',
-      why_2_desc: 'Każdy produkt jest rzetelnie sprawdzany pod kątem działania i stanu wizualnego przed wystawieniem.',
-      why_3_title: 'Znane marki',
-      why_3_desc: 'Oryginalny sprzęt czołowych producentów elektroniki, urządzeń domowych i akcesoriów.',
-      why_4_title: 'Regularnie nowe okazje',
-      why_4_desc: 'Dynamicznie zmieniający się asortyment i unikalne pojedyncze egzemplarze w atrakcyjnych cenach.',
+      // Co znajdziesz w Letino Outlet?
+      why_badge: 'ASORTYMENT & OKAZJE',
+      why_heading: 'Co znajdziesz w Letino Outlet?',
+      why_subtext: 'Nasz asortyment ciągle się zmienia – dziś znalezione, jutro może już go nie być!',
+      why_sources_title: 'Pochodzenie towaru',
+      why_sources_list: '<li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span><strong>Zwroty konsumenckie</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span><strong>Nadwyżki i końcówki magazynowe</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11 12 8"></polygon></svg></span><strong>Produkty powystawowe</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span><strong>Nieodebrane przesyłki</strong></li>',
+      why_categories_title: 'A także między innymi:',
+      why_categories_list: '<li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span><strong>Elektronikę i sprzęt</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span><strong>Dom i małe AGD</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><strong>Beauty i pielęgnację</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span><strong>Torby i akcesoria</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg></span><strong>Sport i rekreację</strong></li>',
+      why_surprise: '<span class="surprise-sparkle">✨</span> <strong>…i mnóstwo innych niespodzianek!</strong>',
+      why_changing_text: 'Nasz asortyment <strong>ciągle się zmienia</strong> – i właśnie to jest największym urokiem outletu.',
+      why_urgency: '<span class="pulse-dot"></span> <strong>Dziś znalezione. Jutro może już go nie być.</strong>',
 
       // Największe platformy sprzedażowe
       platforms_badge: 'ZWERYFIKOWANY PROFIL',
@@ -409,18 +408,17 @@ document.addEventListener('DOMContentLoaded', () => {
       p4_ours: 'Letino price: <strong>89<sub class="currency-sub">€</sub></strong>',
       p4_cta: 'Inquire on Instagram',
 
-      // Why Letino?
-      why_badge: 'WHY CHOOSE US',
-      why_heading: 'Why Letino?',
-      why_subtext: 'Honest grading, strict verification and certified inventory sources.',
-      why_1_title: 'Attractive Prices',
-      why_1_desc: 'Substantial savings compared to standard manufacturer suggested retail prices.',
-      why_2_title: 'Verified Products',
-      why_2_desc: 'Every single unit undergoes thorough functional and visual inspection before being offered.',
-      why_3_title: 'Known Brands',
-      why_3_desc: 'Authentic merchandise from world-leading consumer electronics and home appliance makers.',
-      why_4_title: 'Regular New Drops',
-      why_4_desc: 'Frequently updated stock and unique single items at competitive prices.',
+      // What will you find at Letino Outlet?
+      why_badge: 'ASSORTMENT & DEALS',
+      why_heading: 'What will you find at Letino Outlet?',
+      why_subtext: 'Our selection is constantly changing – found today, gone tomorrow!',
+      why_sources_title: 'Sourcing & Origins',
+      why_sources_list: '<li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span><strong>Customer returns</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span><strong>Overstock & surplus lots</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11 12 8"></polygon></svg></span><strong>Display items</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span><strong>Unclaimed parcels</strong></li>',
+      why_categories_title: 'As well as among others:',
+      why_categories_list: '<li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span><strong>Electronics & gadgets</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span><strong>Home & small appliances</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><strong>Beauty & skincare</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span><strong>Bags & accessories</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg></span><strong>Sports & recreation</strong></li>',
+      why_surprise: '<span class="surprise-sparkle">✨</span> <strong>…and lots of other surprises!</strong>',
+      why_changing_text: 'Our inventory is <strong>constantly changing</strong> – and that is the real magic of our outlet.',
+      why_urgency: '<span class="pulse-dot"></span> <strong>Found today. Might be gone tomorrow.</strong>',
 
       // Major Sales Platforms
       platforms_badge: 'VERIFIED STORE',
@@ -680,18 +678,17 @@ document.addEventListener('DOMContentLoaded', () => {
       p4_ours: 'Letino Preis: <strong>89<sub class="currency-sub">€</sub></strong>',
       p4_cta: 'Auf Instagram anfragen',
 
-      // Warum Letino?
-      why_badge: 'UNSERE VORTEILE',
-      why_heading: 'Warum Letino?',
-      why_subtext: 'Transparente Bewertung, professionelle Prüfung und verlässliche Quellen.',
-      why_1_title: 'Attraktive Preise',
-      why_1_desc: 'Echte Ersparnisse von mehreren Dutzend Prozent gegenüber herkömmlichen UVP-Preisen.',
-      why_2_title: 'Geprüfte Produkte',
-      why_2_desc: 'Jedes Gerät wird vor dem Einstellen technisch und optisch genauestens überprüft.',
-      why_3_title: 'Bekannte Marken',
-      why_3_desc: 'Originalware renommierter Hersteller von Elektronik und Haushaltsgeräten.',
-      why_4_title: 'Regelmäßig neue Drops',
-      why_4_desc: 'Regelmäßig wechselndes Sortiment und seltene Einzelstücke zu attraktiven Preisen.',
+      // Was finden Sie im Letino Outlet?
+      why_badge: 'SORTIMENT & SCHNÄPPCHEN',
+      why_heading: 'Was finden Sie im Letino Outlet?',
+      why_subtext: 'Unser Sortiment wechselt ständig – heute entdeckt, morgen vielleicht schon vergriffen!',
+      why_sources_title: 'Herkunft der Ware',
+      why_sources_list: '<li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg></span><strong>Kundenretouren</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span><strong>Überbestände und Restposten</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 16 9 17.5 9.5 14 7 11.5 10.5 11 12 8"></polygon></svg></span><strong>Ausstellungsstücke</strong></li><li class="what-find-item"><span class="item-icon-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span><strong>Unzustellbare Pakete</strong></li>',
+      why_categories_title: 'Sowie unter anderem:',
+      why_categories_list: '<li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span><strong>Elektronik & Technik</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span><strong>Haushalt & kleine Elektrogeräte</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><strong>Beauty & Körperpflege</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span><strong>Taschen & Accessoires</strong></li><li class="what-find-item"><span class="item-icon-pill accent-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg></span><strong>Sport & Freizeit</strong></li>',
+      why_surprise: '<span class="surprise-sparkle">✨</span> <strong>…und viele weitere Überraschungen!</strong>',
+      why_changing_text: 'Unser Sortiment <strong>wechselt ständig</strong> – genau das macht den besonderen Reiz unseres Outlets aus.',
+      why_urgency: '<span class="pulse-dot"></span> <strong>Heute entdeckt. Morgen vielleicht schon weg.</strong>',
 
       // Große Verkaufsplattformen
       platforms_badge: 'VERIFIZIERTES PROFIL',
